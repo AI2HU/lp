@@ -4,3 +4,61 @@
   --color-accent: #3A1078;
 }
 
+/* Blog Content Styling */
+.blog-content h1 {
+  @apply text-4xl font-bold text-gray-900 mt-12 mb-6 leading-tight;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-bold text-gray-900 mt-10 mb-5 leading-tight;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-bold text-gray-900 mt-8 mb-4 leading-tight;
+}
+
+.blog-content h4 {
+  @apply text-xl font-bold text-gray-900 mt-6 mb-3 leading-tight;
+}
+
+.blog-content p {
+  @apply mb-6 text-gray-700 leading-relaxed text-lg;
+}
+
+.blog-content ul {
+  @apply list-disc list-inside mb-6 space-y-2 ml-4;
+}
+
+.blog-content li {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.blog-content strong {
+  @apply font-semibold text-gray-900;
+}
+
+.blog-content em {
+  @apply italic text-gray-700;
+}
+
+.blog-content code {
+  @apply bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono border;
+}
+
+/* Improve readability for long articles */
+.blog-content {
+  @apply max-w-none;
+  line-height: 1.7;
+}
+
+.blog-content p:first-of-type {
+  @apply text-xl text-gray-600 font-medium;
+}
+
+/* Better spacing for sections */
+.blog-content h1 + p,
+.blog-content h2 + p,
+.blog-content h3 + p {
+  @apply mt-2;
+}
+

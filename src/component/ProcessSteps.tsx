@@ -64,7 +64,8 @@ export function ProcessSteps() {
         
         {/* Workflow Steps */}
         <div className="relative">
-          <div className="grid lg:grid-cols-4 gap-8 lg:gap-6">
+          {/* Mobile: Vertical Stack, Desktop: Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
             {steps.map((step, index) => {
               const isActive = activeStep === index;
               
@@ -82,9 +83,9 @@ export function ProcessSteps() {
                 >
                   <div className="flex flex-col items-center text-center">
                     {/* Main Circle with Number */}
-                    <div className="relative z-10 mb-6">
+                    <div className="relative z-10 mb-4 sm:mb-6">
                       {/* Main Circle with Number */}
-                      <div className={`w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-xl transition-all duration-300 ${
+                      <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-white text-lg sm:text-2xl font-bold shadow-xl transition-all duration-300 ${
                         isActive 
                           ? 'bg-gradient-to-br from-accent to-accent/80 shadow-2xl' 
                           : 'bg-gradient-to-br from-accent/90 to-accent/70'
@@ -93,26 +94,26 @@ export function ProcessSteps() {
                       </div>
                     </div>
                     
-                    {/* Connection Line */}
+                    {/* Connection Line - Hidden on mobile, visible on desktop */}
                     {index < steps.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-accent/40 to-accent/20 z-0"></div>
+                      <div className="hidden lg:block absolute top-6 sm:top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-accent/40 to-accent/20 z-0"></div>
                     )}
                     
                     {/* Content Card */}
-                    <div className={`bg-white p-5 shadow-lg border-2 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2 h-32 flex flex-col justify-center ${
+                    <div className={`bg-white p-4 sm:p-5 shadow-lg border-2 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2 h-28 sm:h-32 flex flex-col justify-center w-full ${
                       isActive 
                         ? 'border-accent shadow-xl scale-105' 
                         : 'border-gray-100 group-hover:border-accent/50'
                     }`}>
-                      <h3 className={`text-lg font-bold mb-3 leading-loose transition-colors duration-300 ${
+                      <h3 className={`text-base sm:text-lg font-bold mb-2 sm:mb-3 leading-tight sm:leading-loose transition-colors duration-300 ${
                         isActive ? 'text-accent' : 'text-gray-900'
                       }`}>
                         {step.title}
                       </h3>
                       
-                      {/* Subtext on Hover */}
+                      {/* Subtext - Always visible on mobile, hover on desktop */}
                       <div className={`text-xs text-accent font-medium transition-all duration-300 ${
-                        isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                        isActive ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2'
                       }`}>
                         {step.subtext}
                       </div>
