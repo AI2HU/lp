@@ -8,6 +8,7 @@ import { Footer } from "@/component/Footer";
 import { FaRocket, FaEuroSign, FaLock, FaSyncAlt, FaBolt, FaCheck, FaTimes } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -272,7 +273,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 max-w-4xl mx-auto">
               <p className="text-lg text-gray-700 leading-relaxed">
-                <span className="font-semibold text-accent">Ces plateformes génèrent du code avec l'IA</span>, 
+                <span className="font-semibold text-accent">Ces plateformes génèrent du code avec l&apos;IA</span>, 
                 mais vous restez prisonnier de leurs écosystèmes. 
                 <span className="font-semibold text-accent"><br />A2H vous libère</span> en transformant ce code IA 
                 en code humain que vous possédez entièrement et pouvez déployer partout.
@@ -411,12 +412,12 @@ export default function Home() {
             </div>
             <p className="text-sm text-gray-500 max-w-xl mx-auto">
               Vous voulez voir un cas d&apos;utilisation réel d&apos;A2H en action ?<br/>
-              <a 
+              <Link 
                 href="/blog/reprendre-main-code-lovable-prototype-controle-total"
                 className="text-accent hover:text-accent/80 underline font-medium transition-colors duration-200"
               >
                 Consultez notre article de blog
-              </a> pour un exemple détaillé.
+              </Link> pour un exemple détaillé.
             </p>
           </div>
         </div>
