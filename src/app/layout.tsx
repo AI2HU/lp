@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "A2H - Libérez vos applications générées par IA",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-JJGT6CSEFN" />
     </html>
   );
 }

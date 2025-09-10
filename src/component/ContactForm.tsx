@@ -147,7 +147,7 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-semibold mb-2">
-            Nom de l'entreprise *
+            Nom de l&apos;entreprise *
           </label>
           <input
             type="text"

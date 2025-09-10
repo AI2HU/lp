@@ -1,18 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const menuItems = [
+  const menuItems = useMemo(() => [
     { id: "benefits", label: "Avantages" },
     { id: "comparison", label: "Comparaison" },
     { id: "pricing-calculator", label: "Calculateur" },
     { id: "process", label: "Processus" }
-  ];
+  ], []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +37,7 @@ export function Nav() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [menuItems]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

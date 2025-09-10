@@ -157,7 +157,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Économies spectaculaires</h3>
               <p className="text-gray-600 leading-relaxed">
-                Éliminez définitivement les frais d'abonnement IA. Notre migration unique est rentabilisée en seulement 5 mois.
+                Éliminez définitivement les frais d&apos;abonnement IA. Notre migration unique est rentabilisée en seulement 5 mois.
               </p>
             </div>
             <div className="group text-center p-8 bg-white  shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-accent/20 hover:-translate-y-2">
@@ -175,7 +175,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Migration transparente</h3>
               <p className="text-gray-600 leading-relaxed">
-                Notre équipe d'élite gère l'ensemble de la transition sans interruption de service et avec un impact minimal sur vos opérations.
+                Notre équipe d&apos;élite gère l&apos;ensemble de la transition sans interruption de service et avec un impact minimal sur vos opérations.
               </p>
             </div>
             <div className="group text-center p-8 bg-white  shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-accent/20 hover:-translate-y-2">
@@ -184,7 +184,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">Performance améliorée</h3>
               <p className="text-gray-600 leading-relaxed">
-                Nous ne nous contentons pas de convertir—nous optimisons. Attendez-vous à un code plus propre, des performances accrues et l'élimination des bizarreries générées par l'IA.
+                Nous ne nous contentons pas de convertir—nous optimisons. Attendez-vous à un code plus propre, des performances accrues et l&apos;élimination des bizarreries générées par l&apos;IA.
               </p>
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center text-accent">
                   <span className="text-2xl mr-4">✓</span>
-                  <span className="text-lg font-medium">Déployez n'importe où, sans verrouillage par le fournisseur</span>
+                  <span className="text-lg font-medium">Déployez n&apos;importe où, sans verrouillage par le fournisseur</span>
                 </li>
               </ul>
             </div>
@@ -299,7 +299,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/80 backdrop-blur-sm  p-12 shadow-2xl border border-accent/20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
-              Prêt à vous libérer de la dépendance à l'IA ?
+              Prêt à vous libérer de la dépendance à l&apos;IA ?
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
               Faites le premier pas vers une véritable propriété du code
@@ -316,7 +316,7 @@ export default function Home() {
               </button>
             </div>
             <p className="text-sm text-gray-500 max-w-xl mx-auto">
-              Vous voulez voir un cas d'utilisation réel d'A2H en action ? Consultez notre article de blog pour un exemple détaillé.
+              Vous voulez voir un cas d&apos;utilisation réel d&apos;A2H en action ? Consultez notre article de blog pour un exemple détaillé.
             </p>
           </div>
         </div>

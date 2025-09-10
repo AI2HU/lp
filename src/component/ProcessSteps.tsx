@@ -56,7 +56,7 @@ export function ProcessSteps() {
               Quatre étapes simples
             </h2>
             <p className="text-lg text-gray-600 mb-4 max-w-2xl mx-auto">
-              Optez pour l'indépendance complète du code
+              Optez pour l&apos;indépendance complète du code
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-accent/50 mx-auto"></div>
           </div>
