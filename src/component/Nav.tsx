@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
 
 export function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,8 @@ export function Nav() {
     { id: "pricing-calculator", label: "Calculateur" },
     { id: "process", label: "Processus" }
   ], []);
+
+  const blogItem = { href: "/blog", label: "Blog" };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,6 +81,12 @@ export function Nav() {
                   {item.label}
                 </button>
               ))}
+              <Link
+                href={blogItem.href}
+                className="px-4 py-2 text-sm font-medium transition-all duration-300 text-accent hover:bg-accent/5"
+              >
+                {blogItem.label}
+              </Link>
             </div>
           </div>
 
@@ -85,11 +94,7 @@ export function Nav() {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection("contact")}
-              className={`px-6 py-2 text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
-                isScrolled
-                  ? 'bg-accent text-white hover:bg-accent/90'
-                  : 'bg-white text-accent hover:bg-accent hover:text-white'
-              }`}
+              className="px-6 py-2 text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-accent text-white hover:bg-accent/90"
             >
               Contact
             </button>
@@ -138,6 +143,13 @@ export function Nav() {
                   {item.label}
                 </button>
               ))}
+              <Link
+                href={blogItem.href}
+                className="block px-3 py-2 text-base font-medium w-full text-left transition-all duration-300 text-gray-700 hover:text-accent hover:bg-accent/10"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {blogItem.label}
+              </Link>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="bg-accent text-white block px-3 py-2 text-base font-medium w-full text-left hover:bg-accent/90 transition-all duration-300 shadow-lg"
