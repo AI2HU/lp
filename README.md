@@ -1,17 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A2H Landing Page
+
+This is a [Next.js](https://nextjs.org) project for the A2H landing page, featuring a contact form integrated with Brevo (formerly Sendinblue).
+
+## Environment Setup
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+BREVO_API_KEY=xkeysib-your-api-key-here
+```
+
+To get your Brevo API key:
+1. Go to [Brevo](https://www.brevo.com/)
+2. Sign in to your account
+3. Go to Settings > API Keys
+4. Create a new API key
+5. Copy the key and add it to your `.env.local` file
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

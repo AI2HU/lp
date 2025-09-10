@@ -59,11 +59,15 @@ export function ContactForm() {
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string>("");
 
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
+    }
+    if (submitError) {
+      setSubmitError("");
     }
   };
 
@@ -93,17 +97,27 @@ export function ContactForm() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setSubmitError("");
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Here you would normally send the data to your API
-      console.log("Form data:", formData);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Erreur lors de l\'envoi du formulaire');
+      }
       
       setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmitError('Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
     } finally {
       setIsSubmitting(false);
     }
@@ -122,6 +136,7 @@ export function ContactForm() {
         <button
           onClick={() => {
             setIsSubmitted(false);
+            setSubmitError("");
             setFormData({
               company: "",
               firstName: "",
@@ -313,6 +328,12 @@ export function ContactForm() {
           </div>
         </label>
       </div>
+
+      {submitError && (
+        <div className="bg-red-50 border-2 border-red-200 p-4 text-center">
+          <p className="text-red-600 font-semibold">{submitError}</p>
+        </div>
+      )}
 
       <button
         type="submit"

@@ -123,10 +123,10 @@ export function PricingCalculator() {
         <div className="text-center">
           <button 
             onClick={scrollToContact}
-            className="bg-accent text-white px-12 py-5 text-xl font-semibold hover:bg-accent/80 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 mx-auto"
+            className="bg-accent text-white px-6 py-3 md:px-12 md:py-5 text-lg md:text-xl font-semibold hover:bg-accent/80 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 md:gap-3 mx-auto"
           >
             Commencer maintenant
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
