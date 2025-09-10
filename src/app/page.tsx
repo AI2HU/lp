@@ -7,6 +7,7 @@ import { ProcessSteps } from "@/component/ProcessSteps";
 import { Footer } from "@/component/Footer";
 import { FaRocket, FaEuroSign, FaLock, FaSyncAlt, FaBolt, FaCheck, FaTimes } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -156,7 +157,7 @@ export default function Home() {
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                 <FaEuroSign className="text-accent text-3xl sm:text-4xl" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">Économies spectaculaires</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">Économies importantes</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Éliminez définitivement les frais d&apos;abonnement IA. Notre migration unique est rentabilisée en seulement 5 mois.
               </p>
@@ -185,7 +186,96 @@ export default function Home() {
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-900">Performance améliorée</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                Nous ne nous contentons pas de convertir—nous optimisons. Attendez-vous à un code plus propre, des performances accrues et l&apos;élimination des bizarreries générées par l&apos;IA.
+                Nous ne nous contentons pas de convertir, nous optimisons. Attendez-vous à un code plus propre, des performances accrues et l&apos;élimination des bizarreries générées par l&apos;IA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Services Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
+              A2H vous aide à migrer de ces services
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Les agents IA créent du code, mais vous restez dépendant de leurs plateformes. 
+              Nous vous libérons de cette dépendance en convertissant votre code IA en code humain robuste.
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent/50 mx-auto"></div>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+            <div className="group flex flex-col items-center p-4">
+              <div className="relative w-16 h-16 mb-2 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/images/base44.png"
+                  alt="Base44"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-gray-700 text-center">Base44</h3>
+            </div>
+            
+            <div className="group flex flex-col items-center p-4">
+              <div className="relative w-16 h-16 mb-2 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/images/bolt.png"
+                  alt="Bolt"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-gray-700 text-center">Bolt</h3>
+            </div>
+            
+            <div className="group flex flex-col items-center p-4">
+              <div className="relative w-16 h-16 mb-2 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/images/hostinger.png"
+                  alt="Hostinger"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-gray-700 text-center">Hostinger</h3>
+            </div>
+            
+            <div className="group flex flex-col items-center p-4">
+              <div className="relative w-16 h-16 mb-2 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/images/lovable.png"
+                  alt="Lovable"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-gray-700 text-center">Lovable</h3>
+            </div>
+            
+            <div className="group flex flex-col items-center p-4">
+              <div className="relative w-16 h-16 mb-2 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/images/replit.png"
+                  alt="Replit"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-semibold text-gray-700 text-center">Replit</h3>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 max-w-4xl mx-auto">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <span className="font-semibold text-accent">Ces plateformes génèrent du code avec l'IA</span>, 
+                mais vous restez prisonnier de leurs écosystèmes. 
+                <span className="font-semibold text-accent"><br />A2H vous libère</span> en transformant ce code IA 
+                en code humain que vous possédez entièrement et pouvez déployer partout.
               </p>
             </div>
           </div>
@@ -197,7 +287,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
-              Comparer et Économiser
+              Comparer et économiser
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent/50 mx-auto "></div>
           </div>
@@ -312,12 +402,21 @@ export default function Home() {
               >
                 Commencer la migration
               </button>
-              <button className="border-2 border-accent text-accent px-12 py-5  text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button 
+                onClick={() => window.location.href = '/blog'}
+                className="border-2 border-accent text-accent px-12 py-5  text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
                 Consulter notre blog
               </button>
             </div>
             <p className="text-sm text-gray-500 max-w-xl mx-auto">
-              Vous voulez voir un cas d&apos;utilisation réel d&apos;A2H en action ? Consultez notre article de blog pour un exemple détaillé.
+              Vous voulez voir un cas d&apos;utilisation réel d&apos;A2H en action ?<br/>
+              <a 
+                href="/blog/reprendre-main-code-lovable-prototype-controle-total"
+                className="text-accent hover:text-accent/80 underline font-medium transition-colors duration-200"
+              >
+                Consultez notre article de blog
+              </a> pour un exemple détaillé.
             </p>
           </div>
         </div>
