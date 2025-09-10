@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     // Initialize API with API key
     const contactAPI = new ContactsApi();
-    (contactAPI as any).authentications.apiKey.apiKey = apiKey;
+    (contactAPI as unknown as { authentications: { apiKey: { apiKey: string } } }).authentications.apiKey.apiKey = apiKey;
 
     // Create contact object
     const contact = new CreateContact();
@@ -59,38 +59,50 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error creating contact:', error);
     
+    // Type guard to check if error has response property
+    const isAxiosError = (err: unknown): err is { response?: { data?: { message?: string }; status?: number }; status?: number; body?: { message?: string }; message?: string } => {
+      return typeof err === 'object' && err !== null;
+    };
+    
     // Log the full error response for debugging
-    if (error.response) {
+    if (isAxiosError(error) && error.response) {
       console.error('Error response data:', error.response.data);
       console.error('Error response status:', error.response.status);
     }
     
     // Provide more specific error messages
     let errorMessage = 'Erreur lors de la création du contact';
-    let details = error.response?.data?.message || error.body?.message || error.message;
+    let details = 'Une erreur inattendue s\'est produite';
     
-    if (error.status === 401) {
-      errorMessage = 'Erreur d\'authentification';
-      details = 'Clé API invalide ou expirée';
-    } else if (error.status === 400) {
-      errorMessage = 'Données invalides';
-      details = error.response?.data?.message || 'Vérifiez que tous les champs sont correctement remplis';
-    } else if (error.status === 403) {
-      errorMessage = 'Accès refusé';
-      details = 'Permissions insuffisantes pour créer le contact';
+    if (isAxiosError(error)) {
+      details = error.response?.data?.message || error.body?.message || error.message || details;
+      
+      const status = error.status || error.response?.status;
+      if (status === 401) {
+        errorMessage = 'Erreur d\'authentification';
+        details = 'Clé API invalide ou expirée';
+      } else if (status === 400) {
+        errorMessage = 'Données invalides';
+        details = error.response?.data?.message || 'Vérifiez que tous les champs sont correctement remplis';
+      } else if (status === 403) {
+        errorMessage = 'Accès refusé';
+        details = 'Permissions insuffisantes pour créer le contact';
+      }
     }
 
     console.error('Error creating contact:', errorMessage, details);
+    
+    const status = isAxiosError(error) ? (error.status || error.response?.status || 500) : 500;
     
     return NextResponse.json(
       { 
         error: errorMessage,
         details: details
       },
-      { status: error.status || 500 }
+      { status }
     );
   }
 }
