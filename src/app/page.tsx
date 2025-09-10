@@ -133,7 +133,7 @@ export default function Home() {
               onClick={() => document.getElementById("pricing-calculator")?.scrollIntoView({ behavior: "smooth" })}
               className="border-2 border-accent text-accent px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Voir un exemple
+              Voir une estimation
             </button>
           </div>
         </div>
