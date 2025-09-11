@@ -1,114 +1,159 @@
 "use client";
 
 import { FaRocket } from "react-icons/fa";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 interface HeroSectionProps {
   scrollY: number;
 }
 
-export function HeroSection({ scrollY }: HeroSectionProps) {
+export function HeroSection({}: HeroSectionProps) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  
+  // Transform scroll progress to various animation values
+  const backgroundRotation = useTransform(scrollYProgress, [0, 1], [135, 145]);
+  
+  // Background radial gradient positions
+  const radial1X = useTransform(scrollYProgress, [0, 1], [50, 60]);
+  const radial1Y = useTransform(scrollYProgress, [0, 1], [30, 40]);
+  const radial2X = useTransform(scrollYProgress, [0, 1], [80, 70]);
+  const radial2Y = useTransform(scrollYProgress, [0, 1], [70, 60]);
+  
+  // Floating elements positions
+  const element1Y = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const element1X = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const element1Scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  
+  const element2Y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const element2X = useTransform(scrollYProgress, [0, 1], [0, -25]);
+  const element2Scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  
+  const element3Y = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const element3X = useTransform(scrollYProgress, [0, 1], [0, 64]);
+  const element3Rotate = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  
+  const element4Y = useTransform(scrollYProgress, [0, 1], [0, 80]);
+  const element4X = useTransform(scrollYProgress, [0, 1], [0, -48]);
+  const element4Rotate = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  
+  // Content positions
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 20]);
+  const titleY = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const subtitleY = useTransform(scrollYProgress, [0, 1], [0, 30]);
+  const highlightY = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const buttonsY = useTransform(scrollYProgress, [0, 1], [0, 60]);
   return (
-    <section 
+    <motion.section 
+      ref={ref}
       id="hero" 
       className="relative py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden"
       style={{
-        background: `linear-gradient(${135 + scrollY * 0.1}deg, 
-          rgba(249, 250, 251, ${1 - scrollY * 0.002}) 0%, 
-          rgba(255, 255, 255, ${1 - scrollY * 0.001}) 50%, 
-          rgba(93, 56, 145, ${0.05 + scrollY * 0.0005}) 100%)`
+        background: `linear-gradient(${backgroundRotation}deg, 
+          rgba(249, 250, 251, 1) 0%, 
+          rgba(255, 255, 255, 1) 50%, 
+          rgba(93, 56, 145, 0.05) 100%)`
       }}
     >
       {/* Dynamic Background Elements */}
-      <div 
-        className="absolute inset-0 transition-all duration-1000"
+      <motion.div 
+        className="absolute inset-0"
         style={{
-          background: `radial-gradient(circle at ${50 + scrollY * 0.1}% ${30 + scrollY * 0.05}%, 
-            rgba(93, 56, 145, ${0.1 - scrollY * 0.0001}) 0%, 
+          background: `radial-gradient(circle at ${radial1X}% ${radial1Y}%, 
+            rgba(93, 56, 145, 0.1) 0%, 
             transparent 50%), 
-            radial-gradient(circle at ${80 - scrollY * 0.1}% ${70 - scrollY * 0.05}%, 
-            rgba(93, 56, 145, ${0.05 - scrollY * 0.00005}) 0%, 
+            radial-gradient(circle at ${radial2X}% ${radial2Y}%, 
+            rgba(93, 56, 145, 0.05) 0%, 
             transparent 50%)`
         }}
       />
       
       {/* Animated Decorative Elements */}
-      <div 
-        className="absolute top-20 left-10 w-20 h-20 bg-accent/10 blur-xl transition-all duration-1000"
+      <motion.div 
+        className="absolute top-20 left-10 w-20 h-20 bg-accent/10 blur-xl"
         style={{
-          transform: `translate(${scrollY * 0.1}px, ${scrollY * 0.05}px) scale(${1 + scrollY * 0.0001})`,
-          opacity: Math.max(0.3, 1 - scrollY * 0.002)
+          x: element1X,
+          y: element1Y,
+          scale: element1Scale
         }}
       />
-      <div 
-        className="absolute bottom-20 right-10 w-32 h-32 bg-accent/5 blur-2xl transition-all duration-1000"
+      <motion.div 
+        className="absolute bottom-20 right-10 w-32 h-32 bg-accent/5 blur-2xl"
         style={{
-          transform: `translate(${-scrollY * 0.05}px, ${-scrollY * 0.1}px) scale(${1 + scrollY * 0.0002})`,
-          opacity: Math.max(0.2, 1 - scrollY * 0.001)
+          x: element2X,
+          y: element2Y,
+          scale: element2Scale
         }}
       />
       
       {/* Additional floating elements */}
-      <div 
-        className="absolute top-1/3 right-1/4 w-16 h-16 bg-accent/5 blur-lg transition-all duration-1000"
+      <motion.div 
+        className="absolute top-1/3 right-1/4 w-16 h-16 bg-accent/5 blur-lg"
         style={{
-          transform: `translate(${scrollY * 0.08}px, ${scrollY * 0.03}px) rotate(${scrollY * 0.1}deg)`,
-          opacity: Math.max(0.1, 0.8 - scrollY * 0.001)
+          x: element3X,
+          y: element3Y,
+          rotate: element3Rotate
         }}
       />
-      <div 
-        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-accent/8 blur-md transition-all duration-1000"
+      <motion.div 
+        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-accent/8 blur-md"
         style={{
-          transform: `translate(${-scrollY * 0.06}px, ${scrollY * 0.08}px) rotate(${-scrollY * 0.15}deg)`,
-          opacity: Math.max(0.1, 0.6 - scrollY * 0.001)
+          x: element4X,
+          y: element4Y,
+          rotate: element4Rotate
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
-        <div 
-          className="inline-flex bg-accent/10 text-accent px-4 py-2 text-sm font-semibold mb-8 items-center gap-2 transition-all duration-1000"
+      <motion.div 
+        className="relative z-10 max-w-7xl mx-auto text-center"
+        style={{
+          y: contentY
+        }}
+      >
+        <motion.div 
+          className="inline-flex bg-accent/10 text-accent px-4 py-2 text-sm font-semibold mb-8 items-center gap-2"
           style={{
-            transform: `translateY(${scrollY * 0.02}px)`,
-            opacity: Math.max(0.7, 1 - scrollY * 0.001)
+            y: contentY
           }}
         >
           <FaRocket className="text-accent" />
           Migration IA vers Code Humain
-        </div>
-        <h1 
-          className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-gray-800 to-accent bg-clip-text text-transparent transition-all duration-1000"
+        </motion.div>
+        <motion.h1 
+          className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-gray-800 to-accent bg-clip-text text-transparent"
           style={{
-            transform: `translateY(${scrollY * 0.05}px)`,
-            opacity: Math.max(0.8, 1 - scrollY * 0.0008),
+            y: titleY,
             lineHeight: '1.1'
           }}
         >
           Libérez votre code IA
-        </h1>
-        <p 
-          className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed transition-all duration-1000"
+        </motion.h1>
+        <motion.p 
+          className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed"
           style={{
-            transform: `translateY(${scrollY * 0.03}px)`,
-            opacity: Math.max(0.6, 1 - scrollY * 0.0006)
+            y: subtitleY
           }}
         >
           Éliminez définitivement les coûteux abonnements IA grâce à notre migration unique vers un code <span className="text-accent font-semibold">plus robuste</span>, <span className="text-accent font-semibold">facile à maintenir</span> et <span className="text-accent font-semibold">à mettre à jour</span>
-        </p>
-        <div 
-          className="bg-white/80 backdrop-blur-sm border border-accent/20 p-4 sm:p-6 max-w-2xl mx-auto mb-8 sm:mb-12 transition-all duration-1000"
+        </motion.p>
+        <motion.div 
+          className="bg-white/80 backdrop-blur-sm border border-accent/20 p-4 sm:p-6 max-w-2xl mx-auto mb-8 sm:mb-12"
           style={{
-            transform: `translateY(${scrollY * 0.04}px)`,
-            opacity: Math.max(0.5, 1 - scrollY * 0.0005)
+            y: highlightY
           }}
         >
           <p className="text-base sm:text-lg lg:text-xl font-semibold text-accent">
             Maximisez votre ROI et prenez le contrôle total de votre technologie
           </p>
-        </div>
-        <div 
-          className="flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000"
+        </motion.div>
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-6 justify-center"
           style={{
-            transform: `translateY(${scrollY * 0.06}px)`,
-            opacity: Math.max(0.4, 1 - scrollY * 0.0004)
+            y: buttonsY
           }}
         >
           <button 
@@ -123,8 +168,8 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
           >
             Voir une estimation
           </button>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }

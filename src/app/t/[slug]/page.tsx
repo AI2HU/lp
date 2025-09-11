@@ -6,6 +6,7 @@ import { BenefitsSection } from "@/component/BenefitsSection";
 import { AIServicesSection } from "@/component/AIServicesSection";
 import { ComparisonSection } from "@/component/ComparisonSection";
 import { ContactSection } from "@/component/ContactSection";
+import { CloudProvidersSection } from "@/component/CloudProvidersSection";
 import { useState, useEffect, use } from "react";
 import Link from "next/link";
 
@@ -246,6 +247,7 @@ export default function TargetPage({ params }: TargetPageProps) {
       <BenefitsSection />
       <AIServicesSection />
       <ComparisonSection />
+      <CloudProvidersSection />
       
       {/* Pricing Calculator Section */}
       <section id="pricing-calculator" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">

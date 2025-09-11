@@ -10,6 +10,7 @@ import { AIServicesSection } from "@/component/AIServicesSection";
 import { ComparisonSection } from "@/component/ComparisonSection";
 import { ContactSection } from "@/component/ContactSection";
 import { CTASection } from "@/component/CTASection";
+import { CloudProvidersSection } from "@/component/CloudProvidersSection";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <BenefitsSection />
         <AIServicesSection />
         <ComparisonSection />
+        <CloudProvidersSection />
 
       {/* Pricing Calculator Section */}
       <section id="pricing-calculator" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
