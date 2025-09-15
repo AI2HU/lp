@@ -19,10 +19,10 @@ export function CTASection() {
               Commencer la migration
             </button>
             <button 
-              onClick={() => window.location.href = '/blog'}
+              onClick={() => window.open('https://calendly.com/jonathan-ai2h/30min', '_blank')}
               className="border-2 border-accent text-accent px-12 py-5  text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Consulter notre blog
+              Debug Express
             </button>
           </div>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
