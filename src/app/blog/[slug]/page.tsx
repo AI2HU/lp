@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getBlogPost, getAllBlogPosts } from '@/lib/blog-posts'
 import { FaCalendarAlt, FaClock, FaUser, FaTag, FaArrowLeft } from 'react-icons/fa'
+import { Footer } from '@/component/Footer'
 
 interface BlogPostPageProps {
   params: {
@@ -149,6 +150,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   )
 }

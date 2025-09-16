@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getAllBlogPosts } from '@/lib/blog-posts'
 import { FaCalendarAlt, FaClock, FaUser, FaTag } from 'react-icons/fa'
+import { Footer } from '@/component/Footer'
 
 export default function BlogPage() {
   const posts = getAllBlogPosts()
@@ -10,7 +11,7 @@ export default function BlogPage() {
       {/* Header */}
       <div className="bg-gradient-to-br from-gray-50 via-white to-accent/5 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent leading-tight">
             Blog A2H
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -131,6 +132,8 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   )
 }
