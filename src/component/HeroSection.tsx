@@ -163,10 +163,10 @@ export function HeroSection({}: HeroSectionProps) {
             Découvrir A2H
           </button>
           <button 
-            onClick={() => document.getElementById("pricing-calculator")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => window.open('https://calendly.com/jonathan-ai2h/30min', '_blank')}
             className="border-2 border-accent text-accent px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            Voir une estimation
+            Debug Express
           </button>
         </motion.div>
       </motion.div>
