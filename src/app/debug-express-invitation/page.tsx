@@ -3,15 +3,14 @@
 import { useSearchParams } from "next/navigation";
 import { FaCheckCircle, FaCalendarAlt, FaUser, FaEnvelope, FaClock } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Suspense } from "react";
 
-export default function DebugExpressInvitationPage() {
+function DebugExpressContent() {
   const searchParams = useSearchParams();
   
   // Extract parameters from URL
   const assignedTo = searchParams.get('assigned_to') || '';
-  const eventTypeName = searchParams.get('event_type_name') || 'Debug Express';
   const eventStartTime = searchParams.get('event_start_time') || '';
-  const eventEndTime = searchParams.get('event_end_time') || '';
   const inviteeFirstName = searchParams.get('invitee_first_name') || '';
   const inviteeLastName = searchParams.get('invitee_last_name') || '';
   const inviteeFullName = searchParams.get('invitee_full_name') || '';
@@ -31,21 +30,7 @@ export default function DebugExpressInvitationPage() {
         minute: '2-digit',
         timeZone: 'Europe/Paris'
       });
-    } catch (error) {
-      return dateTimeString;
-    }
-  };
-
-  const formatTime = (dateTimeString: string) => {
-    if (!dateTimeString) return '';
-    try {
-      const date = new Date(dateTimeString);
-      return date.toLocaleTimeString('fr-FR', {
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZone: 'Europe/Paris'
-      });
-    } catch (error) {
+    } catch {
       return dateTimeString;
     }
   };
@@ -188,7 +173,7 @@ export default function DebugExpressInvitationPage() {
               onClick={() => window.location.href = '/'}
               className="border-2 border-accent text-accent px-8 py-4 text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Retour à l'accueil
+              Retour à l&apos;accueil
             </button>
           </motion.div>
 
@@ -207,5 +192,20 @@ export default function DebugExpressInvitationPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function DebugExpressInvitationPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-accent/5 via-white to-accent/10 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4"></div>
+          <p className="text-gray-600">Chargement...</p>
+        </div>
+      </div>
+    }>
+      <DebugExpressContent />
+    </Suspense>
   );
 }
