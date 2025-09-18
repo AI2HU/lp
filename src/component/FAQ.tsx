@@ -33,7 +33,7 @@ const faqData: FAQItem[] = [
         >
           Debug Express
         </button>
-        {" "}! Échangeons 15 minutes pour débloquer votre situation. Le partage du code source n'est pas nécessaire.
+        {" "}! Échangeons 15 minutes pour débloquer votre situation. Le partage du code source n&apos;est pas nécessaire.
       </>
     )
   }

@@ -4,7 +4,9 @@ import { FaCalendarAlt, FaClock, FaUser, FaTag } from 'react-icons/fa'
 import { Footer } from '@/component/Footer'
 
 export default function BlogPage() {
-  const posts = getAllBlogPosts()
+  const posts = getAllBlogPosts().sort((a, b) => 
+    new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  )
 
   return (
     <div className="min-h-screen bg-white">
