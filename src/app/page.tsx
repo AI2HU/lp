@@ -11,6 +11,7 @@ import { ComparisonSection } from "@/component/ComparisonSection";
 import { ContactSection } from "@/component/ContactSection";
 import { CTASection } from "@/component/CTASection";
 import { CloudProvidersSection } from "@/component/CloudProvidersSection";
+import { FAQ } from "@/component/FAQ";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
       </section>
 
       <ProcessSteps />
+        <FAQ />
         <ContactSection />
         <CTASection />
       <Footer />

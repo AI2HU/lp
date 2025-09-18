@@ -121,7 +121,7 @@ export function HeroSection({}: HeroSectionProps) {
           }}
         >
           <FaRocket className="text-accent" />
-          Migration IA vers Code Humain
+          Migration code IA vers Code Humain
         </motion.div>
         <motion.h1 
           className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-gray-800 to-accent bg-clip-text text-transparent"
@@ -130,7 +130,7 @@ export function HeroSection({}: HeroSectionProps) {
             lineHeight: '1.1'
           }}
         >
-          Libérez votre code IA
+          Code&nbsp;IA&nbsp;trop&nbsp;cher&nbsp;?<br />Migrez&nbsp;vers&nbsp;du&nbsp;code&nbsp;humain
         </motion.h1>
         <motion.p 
           className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed"

@@ -10,7 +10,7 @@ export function Footer() {
             A2H
           </h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-            Libérez votre code IA
+            Migrez votre code IA vers du code humain
           </p>
         </div>
         

@@ -7,6 +7,7 @@ import { AIServicesSection } from "@/component/AIServicesSection";
 import { ComparisonSection } from "@/component/ComparisonSection";
 import { ContactSection } from "@/component/ContactSection";
 import { CloudProvidersSection } from "@/component/CloudProvidersSection";
+import { FAQ } from "@/component/FAQ";
 import { useState, useEffect, use } from "react";
 import Link from "next/link";
 
@@ -22,12 +23,12 @@ const keywordConfigs: Record<string, {
 }> = {
   "vibe-code": {
     heroTitle: "Libérez votre vibe code",
-    heroSubtitle: "Migration IA vers code humain",
+    heroSubtitle: "Migration code IA vers code humain",
     heroDescription: "Éliminez définitivement les coûteux abonnements IA grâce à notre migration unique vers un code plus robuste, facile à maintenir et à mettre à jour",
     ctaTitle: "Gagnez du temps et de l'argent",
     ctaDescription: "Faites le premier pas vers une véritable propriété du code",
-    metaTitle: "Migration IA vers code humain - A2H",
-    metaDescription: "Libérez votre code IA des abonnements coûteux. Migration unique vers un code humain robuste et maintenable."
+    metaTitle: "Migration code IA vers code humain - A2H",
+    metaDescription: "Migrez votre code IA vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code robuste et maintenable."
   },
   "code-ia-trop-cher": {
     heroTitle: "L'IA coûte trop cher ?",
@@ -41,7 +42,7 @@ const keywordConfigs: Record<string, {
   "code-ia-bloque": {
     heroTitle: "Votre code IA vous bloque ?",
     heroSubtitle: "Reprenez le contrôle de votre code",
-    heroDescription: "Vous êtes prisonnier de votre code généré par l'IA ? Reprenez le contrôle total avec notre migration qui transforme votre code IA en code humain que vous maîtrisez et pouvez modifier librement.",
+    heroDescription: "Reprenez le contrôle total avec notre migration qui transforme votre code IA en code humain que vous maîtrisez et pouvez modifier librement.",
     ctaTitle: "Reprenez le contrôle maintenant",
     ctaDescription: "Libérez-vous des contraintes du code IA",
     metaTitle: "Code IA bloqué ? Reprenez le contrôle - A2H",
@@ -257,6 +258,7 @@ export default function TargetPage({ params }: TargetPageProps) {
       </section>
 
       <ProcessSteps />
+      <FAQ />
       <ContactSection />
       <CustomCTASection />
     </>
