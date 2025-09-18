@@ -83,7 +83,7 @@ export function Footer() {
               © 2025 A2H. Tous droits réservés.
             </p>
             <div className="flex space-x-6">
-              <a href="https://www.linkedin.com/company/ai2h" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/ai2h" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin className="w-5 h-5" />
               </a>

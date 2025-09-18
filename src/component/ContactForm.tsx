@@ -168,7 +168,7 @@ export function ContactForm() {
             type="text"
             value={formData.company}
             onChange={(e) => handleInputChange("company", e.target.value)}
-            placeholder="Acme Inc."
+            placeholder="France SAS"
             className={`w-full h-12 px-4 text-lg border-2 bg-white/50 ${
               errors.company ? "border-red-500" : "border-gray-300 focus:border-accent"
             } focus:outline-none transition-colors`}
@@ -220,7 +220,7 @@ export function ContactForm() {
             type="email"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
-            placeholder="jean.dupont@example.com"
+            placeholder="jean.dupont@monentreprise.fr"
             className={`w-full h-12 px-4 text-lg border-2 bg-white/50 ${
               errors.email ? "border-red-500" : "border-gray-300 focus:border-accent"
             } focus:outline-none transition-colors`}

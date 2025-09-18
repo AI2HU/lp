@@ -22,7 +22,7 @@ const keywordConfigs: Record<string, {
   metaDescription: string;
 }> = {
   "vibe-code": {
-    heroTitle: "Libérez votre vibe code",
+    heroTitle: "Vibe&nbsp;code&nbsp;trop&nbsp;cher&nbsp;?<br />Migrez&nbsp;vers&nbsp;du code maintenable",
     heroSubtitle: "Migration code IA vers code humain",
     heroDescription: "Éliminez définitivement les coûteux abonnements IA grâce à notre migration unique vers un code plus robuste, facile à maintenir et à mettre à jour",
     ctaTitle: "Gagnez du temps et de l'argent",
@@ -31,7 +31,7 @@ const keywordConfigs: Record<string, {
     metaDescription: "Migrez votre code IA vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code robuste et maintenable."
   },
   "code-ia-trop-cher": {
-    heroTitle: "L'IA coûte trop cher ?",
+    heroTitle: "L'IA&nbsp;coûte&nbsp;trop&nbsp;cher&nbsp;?<br />Migrez&nbsp;vers&nbsp;du code maintenable",
     heroSubtitle: "Arrêtez de payer l'IA à vie",
     heroDescription: "Les abonnements IA deviennent un gouffre financier. Notre migration unique vous libère définitivement de ces coûts récurrents en transformant votre code IA en code humain que vous possédez entièrement.",
     ctaTitle: "Économisez des milliers d'euros",
@@ -40,7 +40,7 @@ const keywordConfigs: Record<string, {
     metaDescription: "Les abonnements IA sont trop chers ? Migrez vers un code humain que vous possédez. Économisez des milliers d'euros par an avec A2H."
   },
   "code-ia-bloque": {
-    heroTitle: "Votre code IA vous bloque ?",
+    heroTitle: "Votre&nbsp;code&nbsp;IA&nbsp;vous&nbsp;bloque&nbsp;?<br />Migrez vers du code maintenable",
     heroSubtitle: "Reprenez le contrôle de votre code",
     heroDescription: "Reprenez le contrôle total avec notre migration qui transforme votre code IA en code humain que vous maîtrisez et pouvez modifier librement.",
     ctaTitle: "Reprenez le contrôle maintenant",
@@ -156,9 +156,8 @@ export default function TargetPage({ params }: TargetPageProps) {
             opacity: Math.max(0.8, 1 - scrollY * 0.0008),
             lineHeight: '1.1'
           }}
-        >
-          {config.heroTitle}
-        </h1>
+          dangerouslySetInnerHTML={{ __html: config.heroTitle }}
+        />
         <p 
           className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed transition-all duration-1000"
           style={{

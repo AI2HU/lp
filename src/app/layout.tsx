@@ -3,11 +3,12 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Code IA trop cher ? Migrez vers du code humain - A2H",
-  description: "Code IA trop cher ? Migrez vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code maintenu par des experts.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://ai2h.tech'),
+  title: "Code IA trop cher ? Migrez vers du code maintenable - A2H",
+  description: "Code IA trop cher ? Migrez vers du code maintenable. Éliminez les abonnements coûteux avec notre migration unique vers un code maintenu par des experts.",
   openGraph: {
-    title: "Code IA trop cher ? Migrez vers du code humain - A2H",
-    description: "Code IA trop cher ? Migrez vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code maintenu par des experts",
+    title: "Code IA trop cher ? Migrez vers du code maintenable - A2H",
+    description: "Code IA trop cher ? Migrez vers du code maintenable. Éliminez les abonnements coûteux avec notre migration unique vers un code maintenu par des experts",
     images: [
       {
         url: "/images/a2h_banner.png",
@@ -21,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Code IA trop cher ? Migrez vers du code humain - A2H",
-    description: "Code IA trop cher ? Migrez vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code maintenu par des experts",
+    title: "Code IA trop cher ? Migrez vers du code maintenable - A2H",
+    description: "Code IA trop cher ? Migrez vers du code maintenable. Éliminez les abonnements coûteux avec notre migration unique vers un code maintenu par des experts",
     images: ["/images/a2h_banner.png"],
   },
 };

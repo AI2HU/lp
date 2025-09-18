@@ -105,11 +105,7 @@ export function Nav() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 transition-all duration-300 ${
-                isScrolled 
-                  ? 'text-gray-700 hover:text-accent hover:bg-accent/10' 
-                  : 'text-white hover:text-accent/90 hover:bg-white/20'
-              }`}
+              className={`p-2 transition-all duration-300 text-accent hover:text-accent hover:bg-accent/10`}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
