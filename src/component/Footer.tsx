@@ -21,24 +21,24 @@ export function Footer() {
               <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#benefits" className="text-gray-300 hover:font-bold transition-all duration-300">
+                  <Link href="/#benefits" className="text-gray-300 hover:font-bold transition-all duration-300">
                     Avantages
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#process" className="text-gray-300 hover:font-bold transition-all duration-300">
+                  <Link href="/#process" className="text-gray-300 hover:font-bold transition-all duration-300">
                     Processus
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#pricing-calculator" className="text-gray-300 hover:font-bold transition-all duration-300">
+                  <Link href="/#pricing-calculator" className="text-gray-300 hover:font-bold transition-all duration-300">
                     Calculateur
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-300 hover:font-bold transition-all duration-300">
+                  <Link href="/#contact" className="text-gray-300 hover:font-bold transition-all duration-300">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
