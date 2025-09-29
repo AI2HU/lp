@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,9 +61,15 @@ export function Nav() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className={`text-2xl font-bold transition-colors text-accent`}>
-              A2H
-            </h1>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="A2H Logo"
+                width={60}
+                height={60}
+                className="transition-all duration-300 hover:scale-105"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation - Center */}
