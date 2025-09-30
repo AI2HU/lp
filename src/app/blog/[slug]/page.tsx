@@ -98,9 +98,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
                   .replace(/\*(.*?)\*/g, '<em class="italic text-gray-700">$1</em>')
                   
-                  // Code blocks
-                  .replace(/`(.*?)`/g, '<code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono border">$1</code>')
-                  
                   // Lists
                   .replace(/^- (.*$)/gm, '<li class="mb-2 text-gray-700 leading-relaxed text-lg">$1</li>')
                   .replace(/^\d+\. (.*$)/gm, '<li class="mb-2 text-gray-700 leading-relaxed text-lg">$1</li>')
@@ -113,6 +110,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<h[1-6].*?)<\/p>/g, '$1')
                   .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<ul.*?)<\/p>/g, '$1')
                   .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<li.*?)<\/p>/g, '$1')
+
+                  // Code blocks
+                  .replace(/<code(?:\s+class="[^"]*")?>\s*([\s\S]*?)\s*<\/code>/g, '<pre class="bg-gray-100 border-1 border-gray-400 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm font-mono code-block">$1</code></pre>')
+                  // Inline code (single backticks)
+                  .replace(/`(.*?)`/g, '<code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono border">$1</code>')
                   
                   // Clean up empty paragraphs
                   .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><br><\/p>/g, '')
