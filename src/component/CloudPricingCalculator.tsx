@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function PricingCalculator() {
+export function CloudPricingCalculator() {
   const [monthlyPrice, setMonthlyPrice] = useState(100);
   const oneTimePrice = monthlyPrice * 5;
   const breakEvenMonths = 5;

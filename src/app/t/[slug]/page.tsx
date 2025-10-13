@@ -1,6 +1,7 @@
 "use client";
 
-import { PricingCalculator } from "@/component/PricingCalculator";
+import { CloudPricingCalculator } from "@/component/CloudPricingCalculator";
+import { TokenPricingCalculator } from "@/component/TokenPricingCalculator";
 import { ProcessSteps } from "@/component/ProcessSteps";
 import { BenefitsSection } from "@/component/BenefitsSection";
 import { AIServicesSection } from "@/component/AIServicesSection";
@@ -252,7 +253,11 @@ export default function TargetPage({ params }: TargetPageProps) {
       {/* Pricing Calculator Section */}
       <section id="pricing-calculator" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <PricingCalculator />
+          {resolvedParams.slug === "code-ia-trop-cher" ? (
+            <TokenPricingCalculator />
+          ) : (
+            <CloudPricingCalculator />
+          )}
         </div>
       </section>
 

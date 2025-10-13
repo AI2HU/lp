@@ -1,7 +1,7 @@
 "use client";
 
 import { Nav } from "@/component/Nav";
-import { PricingCalculator } from "@/component/PricingCalculator";
+import { CloudPricingCalculator } from "@/component/CloudPricingCalculator";
 import { ProcessSteps } from "@/component/ProcessSteps";
 import { Footer } from "@/component/Footer";
 import { HeroSection } from "@/component/HeroSection";
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Pricing Calculator Section */}
       <section id="pricing-calculator" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <PricingCalculator />
+          <CloudPricingCalculator />
         </div>
       </section>
 
