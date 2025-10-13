@@ -52,6 +52,11 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/manifeste" className="text-gray-300 hover:font-bold transition-all duration-300">
+                    Manifeste
+                  </Link>
+                </li>
+                <li>
                   <Link href="/blog/reprendre-main-code-lovable-prototype-controle-total" className="text-gray-300 hover:font-bold transition-all duration-300">
                     Cas d&apos;usage Lovable
                   </Link>
