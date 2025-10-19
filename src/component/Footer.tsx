@@ -68,7 +68,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/t/code-ia-trop-cher" className="text-gray-300 hover:font-bold transition-all duration-300">
-                    IA trop cher ?
+                    Code IA trop cher ?
                   </Link>
                 </li>
                 <li>
