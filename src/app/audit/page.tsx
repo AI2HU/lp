@@ -142,7 +142,7 @@ export default function AuditPage() {
               {result && (
                 <div className="mt-8 space-y-6">
                   <div className="bg-gray-50 border-2 border-gray-200 p-6">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Récapitulatif de l'audit</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Récapitulatif de l&apos;audit</h2>
                     <div className="space-y-2">
                       <p className="text-lg">
                         <span className="font-semibold">Site audité :</span> {result.url}
@@ -205,13 +205,13 @@ export default function AuditPage() {
               )}
 
               <div className="mt-12 bg-gray-50 border-2 border-gray-200 p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">À propos de l'audit de sécurité</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">À propos de l&apos;audit de sécurité</h2>
                 <p className="text-lg text-gray-700 mb-6">
                   Cet audit se concentre sur les problèmes de sécurité courants que les LLM laissent souvent passer lors de la production de code.
                 </p>
                 <div className="mt-8 space-y-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Pourquoi je n'ai pas accès à tout l'audit ?</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Pourquoi je n&apos;ai pas accès à tout l&apos;audit ?</h3>
                     <p className="text-gray-700">
                       Des failles critiques sur le site peuvent être découvertes. Par principe de divulgation responsable, un rapport complet est uniquement envoyé à une adresse email enregistrée sous le domaine de votre site.
                     </p>
