@@ -31,6 +31,10 @@ export default function AuditPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string>("");
   const [result, setResult] = useState<AuditResult | null>(null);
+  const [emailName, setEmailName] = useState("");
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [emailError, setEmailError] = useState<string>("");
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,6 +47,9 @@ export default function AuditPage() {
     setIsSubmitting(true);
     setError("");
     setResult(null);
+    setEmailName("");
+    setEmailError("");
+    setEmailSent(false);
 
     try {
       const response = await fetch('/api/goditor', {
@@ -88,6 +95,63 @@ export default function AuditPage() {
       'info': 'Information'
     };
     return translations[severity.toLowerCase()] || severity;
+  };
+
+  const extractDomain = (urlString: string): string => {
+    try {
+      const urlObj = new URL(urlString.startsWith('http') ? urlString : `https://${urlString}`);
+      return urlObj.hostname.replace(/^www\./, '');
+    } catch {
+      return urlString.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0];
+    }
+  };
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!emailName.trim()) {
+      setEmailError("Le nom d'email est requis");
+      return;
+    }
+
+    if (!result) {
+      setEmailError("Aucun résultat d'audit disponible");
+      return;
+    }
+
+    setIsSendingEmail(true);
+    setEmailError("");
+    setEmailSent(false);
+
+    try {
+      const domain = extractDomain(result.url);
+      const fullEmail = `${emailName.trim()}@${domain}`;
+
+      const response = await fetch('/api/goditor/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          url: result.url,
+          email: fullEmail,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Échec de l\'envoi de l\'email');
+      }
+
+      setEmailSent(true);
+      setEmailName("");
+    } catch (err) {
+      console.error("Error sending email:", err);
+      setEmailError(err instanceof Error ? err.message : 'Échec de l\'envoi de l\'email. Veuillez réessayer.');
+    } finally {
+      setIsSendingEmail(false);
+    }
   };
 
   return (
@@ -166,6 +230,66 @@ export default function AuditPage() {
                       </div>
                     </div>
                   </div>
+
+                  {result && (
+                    <div className="bg-blue-50 border-2 border-blue-200 p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-4">Recevoir le rapport complet par email</h3>
+                      {emailSent ? (
+                        <div className="bg-green-100 border-2 border-green-300 p-4 text-center">
+                          <p className="text-lg font-semibold text-green-800">
+                            Email envoyé avec succès ! Vérifiez votre boîte de réception.
+                          </p>
+                        </div>
+                      ) : (
+                        <form onSubmit={handleEmailSubmit} className="space-y-4">
+                          <div>
+                            <label htmlFor="emailName" className="block text-lg font-semibold mb-2">
+                              Nom d&apos;email
+                            </label>
+                            <div className="flex items-center gap-2">
+                              <input
+                                id="emailName"
+                                type="text"
+                                value={emailName}
+                                onChange={(e) => {
+                                  setEmailName(e.target.value);
+                                  setEmailError("");
+                                }}
+                                placeholder="votre-nom"
+                                className={`flex-1 h-12 px-4 text-lg border-2 bg-white ${
+                                  emailError ? "border-red-500" : "border-gray-300 focus:border-accent"
+                                } focus:outline-none transition-colors`}
+                                required
+                                pattern="[a-zA-Z0-9._-]+"
+                                title="Seuls les lettres, chiffres, points, tirets et underscores sont autorisés"
+                              />
+                              <span className="text-lg font-semibold text-gray-700 whitespace-nowrap">
+                                @{extractDomain(result.url)}
+                              </span>
+                            </div>
+                            {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
+                            <p className="text-sm text-gray-600 mt-2">
+                              Pour des raisons de sécurité l&apos;email doit être sur le même domaine que le site audité.
+                            </p>
+                          </div>
+                          <button
+                            type="submit"
+                            disabled={isSendingEmail}
+                            className="w-full bg-accent text-white h-12 text-lg font-semibold hover:bg-accent/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            {isSendingEmail ? (
+                              <div className="flex items-center justify-center gap-3">
+                                <div className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                                <span>Envoi en cours...</span>
+                              </div>
+                            ) : (
+                              "Envoyer le rapport par email"
+                            )}
+                          </button>
+                        </form>
+                      )}
+                    </div>
+                  )}
 
                   {result.findings.length > 0 ? (
                     <div className="space-y-4">
