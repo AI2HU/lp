@@ -17,6 +17,7 @@ export function Nav() {
   ], []);
 
   const blogItem = { href: "/blog", label: "Blog" };
+  const auditItem = { href: "/audit", label: "Audit" };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,10 +90,10 @@ export function Nav() {
                 </button>
               ))}
               <Link
-                href={blogItem.href}
+                href={auditItem.href}
                 className="px-4 py-2 text-sm font-medium transition-all duration-300 text-accent hover:bg-accent/5"
               >
-                {blogItem.label}
+                {auditItem.label}
               </Link>
             </div>
           </div>
@@ -152,6 +153,13 @@ export function Nav() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {blogItem.label}
+              </Link>
+              <Link
+                href={auditItem.href}
+                className="block px-3 py-2 text-base font-medium w-full text-left transition-all duration-300 text-gray-700 hover:text-accent hover:bg-accent/10"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {auditItem.label}
               </Link>
               <button
                 onClick={() => scrollToSection("contact")}

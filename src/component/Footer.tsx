@@ -40,6 +40,11 @@ export function Footer() {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link href="/audit" className="text-gray-300 hover:font-bold transition-all duration-300">
+                    Audit de sécurité
+                  </Link>
+                </li>
               </ul>
             </div>
             
