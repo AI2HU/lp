@@ -273,7 +273,7 @@ export default function AuditPage() {
                         <form onSubmit={handleEmailSubmit} className="space-y-4">
                           <div>
                             <label htmlFor="emailName" className="block text-base sm:text-lg font-semibold mb-2">
-                              Votre email d'entreprise
+                              Votre email d&apos;entreprise
                             </label>
                             <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
                               <input
