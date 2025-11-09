@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { generatePDF } from '@/lib/pdf';
 import { GoditorClient } from '@/lib/goditor-client';
+import { CreateContact, ContactsApi } from '@getbrevo/brevo';
 
 function extractDomain(urlString: string): string {
   try {
@@ -162,6 +163,25 @@ export async function POST(request: NextRequest) {
       console.log('Email sent successfully:', responseData);
     } catch {
       console.log('Success response (not JSON):', responseText);
+    }
+
+    try {
+      const contactAPI = new ContactsApi();
+      (contactAPI as unknown as { authentications: { apiKey: { apiKey: string } } }).authentications.apiKey.apiKey = brevoApiKey;
+
+      const emailName = email.split('@')[0];
+      const contact = new CreateContact();
+      contact.email = email;
+      contact.listIds = [4];
+      contact.attributes = {
+        FIRSTNAME: emailName,
+        LASTNAME: '',
+      };
+
+      await contactAPI.createContact(contact);
+      console.log('Contact added to list 4:', email);
+    } catch (contactError) {
+      console.error('Error creating contact:', contactError);
     }
 
     return NextResponse.json(
