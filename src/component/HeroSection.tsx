@@ -130,7 +130,7 @@ export function HeroSection({}: HeroSectionProps) {
             lineHeight: '1.1'
           }}
         >
-          Code&nbsp;IA&nbsp;bloqué&nbsp;?<br />Reprenez&nbsp;le&nbsp;contrôle&nbsp;avec&nbsp;du&nbsp;code&nbsp;maintenable
+          Code&nbsp;IA&nbsp;bloqué&nbsp;?<br />Reprenez&nbsp;le&nbsp;contrôle<br />avec&nbsp;du&nbsp;code&nbsp;maintenable
         </motion.h1>
         <motion.p 
           className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed"
@@ -138,7 +138,7 @@ export function HeroSection({}: HeroSectionProps) {
             y: subtitleY
           }}
         >
-          Éliminez définitivement les coûteux abonnements IA grâce à notre migration unique vers un code <span className="text-accent font-semibold">plus robuste</span>, <span className="text-accent font-semibold">facile à maintenir</span> et <span className="text-accent font-semibold">à mettre à jour</span>
+          Sortez de l'impasse du code IA bloqué grâce à notre migration unique vers un code <span className="text-accent font-semibold">plus robuste</span>, <span className="text-accent font-semibold">facile à maintenir</span> et <span className="text-accent font-semibold">que vous maîtrisez</span>
         </motion.p>
         <motion.div 
           className="bg-white/80 backdrop-blur-sm border border-accent/20 p-4 sm:p-6 max-w-2xl mx-auto mb-8 sm:mb-12"
