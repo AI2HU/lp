@@ -138,7 +138,7 @@ export function HeroSection({}: HeroSectionProps) {
             y: subtitleY
           }}
         >
-          Sortez de l'impasse du code IA bloqué grâce à notre migration unique vers un code <span className="text-accent font-semibold">plus robuste</span>, <span className="text-accent font-semibold">facile à maintenir</span> et <span className="text-accent font-semibold">que vous maîtrisez</span>
+          Sortez de l&apos;impasse du code IA bloqué grâce à notre migration unique vers un code <span className="text-accent font-semibold">plus robuste</span>, <span className="text-accent font-semibold">facile à maintenir</span> et <span className="text-accent font-semibold">que vous maîtrisez</span>
         </motion.p>
         <motion.div 
           className="bg-white/80 backdrop-blur-sm border border-accent/20 p-4 sm:p-6 max-w-2xl mx-auto mb-8 sm:mb-12"
