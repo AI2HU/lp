@@ -130,7 +130,7 @@ export function HeroSection({}: HeroSectionProps) {
             lineHeight: '1.1'
           }}
         >
-          Code&nbsp;IA&nbsp;trop&nbsp;cher&nbsp;?<br />Migrez&nbsp;vers&nbsp;du code&nbsp;maintenable
+          Code&nbsp;IA&nbsp;bloqué&nbsp;?<br />Reprenez&nbsp;le&nbsp;contrôle&nbsp;avec&nbsp;du&nbsp;code&nbsp;maintenable
         </motion.h1>
         <motion.p 
           className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed"
