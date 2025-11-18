@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface FormData {
   company: string;
@@ -30,21 +31,22 @@ const techStacks = [
   "Autre",
 ];
 
-const projectSizes = [
-  { value: "small", label: "Petit projet (1-3 mois)", price: "5 000 - 15 000 €" },
-  { value: "medium", label: "Projet moyen (3-6 mois)", price: "15 000 - 50 000 €" },
-  { value: "large", label: "Grand projet (6+ mois)", price: "50 000+ €" },
-];
-
-const budgetRanges = [
-  "Moins de 10 000 €",
-  "10 000 - 25 000 €",
-  "25 000 - 50 000 €",
-  "50 000 - 100 000 €",
-  "Plus de 100 000 €",
-];
-
 export function ContactForm() {
+  const { t } = useTranslation();
+  
+  const projectSizes = [
+    { value: "small", label: t("contact.projectSizes.small"), price: "5 000 - 15 000 €" },
+    { value: "medium", label: t("contact.projectSizes.medium"), price: "15 000 - 50 000 €" },
+    { value: "large", label: t("contact.projectSizes.large"), price: "50 000+ €" },
+  ];
+
+  const budgetRanges = [
+    t("contact.budgetRanges.less10k"),
+    t("contact.budgetRanges.10k25k"),
+    t("contact.budgetRanges.25k50k"),
+    t("contact.budgetRanges.50k100k"),
+    t("contact.budgetRanges.more100k"),
+  ];
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     company: "",
@@ -74,18 +76,18 @@ export function ContactForm() {
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
 
-    if (!formData.company.trim()) newErrors.company = "Le nom de l'entreprise est requis";
-    if (!formData.firstName.trim()) newErrors.firstName = "Le prénom est requis";
-    if (!formData.lastName.trim()) newErrors.lastName = "Le nom est requis";
+    if (!formData.company.trim()) newErrors.company = t("contact.errors.company");
+    if (!formData.firstName.trim()) newErrors.firstName = t("contact.errors.firstName");
+    if (!formData.lastName.trim()) newErrors.lastName = t("contact.errors.lastName");
     if (!formData.email.trim()) {
-      newErrors.email = "L'email est requis";
+      newErrors.email = t("contact.errors.email");
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "L'email n'est pas valide";
+      newErrors.email = t("contact.errors.emailInvalid");
     }
-    if (!formData.phone.trim()) newErrors.phone = "Le téléphone est requis";
-    if (!formData.projectSize) newErrors.projectSize = "La taille du projet est requise";
-    if (!formData.stack) newErrors.stack = "La technologie est requise";
-    if (!formData.budget) newErrors.budget = "Le budget est requis";
+    if (!formData.phone.trim()) newErrors.phone = t("contact.errors.phone");
+    if (!formData.projectSize) newErrors.projectSize = t("contact.errors.projectSize");
+    if (!formData.stack) newErrors.stack = t("contact.errors.stack");
+    if (!formData.budget) newErrors.budget = t("contact.errors.budget");
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -111,13 +113,13 @@ export function ContactForm() {
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || 'Erreur lors de l\'envoi du formulaire');
+        throw new Error(result.error || t("contact.errors.submitError"));
       }
       
       setIsSubmitted(true);
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitError('Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
+      setSubmitError(t("contact.errors.submitError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -128,10 +130,10 @@ export function ContactForm() {
       <div className="bg-green-50 border-2 border-green-200 p-8 text-center">
         <div className="text-green-600 text-6xl mb-4">✓</div>
         <h3 className="text-2xl font-bold text-green-800 mb-4">
-          Demande envoyée avec succès !
+          {t("contact.success.title")}
         </h3>
         <p className="text-green-700 mb-6">
-          Notre équipe vous contactera dans les 24 heures pour discuter de votre projet.
+          {t("contact.success.message")}
         </p>
         <button
           onClick={() => {
@@ -151,7 +153,7 @@ export function ContactForm() {
           }}
           className="bg-accent text-white px-6 py-3 font-semibold hover:bg-accent/80 transition-colors"
         >
-          Nouvelle demande
+          {t("contact.success.newRequest")}
         </button>
       </div>
     );
@@ -162,7 +164,7 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-semibold mb-2">
-            Nom de l&apos;entreprise *
+            {t("contact.company")}
           </label>
           <input
             type="text"
@@ -179,7 +181,7 @@ export function ContactForm() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-lg font-semibold mb-2">
-              Prénom *
+              {t("contact.firstName")}
             </label>
             <input
               type="text"
@@ -195,7 +197,7 @@ export function ContactForm() {
           
           <div>
             <label className="block text-lg font-semibold mb-2">
-              Nom *
+              {t("contact.lastName")}
             </label>
             <input
               type="text"
@@ -214,7 +216,7 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-semibold mb-2">
-            Email *
+            {t("contact.email")}
           </label>
           <input
             type="email"
@@ -230,7 +232,7 @@ export function ContactForm() {
         
         <div>
           <label className="block text-lg font-semibold mb-2">
-            Téléphone *
+            {t("contact.phone")}
           </label>
           <input
             type="tel"
@@ -248,7 +250,7 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <label className="block text-lg font-semibold mb-2">
-            Taille du projet *
+            {t("contact.projectSize")}
           </label>
           <select
             value={formData.projectSize}
@@ -257,7 +259,7 @@ export function ContactForm() {
               errors.projectSize ? "border-red-500" : "border-gray-300 focus:border-accent"
             } focus:outline-none transition-colors`}
           >
-            <option value="">Sélectionnez la taille</option>
+            <option value="">{t("contact.selectSize")}</option>
             {projectSizes.map((size) => (
               <option key={size.value} value={size.value}>
                 {size.label} - {size.price}
@@ -269,7 +271,7 @@ export function ContactForm() {
         
         <div>
           <label className="block text-lg font-semibold mb-2">
-            Technologie principale *
+            {t("contact.stack")}
           </label>
           <select
             value={formData.stack}
@@ -278,7 +280,7 @@ export function ContactForm() {
               errors.stack ? "border-red-500" : "border-gray-300 focus:border-accent"
             } focus:outline-none transition-colors`}
           >
-            <option value="">Sélectionnez la technologie</option>
+            <option value="">{t("contact.selectTech")}</option>
             {techStacks.map((tech) => (
               <option key={tech} value={tech}>
                 {tech}
@@ -291,7 +293,7 @@ export function ContactForm() {
 
       <div>
         <label className="block text-lg font-semibold mb-2">
-          Budget estimé *
+          {t("contact.budget")}
         </label>
         <select
           value={formData.budget}
@@ -300,7 +302,7 @@ export function ContactForm() {
             errors.budget ? "border-red-500" : "border-gray-300 focus:border-accent"
           } focus:outline-none transition-colors`}
         >
-          <option value="">Sélectionnez votre budget</option>
+          <option value="">{t("contact.selectBudget")}</option>
           {budgetRanges.map((range) => (
             <option key={range} value={range}>
               {range}
@@ -320,10 +322,10 @@ export function ContactForm() {
           />
           <div>
             <span className="text-lg font-semibold">
-              Migration de base de données requise
+              {t("contact.database")}
             </span>
             <p className="text-gray-600 mt-1">
-              Cochez si votre projet nécessite une migration de base de données existante
+              {t("contact.databaseDescription")}
             </p>
           </div>
         </label>
@@ -343,10 +345,10 @@ export function ContactForm() {
         {isSubmitting ? (
           <div className="flex items-center justify-center gap-3">
             <div className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
-            <span>Envoi en cours...</span>
+            <span>{t("contact.submitting")}</span>
           </div>
         ) : (
-          "Demander un devis gratuit"
+          t("contact.submit")
         )}
       </button>
     </form>

@@ -4,8 +4,10 @@ import { useSearchParams } from "next/navigation";
 import { FaCheckCircle, FaCalendarAlt, FaUser, FaEnvelope, FaClock } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 
 function DebugExpressContent() {
+  const { t, i18n } = useTranslation();
   const searchParams = useSearchParams();
   
   // Extract parameters from URL
@@ -21,7 +23,8 @@ function DebugExpressContent() {
     if (!dateTimeString) return '';
     try {
       const date = new Date(dateTimeString);
-      return date.toLocaleString('fr-FR', {
+      const locale = i18n.language === 'en' ? 'en-US' : 'fr-FR';
+      return date.toLocaleString(locale, {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
@@ -33,6 +36,10 @@ function DebugExpressContent() {
     } catch {
       return dateTimeString;
     }
+  };
+  
+  const getLocalizedPath = (path: string) => {
+    return i18n.language === 'en' ? `/en${path}` : path;
   };
 
   const displayName = inviteeFullName || `${inviteeFirstName} ${inviteeLastName}`.trim();
@@ -65,7 +72,7 @@ function DebugExpressContent() {
             transition={{ delay: 0.3 }}
             className="text-3xl sm:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent"
           >
-            Rendez-vous confirmé !
+            {t("debugExpress.title")}
           </motion.h1>
 
           <motion.p
@@ -74,7 +81,7 @@ function DebugExpressContent() {
             transition={{ delay: 0.4 }}
             className="text-lg text-gray-600 text-center mb-8"
           >
-            Merci {displayName}, votre session Debug Express a été planifiée avec succès.
+            {t("debugExpress.thankYou", { name: displayName })}
           </motion.p>
 
           {/* Event Details Card */}
@@ -86,7 +93,7 @@ function DebugExpressContent() {
           >
             <h2 className="text-xl font-semibold text-accent mb-4 flex items-center gap-2">
               <FaCalendarAlt />
-              Détails du rendez-vous
+              {t("debugExpress.appointmentDetails")}
             </h2>
             
             <div className="space-y-4">
@@ -97,7 +104,7 @@ function DebugExpressContent() {
                     {formatDateTime(eventStartTime)}
                   </p>
                   <p className="text-sm text-gray-600">
-                    Durée: 15 minutes
+                    {t("debugExpress.duration")}
                   </p>
                 </div>
               </div>
@@ -106,10 +113,10 @@ function DebugExpressContent() {
                 <FaUser className="text-accent/70 w-5 h-5" />
                 <div>
                   <p className="font-medium text-gray-900">
-                    Avec {assignedTo}
+                    {t("debugExpress.with", { name: assignedTo })}
                   </p>
                   <p className="text-sm text-gray-600">
-                    Jonathan - Expert A2H
+                    {t("debugExpress.expert")}
                   </p>
                 </div>
               </div>
@@ -122,7 +129,7 @@ function DebugExpressContent() {
                       {inviteeEmail}
                     </p>
                     <p className="text-sm text-gray-600">
-                      Email de confirmation envoyé
+                      {t("debugExpress.emailSent")}
                     </p>
                   </div>
                 </div>
@@ -138,20 +145,20 @@ function DebugExpressContent() {
             className="bg-white/60 border border-accent/20 p-6 mb-8"
           >
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              Prochaines étapes
+              {t("debugExpress.nextSteps")}
             </h3>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-accent font-bold">•</span>
-                <span>Vous recevrez un email de confirmation avec le lien de la réunion</span>
+                <span>{t("debugExpress.step1")}</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent font-bold">•</span>
-                <span>Préparez vos questions sur votre projet actuel</span>
+                <span>{t("debugExpress.step2")}</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent font-bold">•</span>
-                <span>Nous analyserons ensemble les améliorations possibles</span>
+                <span>{t("debugExpress.step3")}</span>
               </li>
             </ul>
           </motion.div>
@@ -167,13 +174,13 @@ function DebugExpressContent() {
               onClick={() => window.open('https://calendly.com/jonathan-ai2h/30min', '_blank')}
               className="bg-accent text-white px-8 py-4 text-lg font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Modifier le rendez-vous
+              {t("debugExpress.modifyAppointment")}
             </button>
             <button
-              onClick={() => window.location.href = '/'}
+              onClick={() => window.location.href = getLocalizedPath('/')}
               className="border-2 border-accent text-accent px-8 py-4 text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Retour à l&apos;accueil
+              {t("debugExpress.backHome")}
             </button>
           </motion.div>
 
@@ -184,7 +191,7 @@ function DebugExpressContent() {
             transition={{ delay: 0.8 }}
             className="text-center text-sm text-gray-500 mt-8"
           >
-            Des questions ? Contactez-nous à{" "}
+            {t("debugExpress.questions")}{" "}
             <a href="mailto:contact@ai2h.tech" className="text-accent hover:text-accent/80 underline">
               contact@ai2h.tech
             </a>
@@ -195,16 +202,21 @@ function DebugExpressContent() {
   );
 }
 
-export default function DebugExpressInvitationPage() {
+function LoadingFallback() {
+  const { t } = useTranslation();
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-accent/5 via-white to-accent/10 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4"></div>
-          <p className="text-gray-600">Chargement...</p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-accent/5 via-white to-accent/10 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4"></div>
+        <p className="text-gray-600">{t("debugExpress.loading")}</p>
       </div>
-    }>
+    </div>
+  );
+}
+
+export default function DebugExpressInvitationPage({ params }: { params: Promise<{ lang: string }> }) {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
       <DebugExpressContent />
     </Suspense>
   );

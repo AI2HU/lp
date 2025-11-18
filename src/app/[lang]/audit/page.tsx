@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Nav } from "@/component/Nav";
 import { Footer } from "@/component/Footer";
+import { useTranslation } from "react-i18next";
 
 interface Finding {
   type: string;
@@ -26,7 +27,8 @@ interface AuditResult {
   pdf_path?: string;
 }
 
-export default function AuditPage() {
+export default function AuditPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { t } = useTranslation();
   const [url, setUrl] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string>("");
@@ -40,7 +42,7 @@ export default function AuditPage() {
     e.preventDefault();
     
     if (!url.trim()) {
-      setError("L'URL est requise");
+      setError(t("audit.urlRequired"));
       return;
     }
 
@@ -65,13 +67,13 @@ export default function AuditPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Échec de l\'audit');
+        throw new Error(data.error || t("audit.auditFailed"));
       }
 
       setResult(data);
     } catch (err) {
       console.error("Error submitting audit:", err);
-      setError(err instanceof Error ? err.message : 'Échec de l\'audit. Veuillez réessayer.');
+      setError(err instanceof Error ? err.message : t("audit.auditFailedRetry"));
     } finally {
       setIsSubmitting(false);
     }
@@ -89,14 +91,15 @@ export default function AuditPage() {
   };
 
   const translateSeverity = (severity: string) => {
-    const translations: Record<string, string> = {
-      'critical': 'Critique',
-      'high': 'Élevé',
-      'medium': 'Moyen',
-      'low': 'Faible',
-      'info': 'Information'
+    const severityKey = severity.toLowerCase();
+    const severityTranslations: Record<string, string> = {
+      'critical': t("audit.severity.critical"),
+      'high': t("audit.severity.high"),
+      'medium': t("audit.severity.medium"),
+      'low': t("audit.severity.low"),
+      'info': t("audit.severity.info")
     };
-    return translations[severity.toLowerCase()] || severity;
+    return severityTranslations[severityKey] || severity;
   };
 
   const normalizeUrl = (urlString: string): string => {
@@ -128,12 +131,12 @@ export default function AuditPage() {
     e.preventDefault();
     
     if (!emailName.trim()) {
-      setEmailError("Le nom d'email est requis");
+      setEmailError(t("audit.emailNameRequired"));
       return;
     }
 
     if (!result) {
-      setEmailError("Aucun résultat d'audit disponible");
+      setEmailError(t("audit.noAuditResult"));
       return;
     }
 
@@ -159,14 +162,14 @@ export default function AuditPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Échec de l\'envoi de l\'email');
+        throw new Error(data.error || t("audit.emailFailed"));
       }
 
       setEmailSent(true);
       setEmailName("");
     } catch (err) {
       console.error("Error sending email:", err);
-      setEmailError(err instanceof Error ? err.message : 'Échec de l\'envoi de l\'email. Veuillez réessayer.');
+      setEmailError(err instanceof Error ? err.message : t("audit.emailFailedRetry"));
     } finally {
       setIsSendingEmail(false);
     }
@@ -179,14 +182,14 @@ export default function AuditPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12">
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Audit de Sécurité</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">{t("audit.title")}</h1>
             </div>
 
             <div className="bg-white border-2 border-gray-200 p-4 sm:p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="url" className="block text-lg font-semibold mb-2">
-                    URL du site web *
+                    {t("audit.urlLabel")}
                   </label>
                   <div className="flex items-center">
                     <span className="h-12 px-3 sm:px-4 text-base sm:text-lg border-2 border-r-0 border-gray-300 bg-gray-50 text-gray-700 flex items-center whitespace-nowrap">
@@ -206,7 +209,7 @@ export default function AuditPage() {
                         setUrl(value);
                         setError("");
                       }}
-                      placeholder="example.com"
+                      placeholder={t("audit.urlPlaceholder")}
                       className={`flex-1 h-12 px-3 sm:px-4 text-base sm:text-lg border-2 bg-white ${
                         error ? "border-red-500" : "border-gray-300 focus:border-accent"
                       } focus:outline-none transition-colors`}
@@ -224,10 +227,10 @@ export default function AuditPage() {
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-3">
                       <div className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                      <span>Audit en cours...</span>
+                      <span>{t("audit.auditInProgress")}</span>
                     </div>
                   ) : (
-                    "Lancer l'audit"
+                    t("audit.launchAudit")
                   )}
                 </button>
               </form>
@@ -235,26 +238,26 @@ export default function AuditPage() {
               {result && (
                 <div className="mt-8 space-y-6">
                   <div className="bg-gray-50 border-2 border-gray-200 p-4 sm:p-6">
-                    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Récapitulatif de l&apos;audit</h2>
+                    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{t("audit.summaryTitle")}</h2>
                     <div className="space-y-2">
                       <p className="text-lg">
-                        <span className="font-semibold">Site audité :</span> {result.url}
+                        <span className="font-semibold">{t("audit.auditedSite")}</span> {result.url}
                       </p>
                       <p className="text-lg">
-                        <span className="font-semibold">Total des résultats (Moyen & Faible) :</span> {result.summary.total_findings}
+                        <span className="font-semibold">{t("audit.totalFindings")}</span> {result.summary.total_findings}
                       </p>
                       <div className="flex flex-wrap gap-2 sm:gap-4 mt-4">
                         <span className="px-2 sm:px-3 py-1 text-sm sm:text-base bg-red-100 text-red-800">
-                          Critique: {result.summary.critical}
+                          {t("audit.severity.critical")}: {result.summary.critical}
                         </span>
                         <span className="px-2 sm:px-3 py-1 text-sm sm:text-base bg-orange-100 text-orange-800">
-                          Élevé: {result.summary.high}
+                          {t("audit.severity.high")}: {result.summary.high}
                         </span>
                         <span className="px-2 sm:px-3 py-1 text-sm sm:text-base bg-yellow-100 text-yellow-800">
-                          Moyen: {result.summary.medium}
+                          {t("audit.severity.medium")}: {result.summary.medium}
                         </span>
                         <span className="px-2 sm:px-3 py-1 text-sm sm:text-base bg-blue-100 text-blue-800">
-                          Faible: {result.summary.low}
+                          {t("audit.severity.low")}: {result.summary.low}
                         </span>
                       </div>
                     </div>
@@ -262,18 +265,18 @@ export default function AuditPage() {
 
                   {result && (
                     <div className="bg-blue-50 border-2 border-blue-200 p-4 sm:p-6">
-                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Recevoir le rapport complet par email</h3>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">{t("audit.emailTitle")}</h3>
                       {emailSent ? (
                         <div className="bg-green-100 border-2 border-green-300 p-4 text-center">
                           <p className="text-lg font-semibold text-green-800">
-                            Email envoyé avec succès ! Vérifiez votre boîte de réception.
+                            {t("audit.emailSuccess")}
                           </p>
                         </div>
                       ) : (
                         <form onSubmit={handleEmailSubmit} className="space-y-4">
                           <div>
                             <label htmlFor="emailName" className="block text-base sm:text-lg font-semibold mb-2">
-                              Votre email d&apos;entreprise
+                              {t("audit.emailLabel")}
                             </label>
                             <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
                               <input
@@ -284,13 +287,13 @@ export default function AuditPage() {
                                   setEmailName(e.target.value);
                                   setEmailError("");
                                 }}
-                                placeholder="secops"
+                                placeholder={t("audit.emailPlaceholder")}
                                 className={`flex-1 min-w-0 h-12 px-3 sm:px-4 text-base sm:text-lg border-2 bg-white ${
                                   emailError ? "border-red-500" : "border-gray-300 focus:border-accent"
                                 } focus:outline-none transition-colors`}
                                 required
                                 pattern="[a-zA-Z0-9._-]+"
-                                title="Seuls les lettres, chiffres, points, tirets et underscores sont autorisés"
+                                title={t("audit.emailPatternTitle")}
                               />
                               <span className="flex-1 text-base sm:text-lg font-semibold text-gray-700 whitespace-nowrap">
                                 @{extractDomain(result.url)}
@@ -298,7 +301,7 @@ export default function AuditPage() {
                             </div>
                             {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
                             <p className="text-sm text-gray-600 mt-2">
-                              Pour des raisons de sécurité l&apos;email doit être sur le même domaine que le site audité.
+                              {t("audit.emailHelp")}
                             </p>
                           </div>
                           <button
@@ -309,10 +312,10 @@ export default function AuditPage() {
                             {isSendingEmail ? (
                               <div className="flex items-center justify-center gap-3">
                                 <div className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                                <span>Envoi en cours...</span>
+                                <span>{t("audit.sendingEmail")}</span>
                               </div>
                             ) : (
-                              "Envoyer le rapport par email"
+                              t("audit.sendReport")
                             )}
                           </button>
                         </form>
@@ -322,7 +325,7 @@ export default function AuditPage() {
 
                   {result.findings.length > 0 ? (
                     <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-gray-900">Résultats</h3>
+                      <h3 className="text-xl font-bold text-gray-900">{t("audit.results")}</h3>
                       {result.findings.map((finding, index) => (
                         <div
                           key={index}
@@ -335,12 +338,12 @@ export default function AuditPage() {
                             </span>
                           </div>
                           <p className="text-sm mb-2">
-                            <span className="font-semibold">Type:</span> {finding.type}
+                            <span className="font-semibold">{t("audit.type")}</span> {finding.type}
                           </p>
                           <p className="mb-2">{finding.description}</p>
                           {finding.evidence && (
                             <div className="mt-3 p-3 bg-white/50">
-                              <p className="text-sm font-semibold mb-1">Preuve:</p>
+                              <p className="text-sm font-semibold mb-1">{t("audit.evidence")}</p>
                               <p className="text-sm font-mono break-all">{finding.evidence}</p>
                             </div>
                           )}
@@ -350,7 +353,7 @@ export default function AuditPage() {
                   ) : (
                     <div className="bg-green-50 border-2 border-green-200 p-6 text-center">
                       <p className="text-lg font-semibold text-green-800">
-                        Aucun résultat de sévérité moyenne ou faible détecté.
+                        {t("audit.noFindings")}
                       </p>
                     </div>
                   )}
@@ -358,15 +361,15 @@ export default function AuditPage() {
               )}
 
               <div className="mt-12 bg-gray-50 border-2 border-gray-200 p-4 sm:p-8">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">À propos de l&apos;audit de sécurité</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{t("audit.aboutTitle")}</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  Cet audit se concentre sur les problèmes de sécurité courants que les LLM laissent souvent passer lors de la production de code.
+                  {t("audit.aboutDescription")}
                 </p>
                 <div className="mt-8 space-y-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Pourquoi je n&apos;ai pas accès à tout l&apos;audit ?</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t("audit.whyQuestion")}</h3>
                     <p className="text-gray-700">
-                      Des failles critiques sur le site peuvent être découvertes. Par principe de divulgation responsable, un rapport complet est uniquement envoyé à une adresse email enregistrée sous le domaine de votre site.
+                      {t("audit.whyAnswer")}
                     </p>
                   </div>
                 </div>

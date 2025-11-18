@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "advantages": "Avantages",
+    "comparison": "Comparaison",
+    "calculator": "Calculateur",
+    "process": "Processus",
+    "blog": "Blog",
+    "audit": "Audit",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Migration code IA vers Code Humain",
+    "title": "Code IA bloqué ?<br />Reprenez le contrôle<br />avec du code maintenable",
+    "subtitle": "Sortez de l'impasse du code IA bloqué grâce à notre migration unique vers un code <span class=\"text-accent font-semibold\">plus robuste</span>, <span class=\"text-accent font-semibold\">facile à maintenir</span> et <span class=\"text-accent font-semibold\">que vous maîtrisez</span>",
+    "highlight": "Maximisez votre ROI et prenez le contrôle total de votre technologie",
+    "ctaDiscover": "Découvrir A2H",
+    "ctaDebug": "Debug Express"
+  },
+  "benefits": {
+    "title": "Avantages exceptionnels",
+    "subtitle": "Votre investissement se transforme en économies substantielles",
+    "savings": {
+      "title": "Économies importantes",
+      "description": "Éliminez définitivement les frais d'abonnement IA. Notre migration unique est rentabilisée en seulement 5 mois."
+    },
+    "ownership": {
+      "title": "Propriété intellectuelle totale",
+      "description": "Obtenez 100% de contrôle sur votre code sans aucune dépendance continue ni restriction de licence."
+    },
+    "migration": {
+      "title": "Migration transparente",
+      "description": "Notre équipe d'élite gère l'ensemble de la transition sans interruption de service et avec un impact minimal sur vos opérations."
+    },
+    "performance": {
+      "title": "Performance améliorée",
+      "description": "Nous ne nous contentons pas de convertir, nous optimisons. Attendez-vous à un code plus propre, des performances accrues et l'élimination des bizarreries générées par l'IA."
+    }
+  },
+  "aiServices": {
+    "title": "A2H vous aide à migrer de ces services",
+    "subtitle": "Les agents IA créent du code, mais vous restez dépendant de leurs plateformes. Nous vous libérons de cette dépendance en convertissant votre code IA en code humain robuste.",
+    "highlight": "Ces plateformes génèrent du code avec l'IA",
+    "highlight2": "A2H vous libère",
+    "description": "mais vous restez prisonnier de leurs écosystèmes. en transformant ce code IA en code humain que vous possédez entièrement et pouvez déployer partout."
+  },
+  "comparison": {
+    "title": "Comparer et économiser",
+    "aiSubscription": {
+      "title": "Abonnement au service IA",
+      "continuousPayments": "Paiements mensuels continus",
+      "locked": "Verrouillé dans des systèmes propriétaires",
+      "limited": "Options de personnalisation limitées",
+      "dependency": "Dépendance à un service tiers"
+    },
+    "a2h": {
+      "badge": "VOUS GAGNEZ",
+      "title": "Migration unique A2H",
+      "oneTime": "Paiement unique, propriété à vie",
+      "control": "Propriété et contrôle total du code",
+      "customization": "Potentiel de personnalisation illimité",
+      "deploy": "Déployez n'importe où, sans verrouillage par le fournisseur"
+    }
+  },
+  "cloudProviders": {
+    "title": "Les fournisseurs suggérés par A2H",
+    "subtitle": "Nous nous adaptons à vos besoins pour choisir votre hébergeur le plus rentable et performant"
+  },
+  "calculator": {
+    "title": "Calculez vos économies avec A2H",
+    "subtitle": "Découvrez combien vous pourriez économiser en migrant vers un code optimisé",
+    "currentCost": "Coût mensuel actuel de votre service IA",
+    "perMonth": "par mois",
+    "currentCost12Months": "Coût actuel (12 mois)",
+    "continuousPayments": "Paiements continus",
+    "vs": "vs",
+    "a2hMigration": "Migration A2H",
+    "oneTimePayment": "Paiement unique",
+    "breakEven": "Rentabilisation en",
+    "months": "mois",
+    "savings": "Vos économies avec A2H",
+    "firstYear": "Première année",
+    "firstYearDescription": "Économies immédiates après migration",
+    "eachYear": "Chaque année suivante",
+    "eachYearDescription": "Économies annuelles récurrentes",
+    "startNow": "Commencer maintenant"
+  },
+  "process": {
+    "title": "Quatre étapes simples",
+    "subtitle": "Optez pour l'indépendance complète du code",
+    "step1": {
+      "title": "Évaluation complète",
+      "subtext": "Analyse approfondie de votre code existant"
+    },
+    "step2": {
+      "title": "Migration stratégique",
+      "subtext": "Stratégie personnalisée pour votre migration"
+    },
+    "step3": {
+      "title": "Implémentation experte",
+      "subtext": "Exécution par nos experts développeurs"
+    },
+    "step4": {
+      "title": "Transfert complet",
+      "subtext": "Livraison avec documentation complète"
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Trouvez les réponses aux questions les plus courantes sur nos services de migration de code IA",
+    "q1": "Est-ce que je dois transmettre mon code source pour bénéficier du service A2H ?",
+    "a1": "Non, pas lors du premier contact. Échangeons d'abord, selon vos besoins vous nous partagerez l'accès à votre code ou non. Pour un besoin de migration, A2H devra accéder à votre code.",
+    "q2": "Est-ce que je peux choisir vers quel service migrer ?",
+    "a2": "Oui ! Cependant, A2H propose d'étudier avec vous quels services privilégier. Nous choisissons les meilleurs services qualifiés selon les besoins de votre produit.",
+    "q3": "Est-ce que je pourrai toujours bénéficier des IAs pour le code de mon produit ?",
+    "a3": "Oui, toujours avec vos services IA favoris.",
+    "q4": "Mon code est bloqué, vous pouvez m'aider ?",
+    "a4": "Bien sûr, planifiez un",
+    "a4Debug": "Debug Express",
+    "a4Rest": "! Échangeons 15 minutes pour débloquer votre situation. Le partage du code source n'est pas nécessaire.",
+    "moreQuestions": "Vous avez d'autres questions ?",
+    "contactUs": "Contactez-nous"
+  },
+  "contact": {
+    "title": "Demandez votre devis gratuit",
+    "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous contactera dans les 24 heures pour discuter de votre projet.",
+    "company": "Nom de l'entreprise *",
+    "firstName": "Prénom *",
+    "lastName": "Nom *",
+    "email": "Email *",
+    "phone": "Téléphone *",
+    "projectSize": "Taille du projet *",
+    "selectSize": "Sélectionnez la taille",
+    "stack": "Technologie principale *",
+    "selectTech": "Sélectionnez la technologie",
+    "budget": "Budget estimé *",
+    "selectBudget": "Sélectionnez votre budget",
+    "database": "Migration de base de données requise",
+    "databaseDescription": "Cochez si votre projet nécessite une migration de base de données existante",
+    "submit": "Demander un devis gratuit",
+    "submitting": "Envoi en cours...",
+    "success": {
+      "title": "Demande envoyée avec succès !",
+      "message": "Notre équipe vous contactera dans les 24 heures pour discuter de votre projet.",
+      "newRequest": "Nouvelle demande"
+    },
+    "errors": {
+      "company": "Le nom de l'entreprise est requis",
+      "firstName": "Le prénom est requis",
+      "lastName": "Le nom est requis",
+      "email": "L'email est requis",
+      "emailInvalid": "L'email n'est pas valide",
+      "phone": "Le téléphone est requis",
+      "projectSize": "La taille du projet est requise",
+      "stack": "La technologie est requise",
+      "budget": "Le budget est requis",
+      "submitError": "Erreur lors de l'envoi du formulaire. Veuillez réessayer."
+    },
+    "projectSizes": {
+      "small": "Petit projet (1-3 mois)",
+      "medium": "Projet moyen (3-6 mois)",
+      "large": "Grand projet (6+ mois)"
+    },
+    "budgetRanges": {
+      "less10k": "Moins de 10 000 €",
+      "10k25k": "10 000 - 25 000 €",
+      "25k50k": "25 000 - 50 000 €",
+      "50k100k": "50 000 - 100 000 €",
+      "more100k": "Plus de 100 000 €"
+    }
+  },
+  "cta": {
+    "title": "Gagnez du temps et de l'argent",
+    "subtitle": "Faites le premier pas vers une véritable propriété du code",
+    "startMigration": "Commencer la migration",
+    "debugExpress": "Debug Express",
+    "blogText": "Vous voulez voir un cas d'utilisation réel d'A2H en action ?",
+    "blogLink": "Consultez notre article de blog",
+    "blogRest": "pour un exemple détaillé."
+  },
+  "footer": {
+    "tagline": "Migrez votre code IA vers du code humain",
+    "services": "Services",
+    "resources": "Ressources",
+    "advantages": "Avantages",
+    "process": "Processus",
+    "calculator": "Calculateur",
+    "contact": "Contact",
+    "securityAudit": "Audit de sécurité",
+    "blog": "Blog",
+    "manifesto": "Manifeste",
+    "lovableUseCase": "Cas d'usage Lovable",
+    "vibeMigration": "Migration Vibe",
+    "codeTooExpensive": "Code IA trop cher ?",
+    "codeBlocked": "Code IA bloqué ?",
+    "copyright": "© 2025 A2H. Tous droits réservés."
+  },
+  "manifesto": {
+    "title": "Manifeste A2H",
+    "subtitle": "Notre vision pour libérer le développement logiciel de la dépendance à l'IA",
+    "whyTitle": "Pourquoi ce manifeste ?",
+    "whyP1": "L'intelligence artificielle a révolutionné le développement logiciel, mais elle a aussi créé une nouvelle forme de dépendance. Les développeurs et les entreprises se retrouvent prisonniers d'abonnements coûteux, de code généré qu'ils ne comprennent pas, et de solutions qui les éloignent de leur autonomie technique.",
+    "whyP2": "Chez A2H, nous croyons qu'il est temps de reprendre le contrôle. Ce manifeste expose notre vision d'un développement logiciel libéré, autonome et durable.",
+    "principlesTitle": "Nos principes fondamentaux",
+    "principle1Title": "1. L'autonomie technique avant tout",
+    "principle1Text": "Un développeur doit comprendre et maîtriser son code. L'IA doit être un outil, pas un maître. Nous migrons votre code généré vers du code humain que vous pouvez lire, modifier et maintenir.",
+    "principle2Title": "2. La liberté financière par l'indépendance",
+    "principle2Text": "Les abonnements IA créent une dépendance financière croissante. Notre migration unique vous libère définitivement de ces coûts récurrents en transformant votre code IA en code que vous possédez entièrement.",
+    "principle3Title": "3. La qualité et la maintenabilité",
+    "principle3Text": "Le code généré par l'IA est souvent fonctionnel mais rarement optimal. Nous transformons votre code en une solution robuste, performante et facile à maintenir sur le long terme.",
+    "principle4Title": "4. La transparence et la confiance",
+    "principle4Text": "Chaque ligne de code migré est expliquée, documentée et livrée avec une formation complète. Vous comprenez ce que vous obtenez et comment l'utiliser.",
+    "missionTitle": "Notre mission",
+    "missionQuote": "Libérer chaque développeur et chaque entreprise de la dépendance à l'IA en leur donnant les moyens de posséder, comprendre et maîtriser leur technologie.",
+    "fightTitle": "Ce contre quoi nous luttons",
+    "fight1Title": "🚫 La dépendance financière",
+    "fight1Text": "Les abonnements IA qui s'accumulent et créent une charge financière croissante et imprévisible.",
+    "fight2Title": "🚫 Le code opaque",
+    "fight2Text": "Du code généré que personne ne comprend, créant des risques techniques et de maintenance.",
+    "fight3Title": "🚫 La perte d'autonomie",
+    "fight3Text": "La dépendance technologique qui éloigne les équipes de leur expertise métier.",
+    "fight4Title": "🚫 Les solutions temporaires",
+    "fight4Text": "Des prototypes qui restent des prototypes, sans évolution vers des solutions durables.",
+    "solutionTitle": "Notre solution",
+    "solutionSubtitle": "Migration IA vers Code Humain",
+    "solutionDescription": "Une approche unique qui transforme définitivement votre code IA en code humain, vous rendant autonome et libre de toute dépendance.",
+    "solutionStep1Title": "Analyse",
+    "solutionStep1Text": "Compréhension complète de votre code IA et de vos besoins métier",
+    "solutionStep2Title": "Migration",
+    "solutionStep2Text": "Transformation en code humain optimisé, documenté et maintenable",
+    "solutionStep3Title": "Formation",
+    "solutionStep3Text": "Transfert de compétences pour une autonomie complète",
+    "ctaTitle": "Rejoignez le mouvement",
+    "ctaText": "Si vous partagez notre vision d'un développement logiciel libre et autonome, si vous en avez assez des abonnements qui s'accumulent et du code que vous ne maîtrisez pas, alors vous êtes prêt pour la migration A2H.",
+    "ctaButton": "Commencer votre migration",
+    "quote": "Code is Law."
+  },
+  "debugExpress": {
+    "title": "Rendez-vous confirmé !",
+    "thankYou": "Merci {{name}}, votre session Debug Express a été planifiée avec succès.",
+    "appointmentDetails": "Détails du rendez-vous",
+    "duration": "Durée: 15 minutes",
+    "with": "Avec {{name}}",
+    "expert": "Jonathan - Expert A2H",
+    "emailSent": "Email de confirmation envoyé",
+    "nextSteps": "Prochaines étapes",
+    "step1": "Vous recevrez un email de confirmation avec le lien de la réunion",
+    "step2": "Préparez vos questions sur votre projet actuel",
+    "step3": "Nous analyserons ensemble les améliorations possibles",
+    "modifyAppointment": "Modifier le rendez-vous",
+    "backHome": "Retour à l'accueil",
+    "questions": "Des questions ? Contactez-nous à",
+    "loading": "Chargement..."
+  },
+  "audit": {
+    "title": "Audit de Sécurité",
+    "urlLabel": "URL du site web *",
+    "urlPlaceholder": "example.com",
+    "urlRequired": "L'URL est requise",
+    "auditInProgress": "Audit en cours...",
+    "launchAudit": "Lancer l'audit",
+    "auditFailed": "Échec de l'audit",
+    "auditFailedRetry": "Échec de l'audit. Veuillez réessayer.",
+    "summaryTitle": "Récapitulatif de l'audit",
+    "auditedSite": "Site audité :",
+    "totalFindings": "Total des résultats (Moyen & Faible) :",
+    "severity": {
+      "critical": "Critique",
+      "high": "Élevé",
+      "medium": "Moyen",
+      "low": "Faible",
+      "info": "Information"
+    },
+    "emailTitle": "Recevoir le rapport complet par email",
+    "emailSuccess": "Email envoyé avec succès ! Vérifiez votre boîte de réception.",
+    "emailLabel": "Votre email d'entreprise",
+    "emailPlaceholder": "secops",
+    "emailPatternTitle": "Seuls les lettres, chiffres, points, tirets et underscores sont autorisés",
+    "emailHelp": "Pour des raisons de sécurité l'email doit être sur le même domaine que le site audité.",
+    "sendingEmail": "Envoi en cours...",
+    "sendReport": "Envoyer le rapport par email",
+    "emailNameRequired": "Le nom d'email est requis",
+    "noAuditResult": "Aucun résultat d'audit disponible",
+    "emailFailed": "Échec de l'envoi de l'email",
+    "emailFailedRetry": "Échec de l'envoi de l'email. Veuillez réessayer.",
+    "results": "Résultats",
+    "type": "Type:",
+    "evidence": "Preuve:",
+    "noFindings": "Aucun résultat de sévérité moyenne ou faible détecté.",
+    "aboutTitle": "À propos de l'audit de sécurité",
+    "aboutDescription": "Cet audit se concentre sur les problèmes de sécurité courants que les LLM laissent souvent passer lors de la production de code.",
+    "whyQuestion": "Pourquoi je n'ai pas accès à tout l'audit ?",
+    "whyAnswer": "Des failles critiques sur le site peuvent être découvertes. Par principe de divulgation responsable, un rapport complet est uniquement envoyé à une adresse email enregistrée sous le domaine de votre site."
+  },
+  "meta": {
+    "title": "Code IA bloqué ? Migrez vers du code maintenable - A2H",
+    "description": "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts."
+  }
+}
+

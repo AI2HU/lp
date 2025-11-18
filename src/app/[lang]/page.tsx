@@ -12,9 +12,10 @@ import { ContactSection } from "@/component/ContactSection";
 import { CTASection } from "@/component/CTASection";
 import { CloudProvidersSection } from "@/component/CloudProvidersSection";
 import { FAQ } from "@/component/FAQ";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 
-export default function Home() {
+export default function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const resolvedParams = use(params);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {

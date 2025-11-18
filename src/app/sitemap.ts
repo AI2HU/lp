@@ -4,141 +4,74 @@ import { getAllBlogPosts } from '@/lib/blog-posts'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ai2h.tech'
   const blogPosts = getAllBlogPosts()
+  const locales = ['', '/en'] // '' for French (base path), '/en' for English
   
-  const staticPages = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/manifeste`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/audit`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#benefits`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#comparison`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#pricing-calculator`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#process`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
+  // Target page slugs
+  const targetSlugs = [
+    'vibe-code',
+    'code-ia-trop-cher',
+    'code-ia-bloque',
+    'debugger-code-genere-par-ia',
+    'code-ia-fonctionne-pas',
+    'code-ia-dette-technique',
+    'failles-securite-code-genere-par-llm',
+    'mauvaise-qualite-code-genere-par-ia',
+    'refactoring-code-ia',
+    'hallucination-code-ia',
+    'probleme-integration-code-ia',
   ]
 
-  // Add target pages
-  const targetPages = [
-    {
-      url: `${baseUrl}/t/vibe-code`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/code-ia-trop-cher`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/code-ia-bloque`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/debugger-code-genere-par-ia`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/code-ia-fonctionne-pas`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/code-ia-dette-technique`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/failles-securite-code-genere-par-llm`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/mauvaise-qualite-code-genere-par-ia`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/refactoring-code-ia`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/hallucination-code-ia`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/t/probleme-integration-code-ia`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-  ]
+  // Generate pages for both locales
+  const generatePages = (locale: string) => {
+    const prefix = locale
+    const pages: MetadataRoute.Sitemap = [
+      {
+        url: `${baseUrl}${prefix}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 1,
+      },
+      {
+        url: `${baseUrl}${prefix}/blog`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      },
+      {
+        url: `${baseUrl}${prefix}/manifeste`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.9,
+      },
+      {
+        url: `${baseUrl}${prefix}/audit`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      },
+    ]
 
-  // Add blog posts
-  const blogPostPages = blogPosts.map(post => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.publishedAt),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+    // Add target pages
+    const targetPages = targetSlugs.map(slug => ({
+      url: `${baseUrl}${prefix}/t/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }))
 
-  return [...staticPages, ...targetPages, ...blogPostPages]
+    // Add blog posts
+    const blogPostPages = blogPosts.map(post => ({
+      url: `${baseUrl}${prefix}/blog/${post.slug}`,
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+
+    return [...pages, ...targetPages, ...blogPostPages]
+  }
+
+  // Generate sitemap for all locales
+  const allPages = locales.flatMap(locale => generatePages(locale))
+
+  return allPages
 }

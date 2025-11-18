@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "advantages": "Advantages",
+    "comparison": "Comparison",
+    "calculator": "Calculator",
+    "process": "Process",
+    "blog": "Blog",
+    "audit": "Audit",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AI Code to Human Code Migration",
+    "title": "AI Code stuck?<br />Take back control<br />with maintainable code",
+    "subtitle": "Get out of the AI code deadlock thanks to our unique migration to <span class=\"text-accent font-semibold\">more robust</span>, <span class=\"text-accent font-semibold\">easy to maintain</span> and <span class=\"text-accent font-semibold\">code you master</span>",
+    "highlight": "Maximize your ROI and take full control of your technology",
+    "ctaDiscover": "Discover A2H",
+    "ctaDebug": "Debug Express"
+  },
+  "benefits": {
+    "title": "Exceptional benefits",
+    "subtitle": "Your investment transforms into substantial savings",
+    "savings": {
+      "title": "Significant savings",
+      "description": "Eliminate AI subscription fees permanently. Our unique migration pays for itself in just 5 months."
+    },
+    "ownership": {
+      "title": "Total intellectual property",
+      "description": "Get 100% control over your code with no ongoing dependencies or license restrictions."
+    },
+    "migration": {
+      "title": "Seamless migration",
+      "description": "Our elite team handles the entire transition without service interruption and with minimal impact on your operations."
+    },
+    "performance": {
+      "title": "Improved performance",
+      "description": "We don't just convert, we optimize. Expect cleaner code, increased performance, and elimination of AI-generated quirks."
+    }
+  },
+  "aiServices": {
+    "title": "A2H helps you migrate from these services",
+    "subtitle": "AI agents create code, but you remain dependent on their platforms. We free you from this dependency by converting your AI code into robust human code.",
+    "highlight": "These platforms generate code with AI",
+    "highlight2": "A2H frees you",
+    "description": "but you remain trapped in their ecosystems. by transforming this AI code into human code that you fully own and can deploy anywhere."
+  },
+  "comparison": {
+    "title": "Compare and save",
+    "aiSubscription": {
+      "title": "AI service subscription",
+      "continuousPayments": "Ongoing monthly payments",
+      "locked": "Locked into proprietary systems",
+      "limited": "Limited customization options",
+      "dependency": "Dependency on third-party service"
+    },
+    "a2h": {
+      "badge": "YOU WIN",
+      "title": "One-time A2H migration",
+      "oneTime": "One-time payment, lifetime ownership",
+      "control": "Full ownership and control of code",
+      "customization": "Unlimited customization potential",
+      "deploy": "Deploy anywhere, no vendor lock-in"
+    }
+  },
+  "cloudProviders": {
+    "title": "Providers recommended by A2H",
+    "subtitle": "We adapt to your needs to choose the most cost-effective and performant hosting provider"
+  },
+  "calculator": {
+    "title": "Calculate your savings with A2H",
+    "subtitle": "Discover how much you could save by migrating to optimized code",
+    "currentCost": "Current monthly cost of your AI service",
+    "perMonth": "per month",
+    "currentCost12Months": "Current cost (12 months)",
+    "continuousPayments": "Ongoing payments",
+    "vs": "vs",
+    "a2hMigration": "A2H migration",
+    "oneTimePayment": "One-time payment",
+    "breakEven": "Break-even in",
+    "months": "months",
+    "savings": "Your savings with A2H",
+    "firstYear": "First year",
+    "firstYearDescription": "Immediate savings after migration",
+    "eachYear": "Each subsequent year",
+    "eachYearDescription": "Recurring annual savings",
+    "startNow": "Start now"
+  },
+  "process": {
+    "title": "Four simple steps",
+    "subtitle": "Choose complete code independence",
+    "step1": {
+      "title": "Complete evaluation",
+      "subtext": "In-depth analysis of your existing code"
+    },
+    "step2": {
+      "title": "Strategic migration",
+      "subtext": "Personalized strategy for your migration"
+    },
+    "step3": {
+      "title": "Expert implementation",
+      "subtext": "Execution by our expert developers"
+    },
+    "step4": {
+      "title": "Complete transfer",
+      "subtext": "Delivery with complete documentation"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Find answers to the most common questions about our AI code migration services",
+    "q1": "Do I need to share my source code to benefit from A2H service?",
+    "a1": "No, not on first contact. Let's discuss first, depending on your needs you may or may not share access to your code. For a migration need, A2H will need access to your code.",
+    "q2": "Can I choose which service to migrate to?",
+    "a2": "Yes! However, A2H proposes to study with you which services to prioritize. We choose the best qualified services according to your product's needs.",
+    "q3": "Will I still be able to use AIs for my product's code?",
+    "a3": "Yes, always with your favorite AI services.",
+    "q4": "My code is stuck, can you help me?",
+    "a4": "Of course, schedule a",
+    "a4Debug": "Debug Express",
+    "a4Rest": "! Let's exchange 15 minutes to unblock your situation. Source code sharing is not necessary.",
+    "moreQuestions": "Have other questions?",
+    "contactUs": "Contact us"
+  },
+  "contact": {
+    "title": "Request your free quote",
+    "subtitle": "Fill out the form below and our team will contact you within 24 hours to discuss your project.",
+    "company": "Company name *",
+    "firstName": "First name *",
+    "lastName": "Last name *",
+    "email": "Email *",
+    "phone": "Phone *",
+    "projectSize": "Project size *",
+    "selectSize": "Select size",
+    "stack": "Main technology *",
+    "selectTech": "Select technology",
+    "budget": "Estimated budget *",
+    "selectBudget": "Select your budget",
+    "database": "Database migration required",
+    "databaseDescription": "Check if your project requires migration of an existing database",
+    "submit": "Request a free quote",
+    "submitting": "Sending...",
+    "success": {
+      "title": "Request sent successfully!",
+      "message": "Our team will contact you within 24 hours to discuss your project.",
+      "newRequest": "New request"
+    },
+    "errors": {
+      "company": "Company name is required",
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "email": "Email is required",
+      "emailInvalid": "Email is not valid",
+      "phone": "Phone is required",
+      "projectSize": "Project size is required",
+      "stack": "Technology is required",
+      "budget": "Budget is required",
+      "submitError": "Error sending form. Please try again."
+    },
+    "projectSizes": {
+      "small": "Small project (1-3 months)",
+      "medium": "Medium project (3-6 months)",
+      "large": "Large project (6+ months)"
+    },
+    "budgetRanges": {
+      "less10k": "Less than €10,000",
+      "10k25k": "€10,000 - €25,000",
+      "25k50k": "€25,000 - €50,000",
+      "50k100k": "€50,000 - €100,000",
+      "more100k": "More than €100,000"
+    }
+  },
+  "cta": {
+    "title": "Save time and money",
+    "subtitle": "Take the first step towards true code ownership",
+    "startMigration": "Start migration",
+    "debugExpress": "Debug Express",
+    "blogText": "Want to see a real A2H use case in action?",
+    "blogLink": "Check out our blog post",
+    "blogRest": "for a detailed example."
+  },
+  "footer": {
+    "tagline": "Migrate your AI code to human code",
+    "services": "Services",
+    "resources": "Resources",
+    "advantages": "Advantages",
+    "process": "Process",
+    "calculator": "Calculator",
+    "contact": "Contact",
+    "securityAudit": "Security Audit",
+    "blog": "Blog",
+    "manifesto": "Manifesto",
+    "lovableUseCase": "Lovable Use Case",
+    "vibeMigration": "Vibe Migration",
+    "codeTooExpensive": "AI Code too expensive?",
+    "codeBlocked": "AI Code stuck?",
+    "copyright": "© 2025 A2H. All rights reserved."
+  },
+  "manifesto": {
+    "title": "A2H Manifesto",
+    "subtitle": "Our vision to free software development from AI dependency",
+    "whyTitle": "Why this manifesto?",
+    "whyP1": "Artificial intelligence has revolutionized software development, but it has also created a new form of dependency. Developers and companies find themselves trapped by expensive subscriptions, generated code they don't understand, and solutions that distance them from their technical autonomy.",
+    "whyP2": "At A2H, we believe it's time to take back control. This manifesto sets out our vision for free, autonomous and sustainable software development.",
+    "principlesTitle": "Our fundamental principles",
+    "principle1Title": "1. Technical autonomy above all",
+    "principle1Text": "A developer must understand and master their code. AI must be a tool, not a master. We migrate your generated code to human code that you can read, modify and maintain.",
+    "principle2Title": "2. Financial freedom through independence",
+    "principle2Text": "AI subscriptions create growing financial dependency. Our unique migration permanently frees you from these recurring costs by transforming your AI code into code you fully own.",
+    "principle3Title": "3. Quality and maintainability",
+    "principle3Text": "AI-generated code is often functional but rarely optimal. We transform your code into a robust, performant solution that's easy to maintain over the long term.",
+    "principle4Title": "4. Transparency and trust",
+    "principle4Text": "Every line of migrated code is explained, documented and delivered with complete training. You understand what you're getting and how to use it.",
+    "missionTitle": "Our mission",
+    "missionQuote": "Free every developer and every company from AI dependency by giving them the means to own, understand and master their technology.",
+    "fightTitle": "What we fight against",
+    "fight1Title": "🚫 Financial dependency",
+    "fight1Text": "AI subscriptions that accumulate and create growing, unpredictable financial burden.",
+    "fight2Title": "🚫 Opaque code",
+    "fight2Text": "Generated code that no one understands, creating technical and maintenance risks.",
+    "fight3Title": "🚫 Loss of autonomy",
+    "fight3Text": "Technological dependency that distances teams from their business expertise.",
+    "fight4Title": "🚫 Temporary solutions",
+    "fight4Text": "Prototypes that remain prototypes, without evolution towards sustainable solutions.",
+    "solutionTitle": "Our solution",
+    "solutionSubtitle": "AI to Human Code Migration",
+    "solutionDescription": "A unique approach that permanently transforms your AI code into human code, making you autonomous and free from any dependency.",
+    "solutionStep1Title": "Analysis",
+    "solutionStep1Text": "Complete understanding of your AI code and your business needs",
+    "solutionStep2Title": "Migration",
+    "solutionStep2Text": "Transformation into optimized, documented and maintainable human code",
+    "solutionStep3Title": "Training",
+    "solutionStep3Text": "Knowledge transfer for complete autonomy",
+    "ctaTitle": "Join the movement",
+    "ctaText": "If you share our vision of free and autonomous software development, if you're tired of accumulating subscriptions and code you don't master, then you're ready for A2H migration.",
+    "ctaButton": "Start your migration",
+    "quote": "Code is Law."
+  },
+  "debugExpress": {
+    "title": "Appointment confirmed!",
+    "thankYou": "Thank you {{name}}, your Debug Express session has been successfully scheduled.",
+    "appointmentDetails": "Appointment details",
+    "duration": "Duration: 15 minutes",
+    "with": "With {{name}}",
+    "expert": "Jonathan - A2H Expert",
+    "emailSent": "Confirmation email sent",
+    "nextSteps": "Next steps",
+    "step1": "You will receive a confirmation email with the meeting link",
+    "step2": "Prepare your questions about your current project",
+    "step3": "We will analyze together the possible improvements",
+    "modifyAppointment": "Modify appointment",
+    "backHome": "Back to home",
+    "questions": "Questions? Contact us at",
+    "loading": "Loading..."
+  },
+  "audit": {
+    "title": "Security Audit",
+    "urlLabel": "Website URL *",
+    "urlPlaceholder": "example.com",
+    "urlRequired": "URL is required",
+    "auditInProgress": "Audit in progress...",
+    "launchAudit": "Launch Audit",
+    "auditFailed": "Audit failed",
+    "auditFailedRetry": "Audit failed. Please try again.",
+    "summaryTitle": "Audit Summary",
+    "auditedSite": "Audited site:",
+    "totalFindings": "Total findings (Medium & Low):",
+    "severity": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "info": "Information"
+    },
+    "emailTitle": "Receive full report by email",
+    "emailSuccess": "Email sent successfully! Check your inbox.",
+    "emailLabel": "Your company email",
+    "emailPlaceholder": "secops",
+    "emailPatternTitle": "Only letters, numbers, dots, dashes and underscores are allowed",
+    "emailHelp": "For security reasons, the email must be on the same domain as the audited site.",
+    "sendingEmail": "Sending...",
+    "sendReport": "Send report by email",
+    "emailNameRequired": "Email name is required",
+    "noAuditResult": "No audit result available",
+    "emailFailed": "Failed to send email",
+    "emailFailedRetry": "Failed to send email. Please try again.",
+    "results": "Results",
+    "type": "Type:",
+    "evidence": "Evidence:",
+    "noFindings": "No medium or low severity findings detected.",
+    "aboutTitle": "About Security Audit",
+    "aboutDescription": "This audit focuses on common security issues that LLMs often miss when producing code.",
+    "whyQuestion": "Why don't I have access to the full audit?",
+    "whyAnswer": "Critical vulnerabilities on the site may be discovered. Following responsible disclosure principles, a full report is only sent to an email address registered under your site's domain."
+  },
+  "meta": {
+    "title": "AI Code stuck? Migrate to maintainable code - A2H",
+    "description": "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts."
+  }
+}
+

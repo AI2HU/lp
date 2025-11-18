@@ -3,21 +3,31 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export function Nav() {
+  const { t, i18n } = useTranslation();
+  
+  const getLocalizedPath = (path: string) => {
+    const currentLang = i18n.language;
+    if (currentLang === 'en') {
+      return `/en${path}`;
+    }
+    return path;
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   const menuItems = useMemo(() => [
-    { id: "benefits", label: "Avantages" },
-    { id: "comparison", label: "Comparaison" },
-    { id: "pricing-calculator", label: "Calculateur" },
-    { id: "process", label: "Processus" }
-  ], []);
+    { id: "benefits", label: t("nav.advantages") },
+    { id: "comparison", label: t("nav.comparison") },
+    { id: "pricing-calculator", label: t("nav.calculator") },
+    { id: "process", label: t("nav.process") }
+  ], [t]);
 
-  const blogItem = { href: "/blog", label: "Blog" };
-  const auditItem = { href: "/audit", label: "Audit" };
+  const blogItem = { href: getLocalizedPath("/blog"), label: t("nav.blog") };
+  const auditItem = { href: getLocalizedPath("/audit"), label: t("nav.audit") };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +72,7 @@ export function Nav() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link href={i18n.language === 'en' ? '/en' : '/'} className="flex items-center">
               <Image
                 src="/logo.png"
                 alt="A2H Logo"
@@ -104,7 +114,7 @@ export function Nav() {
               onClick={() => scrollToSection("contact")}
               className="px-6 py-2 text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-accent text-white hover:bg-accent/90"
             >
-              Contact
+              {t("nav.contact")}
             </button>
           </div>
 
@@ -165,7 +175,7 @@ export function Nav() {
                 onClick={() => scrollToSection("contact")}
                 className="bg-accent text-white block px-3 py-2 text-base font-medium w-full text-left hover:bg-accent/90 transition-all duration-300 shadow-lg"
               >
-                Contact
+                {t("nav.contact")}
               </button>
             </div>
           </div>

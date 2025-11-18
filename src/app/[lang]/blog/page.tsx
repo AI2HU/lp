@@ -3,10 +3,15 @@ import { getAllBlogPosts } from '@/lib/blog-posts'
 import { FaCalendarAlt, FaClock, FaUser, FaTag } from 'react-icons/fa'
 import { Footer } from '@/component/Footer'
 
-export default function BlogPage() {
+export default async function BlogPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
   const posts = getAllBlogPosts().sort((a, b) => 
     new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   )
+  
+  const getLocalizedPath = (path: string) => {
+    return lang === 'en' ? `/en${path}` : path;
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -62,7 +67,7 @@ export default function BlogPage() {
                     {/* Title */}
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 leading-tight">
                       <Link
-                        href={`/blog/${post.slug}`}
+                        href={getLocalizedPath(`/blog/${post.slug}`)}
                         className="hover:text-accent transition-colors duration-300"
                       >
                         {post.title}
@@ -89,7 +94,7 @@ export default function BlogPage() {
 
                     {/* Read More Link */}
                     <Link
-                      href={`/blog/${post.slug}`}
+                      href={getLocalizedPath(`/blog/${post.slug}`)}
                       className="inline-flex items-center text-accent font-semibold hover:text-accent/80 transition-colors duration-300"
                     >
                       Lire l&apos;article complet
@@ -126,7 +131,7 @@ export default function BlogPage() {
               Découvrez comment nous pouvons vous aider à réduire vos coûts et améliorer vos performances
             </p>
             <Link
-              href="/#contact"
+              href={getLocalizedPath("/#contact")}
               className="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Demander un devis gratuit

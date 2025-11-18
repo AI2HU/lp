@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function CloudPricingCalculator() {
+  const { t } = useTranslation();
   const [monthlyPrice, setMonthlyPrice] = useState(100);
   const oneTimePrice = monthlyPrice * 5;
   const breakEvenMonths = 5;
@@ -25,10 +27,10 @@ export function CloudPricingCalculator() {
       {/* Header */}
       <div className="text-center mb-10">
         <h3 className="text-3xl font-bold mb-4 text-accent">
-          Calculez vos économies avec A2H
+          {t("calculator.title")}
         </h3>
         <p className="text-gray-600 text-lg">
-          Découvrez combien vous pourriez économiser en migrant vers un code optimisé
+          {t("calculator.subtitle")}
         </p>
       </div>
 
@@ -36,12 +38,12 @@ export function CloudPricingCalculator() {
       <div className="mb-10 p-6 bg-gray-50 border border-gray-200">
         <div className="text-center mb-6">
           <h4 className="text-xl font-semibold mb-2 text-gray-800">
-            Coût mensuel actuel de votre service IA
+            {t("calculator.currentCost")}
           </h4>
           <div className="text-4xl font-bold text-accent mb-2">
             {monthlyPrice}€
           </div>
-          <span className="text-gray-600">par mois</span>
+          <span className="text-gray-600">{t("calculator.perMonth")}</span>
         </div>
         
         <div className="max-w-md mx-auto">
@@ -68,25 +70,25 @@ export function CloudPricingCalculator() {
       <div className="flex justify-center items-center gap-12 mb-8 text-center">
         {/* Current Cost */}
         <div className="flex flex-col items-center">
-          <span className="text-sm text-gray-500 mb-1">Coût actuel (12 mois)</span>
+          <span className="text-sm text-gray-500 mb-1">{t("calculator.currentCost12Months")}</span>
           <span className="text-2xl font-bold text-gray-600">{monthlyPrice * 12}€</span>
-          <span className="text-xs text-gray-400">Paiements continus</span>
+          <span className="text-xs text-gray-400">{t("calculator.continuousPayments")}</span>
         </div>
 
-        <div className="text-gray-300 text-2xl">vs</div>
+        <div className="text-gray-300 text-2xl">{t("calculator.vs")}</div>
 
         {/* A2H Cost */}
         <div className="flex flex-col items-center">
-          <span className="text-sm text-gray-500 mb-1">Migration A2H</span>
+          <span className="text-sm text-gray-500 mb-1">{t("calculator.a2hMigration")}</span>
           <span className="text-2xl font-bold text-accent">{oneTimePrice}€</span>
-          <span className="text-xs text-gray-400">Paiement unique</span>
+          <span className="text-xs text-gray-400">{t("calculator.oneTimePayment")}</span>
         </div>
       </div>
 
       {/* Break-even - Subtle */}
       <div className="text-center mb-8">
         <span className="text-sm text-gray-500">
-          Rentabilisation en <span className="font-semibold text-accent">{breakEvenMonths} mois</span>
+          {t("calculator.breakEven")} <span className="font-semibold text-accent">{breakEvenMonths} {t("calculator.months")}</span>
         </span>
       </div>
 
@@ -94,27 +96,27 @@ export function CloudPricingCalculator() {
       <div className="p-10 bg-gradient-to-r from-green-50 via-accent/10 to-green-50 border-2 border-green-300 shadow-lg">
         <div className="text-center mb-8">
           <h4 className="text-3xl font-bold mb-6 text-gray-800">
-            Vos économies avec A2H
+            {t("calculator.savings")}
           </h4>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="p-6 bg-white border-2 border-green-200">
-              <h5 className="text-lg font-semibold text-gray-700 mb-2">Première année</h5>
+              <h5 className="text-lg font-semibold text-gray-700 mb-2">{t("calculator.firstYear")}</h5>
               <div className="text-4xl font-bold text-accent mb-2">
                 {yearOneSavings}€
               </div>
               <p className="text-sm text-gray-600">
-                Économies immédiates après migration
+                {t("calculator.firstYearDescription")}
               </p>
             </div>
             
             <div className="p-6 bg-white border-2 border-accent/20">
-              <h5 className="text-lg font-semibold text-gray-700 mb-2">Chaque année suivante</h5>
+              <h5 className="text-lg font-semibold text-gray-700 mb-2">{t("calculator.eachYear")}</h5>
               <div className="text-4xl font-bold text-accent mb-2">
                 {yearTwoSavings}€
               </div>
               <p className="text-sm text-gray-600">
-                Économies annuelles récurrentes
+                {t("calculator.eachYearDescription")}
               </p>
             </div>
           </div>
@@ -125,7 +127,7 @@ export function CloudPricingCalculator() {
             onClick={scrollToContact}
             className="bg-accent text-white px-6 py-3 md:px-12 md:py-5 text-lg md:text-xl font-semibold hover:bg-accent/80 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2 md:gap-3 mx-auto"
           >
-            Commencer maintenant
+            {t("calculator.startNow")}
             <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

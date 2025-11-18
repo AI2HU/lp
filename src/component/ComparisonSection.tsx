@@ -1,12 +1,16 @@
+"use client";
+
 import { FaCheck, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export function ComparisonSection() {
+  const { t } = useTranslation();
   return (
     <section id="comparison" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
-            Comparer et économiser
+            {t("comparison.title")}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent/50 mx-auto "></div>
         </div>
@@ -18,25 +22,25 @@ export function ComparisonSection() {
                 <FaTimes className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold text-rose-600">
-                Abonnement au service IA
+                {t("comparison.aiSubscription.title")}
               </h3>
             </div>
             <ul className="space-y-6">
               <li className="flex items-center text-rose-600">
                 <span className="text-2xl mr-4">✕</span>
-                <span className="text-lg">Paiements mensuels continus</span>
+                <span className="text-lg">{t("comparison.aiSubscription.continuousPayments")}</span>
               </li>
               <li className="flex items-center text-rose-600">
                 <span className="text-2xl mr-4">✕</span>
-                <span className="text-lg">Verrouillé dans des systèmes propriétaires</span>
+                <span className="text-lg">{t("comparison.aiSubscription.locked")}</span>
               </li>
               <li className="flex items-center text-rose-600">
                 <span className="text-2xl mr-4">✕</span>
-                <span className="text-lg">Options de personnalisation limitées</span>
+                <span className="text-lg">{t("comparison.aiSubscription.limited")}</span>
               </li>
               <li className="flex items-center text-rose-600">
                 <span className="text-2xl mr-4">✕</span>
-                <span className="text-lg">Dépendance à un service tiers</span>
+                <span className="text-lg">{t("comparison.aiSubscription.dependency")}</span>
               </li>
             </ul>
           </div>
@@ -44,32 +48,32 @@ export function ComparisonSection() {
           {/* A2H Migration Column */}
           <div className="bg-gradient-to-br from-green-50 to-accent/10 border-2 border-accent  p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-accent text-white px-4 py-2 text-sm font-semibold ">
-              VOUS GAGNEZ
+              {t("comparison.a2h.badge")}
             </div>
             <div className="text-center mb-8">
               <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaCheck className="text-white text-2xl" />
               </div>
               <h3 className="text-2xl font-bold text-accent">
-                Migration unique A2H
+                {t("comparison.a2h.title")}
               </h3>
             </div>
             <ul className="space-y-6">
               <li className="flex items-center text-accent">
                 <span className="text-2xl mr-4">✓</span>
-                <span className="text-lg font-medium">Paiement unique, propriété à vie</span>
+                <span className="text-lg font-medium">{t("comparison.a2h.oneTime")}</span>
               </li>
               <li className="flex items-center text-accent">
                 <span className="text-2xl mr-4">✓</span>
-                <span className="text-lg font-medium">Propriété et contrôle total du code</span>
+                <span className="text-lg font-medium">{t("comparison.a2h.control")}</span>
               </li>
               <li className="flex items-center text-accent">
                 <span className="text-2xl mr-4">✓</span>
-                <span className="text-lg font-medium">Potentiel de personnalisation illimité</span>
+                <span className="text-lg font-medium">{t("comparison.a2h.customization")}</span>
               </li>
               <li className="flex items-center text-accent">
                 <span className="text-2xl mr-4">✓</span>
-                <span className="text-lg font-medium">Déployez n&apos;importe où, sans verrouillage par le fournisseur</span>
+                <span className="text-lg font-medium">{t("comparison.a2h.deploy")}</span>
               </li>
             </ul>
           </div>

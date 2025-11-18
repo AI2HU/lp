@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 export function ProcessSteps() {
+  const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -24,28 +26,28 @@ export function ProcessSteps() {
     return () => observer.disconnect();
   }, []);
 
-  const steps = [
+  const steps = useMemo(() => [
     {
       number: 1,
-      title: "Évaluation complète",
-      subtext: "Analyse approfondie de votre code existant"
+      title: t("process.step1.title"),
+      subtext: t("process.step1.subtext")
     },
     {
       number: 2,
-      title: "Migration stratégique",
-      subtext: "Stratégie personnalisée pour votre migration"
+      title: t("process.step2.title"),
+      subtext: t("process.step2.subtext")
     },
     {
       number: 3,
-      title: "Implémentation experte",
-      subtext: "Exécution par nos experts développeurs"
+      title: t("process.step3.title"),
+      subtext: t("process.step3.subtext")
     },
     {
       number: 4,
-      title: "Transfert complet",
-      subtext: "Livraison avec documentation complète"
+      title: t("process.step4.title"),
+      subtext: t("process.step4.subtext")
     }
-  ];
+  ], [t]);
 
   return (
     <section id="process" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
@@ -53,10 +55,10 @@ export function ProcessSteps() {
         <div className="text-center mb-12">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="text-3xl sm:text-4xl font-bold mb-3 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
-              Quatre étapes simples
+              {t("process.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-4 max-w-2xl mx-auto">
-              Optez pour l&apos;indépendance complète du code
+              {t("process.subtitle")}
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-accent to-accent/50 mx-auto"></div>
           </div>

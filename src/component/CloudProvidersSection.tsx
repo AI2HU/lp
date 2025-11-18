@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export function CloudProvidersSection() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -155,10 +157,10 @@ export function CloudProvidersSection() {
           }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent leading-tight">
-            Les fournisseurs suggérés par A2H
+            {t("cloudProviders.title")}
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Nous nous adaptons à vos besoins pour choisir votre hébergeur le plus rentable et performant
+            {t("cloudProviders.subtitle")}
           </p>
         </motion.div>
         

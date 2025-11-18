@@ -125,6 +125,7 @@ const keywordConfigs: Record<string, {
 
 interface TargetPageProps {
   params: Promise<{
+    lang: string;
     slug: string;
   }>;
 }

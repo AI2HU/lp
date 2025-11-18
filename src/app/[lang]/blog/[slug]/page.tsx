@@ -5,20 +5,22 @@ import { FaCalendarAlt, FaClock, FaUser, FaTag, FaArrowLeft } from 'react-icons/
 import { Footer } from '@/component/Footer'
 
 interface BlogPostPageProps {
-  params: {
-    slug: string
-  }
+  params: Promise<{
+    lang: string;
+    slug: string;
+  }>;
 }
 
 export async function generateStaticParams() {
   const posts = getAllBlogPosts()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
+  return [
+    ...posts.map((post) => ({ lang: 'fr', slug: post.slug })),
+    ...posts.map((post) => ({ lang: 'en', slug: post.slug })),
+  ]
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params
+  const { lang, slug } = await params
   const post = getBlogPost(slug)
 
   if (!post) {
@@ -32,7 +34,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="max-w-4xl mx-auto">
           {/* Back Link */}
           <Link
-            href="/blog"
+            href={lang === 'en' ? '/en/blog' : '/blog'}
             className="inline-flex items-center text-accent hover:text-accent/80 transition-colors duration-300 mb-4 text-sm"
           >
             <FaArrowLeft className="mr-2" />
@@ -137,13 +139,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/#contact"
+                href={lang === 'en' ? '/en/#contact' : '/#contact'}
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Demander un devis gratuit
               </Link>
               <Link
-                href="/blog"
+                href={lang === 'en' ? '/en/blog' : '/blog'}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-accent text-accent font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Voir tous les articles

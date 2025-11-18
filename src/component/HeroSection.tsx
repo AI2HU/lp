@@ -3,12 +3,14 @@
 import { FaRocket } from "react-icons/fa";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 interface HeroSectionProps {
   scrollY: number;
 }
 
 export function HeroSection({}: HeroSectionProps) {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -121,7 +123,7 @@ export function HeroSection({}: HeroSectionProps) {
           }}
         >
           <FaRocket className="text-accent" />
-          Migration code IA vers Code Humain
+          {t("hero.badge")}
         </motion.div>
         <motion.h1 
           className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-gray-800 to-accent bg-clip-text text-transparent"
@@ -129,17 +131,15 @@ export function HeroSection({}: HeroSectionProps) {
             y: titleY,
             lineHeight: '1.1'
           }}
-        >
-          Code&nbsp;IA&nbsp;bloqué&nbsp;?<br />Reprenez&nbsp;le&nbsp;contrôle<br />avec&nbsp;du&nbsp;code&nbsp;maintenable
-        </motion.h1>
+          dangerouslySetInnerHTML={{ __html: t("hero.title") }}
+        />
         <motion.p 
           className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-4xl lg:max-w-5xl mx-auto leading-relaxed"
           style={{
             y: subtitleY
           }}
-        >
-          Sortez de l&apos;impasse du code IA bloqué grâce à notre migration unique vers un code <span className="text-accent font-semibold">plus robuste</span>, <span className="text-accent font-semibold">facile à maintenir</span> et <span className="text-accent font-semibold">que vous maîtrisez</span>
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }}
+        />
         <motion.div 
           className="bg-white/80 backdrop-blur-sm border border-accent/20 p-4 sm:p-6 max-w-2xl mx-auto mb-8 sm:mb-12"
           style={{
@@ -147,7 +147,7 @@ export function HeroSection({}: HeroSectionProps) {
           }}
         >
           <p className="text-base sm:text-lg lg:text-xl font-semibold text-accent">
-            Maximisez votre ROI et prenez le contrôle total de votre technologie
+            {t("hero.highlight")}
           </p>
         </motion.div>
         <motion.div 
@@ -160,13 +160,13 @@ export function HeroSection({}: HeroSectionProps) {
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-accent text-white px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            Découvrir A2H
+            {t("hero.ctaDiscover")}
           </button>
           <button 
             onClick={() => window.open('https://calendly.com/jonathan-ai2h/30min', '_blank')}
             className="border-2 border-accent text-accent px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            Debug Express
+            {t("hero.ctaDebug")}
           </button>
         </motion.div>
       </motion.div>

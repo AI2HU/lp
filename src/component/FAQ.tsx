@@ -3,43 +3,45 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface FAQItem {
   question: string;
   answer: string | React.ReactNode;
 }
 
-const faqData: FAQItem[] = [
-  {
-    question: "Est-ce que je dois transmettre mon code source pour bénéficier du service A2H ?",
-    answer: "Non, pas lors du premier contact. Échangeons d'abord, selon vos besoins vous nous partagerez l'accès à votre code ou non. Pour un besoin de migration, A2H devra accéder à votre code."
-  },
-  {
-    question: "Est-ce que je peux choisir vers quel service migrer ?",
-    answer: "Oui ! Cependant, A2H propose d'étudier avec vous quels services privilégier. Nous choisissons les meilleurs services qualifiés selon les besoins de votre produit."
-  },
-  {
-    question: "Est-ce que je pourrai toujours bénéficier des IAs pour le code de mon produit ?",
-    answer: "Oui, toujours avec vos services IA favoris."
-  },
-  {
-    question: "Mon code est bloqué, vous pouvez m'aider ?",
-    answer: (
-      <>
-        Bien sûr, planifiez un{" "}
-        <button
-          onClick={() => window.open('https://calendly.com/jonathan-ai2h/30min', '_blank')}
-          className="text-accent cursor-pointer hover:text-accent/80 font-semibold transition-colors duration-200"
-        >
-          Debug Express
-        </button>
-        {" "}! Échangeons 15 minutes pour débloquer votre situation. Le partage du code source n&apos;est pas nécessaire.
-      </>
-    )
-  }
-];
-
 export function FAQ() {
+  const { t } = useTranslation();
+  
+  const faqData: FAQItem[] = [
+    {
+      question: t("faq.q1"),
+      answer: t("faq.a1")
+    },
+    {
+      question: t("faq.q2"),
+      answer: t("faq.a2")
+    },
+    {
+      question: t("faq.q3"),
+      answer: t("faq.a3")
+    },
+    {
+      question: t("faq.q4"),
+      answer: (
+        <>
+          {t("faq.a4")}{" "}
+          <button
+            onClick={() => window.open('https://calendly.com/jonathan-ai2h/30min', '_blank')}
+            className="text-accent cursor-pointer hover:text-accent/80 font-semibold transition-colors duration-200"
+          >
+            {t("faq.a4Debug")}
+          </button>
+          {" "}{t("faq.a4Rest")}
+        </>
+      )
+    }
+  ];
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
@@ -55,10 +57,10 @@ export function FAQ() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
-            Questions fréquentes
+            {t("faq.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Trouvez les réponses aux questions les plus courantes sur nos services de migration de code IA
+            {t("faq.subtitle")}
           </p>
         </div>
 
@@ -114,14 +116,14 @@ export function FAQ() {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            Vous avez d&apos;autres questions ?
+            {t("faq.moreQuestions")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="bg-accent text-white px-8 py-4 text-lg font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Contactez-nous
+              {t("faq.contactUs")}
             </button>
           </div>
         </div>
