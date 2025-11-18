@@ -4,8 +4,10 @@ import { reprendreMainCodeLovablePrototypeControleTotal } from './reprendre-main
 import { vibeCodingCoutSecuriteRisquesCaches } from './vibe-coding-cout-securite-risques-caches';
 import { sortirBoucleInfernaleIaEgareCodeReprendreControle } from './sortir-boucle-infernale-ia-egare-code-reprendre-controle';
 import { supabaseCoutReelTechniquePricing } from './supabase-cout-reel-technique-pricing';
+import { plusGrossesFaillesVibeCoding } from './plus-grosses-failles-vibe-coding';
 
 export const blogPosts: BlogPost[] = [
+  plusGrossesFaillesVibeCoding,
   vibeCodingRevolutionMirageIngenieurLogiciel,
   reprendreMainCodeLovablePrototypeControleTotal,
   vibeCodingCoutSecuriteRisquesCaches,
