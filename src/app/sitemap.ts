@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'refactoring-code-ia',
     'hallucination-code-ia',
     'probleme-integration-code-ia',
+    'reassurance-production-vibe-code',
   ]
 
   // Generate pages for both locales

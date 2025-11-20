@@ -173,6 +173,7 @@
     "subtitle": "Take the first step towards true code ownership",
     "startMigration": "Start migration",
     "debugExpress": "Debug Express",
+    "blogButton": "Visit our blog",
     "blogText": "Want to see a real A2H use case in action?",
     "blogLink": "Check out our blog post",
     "blogRest": "for a detailed example."
@@ -294,6 +295,116 @@
   "meta": {
     "title": "AI Code stuck? Migrate to maintainable code - A2H",
     "description": "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts."
+  },
+  "targetPages": {
+    "vibe-code": {
+      "heroTitle": "Vibe&nbsp;code&nbsp;too&nbsp;expensive&nbsp;?<br />Migrate&nbsp;to&nbsp;maintainable code",
+      "heroSubtitle": "AI code to human code migration",
+      "heroDescription": "Eliminate costly AI subscriptions permanently with our unique migration to more robust, easy to maintain and update code",
+      "ctaTitle": "Save time and money",
+      "ctaDescription": "Take the first step towards true code ownership",
+      "metaTitle": "AI code to human code migration - A2H",
+      "metaDescription": "Migrate your AI code to human code. Eliminate costly subscriptions with our unique migration to robust and maintainable code."
+    },
+    "code-ia-trop-cher": {
+      "heroTitle": "AI&nbsp;costs&nbsp;too&nbsp;much&nbsp;?<br />Migrate&nbsp;to&nbsp;maintainable code",
+      "heroSubtitle": "Stop paying for AI forever",
+      "heroDescription": "AI subscriptions become a financial drain. Our unique migration permanently frees you from these recurring costs by transforming your AI code into human code that you fully own.",
+      "ctaTitle": "Save thousands of euros",
+      "ctaDescription": "Regain your financial and technical independence",
+      "metaTitle": "AI costs too much? Migration to human code - A2H",
+      "metaDescription": "AI subscriptions too expensive? Migrate to human code you own. Save thousands of euros per year with A2H."
+    },
+    "code-ia-bloque": {
+      "heroTitle": "Your&nbsp;AI&nbsp;code&nbsp;blocking&nbsp;you&nbsp;?<br />Migrate to maintainable code",
+      "heroSubtitle": "Take back control of your code",
+      "heroDescription": "Take full control with our migration that transforms your AI code into human code that you master and can modify freely.",
+      "ctaTitle": "Take back control now",
+      "ctaDescription": "Free yourself from AI code constraints",
+      "metaTitle": "AI code blocked? Take back control - A2H",
+      "metaDescription": "Your AI code blocking you? Take back control with A2H. Migration to human code you fully master."
+    },
+    "debugger-code-genere-par-ia": {
+      "heroTitle": "Debugging&nbsp;AI-generated&nbsp;code&nbsp;?<br />Migrate to maintainable code",
+      "heroSubtitle": "Stop wasting time debugging",
+      "heroDescription": "AI-generated code is difficult to debug and maintain. Our migration transforms this opaque code into clear, maintainable code by experts.",
+      "ctaTitle": "Stop wasting time",
+      "ctaDescription": "Transform your AI code into debuggable code",
+      "metaTitle": "Debugging AI-generated code? Migration to maintainable code - A2H",
+      "metaDescription": "AI-generated code hard to debug? Migrate to maintainable code with A2H. Stop wasting time on opaque code."
+    },
+    "code-ia-fonctionne-pas": {
+      "heroTitle": "Your&nbsp;AI&nbsp;code&nbsp;not&nbsp;working&nbsp;?<br />Migrate to reliable code",
+      "heroSubtitle": "Failing AI code? Take back control",
+      "heroDescription": "AI-generated code can be unpredictable and failing. Our migration guarantees reliable, tested and maintained code by human experts.",
+      "ctaTitle": "Get working code",
+      "ctaDescription": "No more bugs and malfunctions",
+      "metaTitle": "AI code not working? Migration to reliable code - A2H",
+      "metaDescription": "Your AI code not working properly? Migrate to reliable code with A2H. Guaranteed functionality and maintenance by experts."
+    },
+    "code-ia-dette-technique": {
+      "heroTitle": "Technical&nbsp;debt&nbsp;from&nbsp;AI&nbsp;code&nbsp;?<br />Migrate to clean code",
+      "heroSubtitle": "Eliminate accumulated technical debt",
+      "heroDescription": "AI-generated code quickly accumulates technical debt. Our migration cleans and restructures your code to eliminate this invisible debt.",
+      "ctaTitle": "Clean up your technical debt",
+      "ctaDescription": "Clean, maintainable and scalable code",
+      "metaTitle": "Technical debt from AI code? Migration to clean code - A2H",
+      "metaDescription": "Your AI code accumulating technical debt? Migrate to clean code with A2H. Technical debt elimination and maintainable code."
+    },
+    "failles-securite-code-genere-par-llm": {
+      "heroTitle": "Security&nbsp;vulnerabilities&nbsp;in&nbsp;LLM&nbsp;code&nbsp;?<br />Migrate to secure code",
+      "heroSubtitle": "Secure your AI-generated code",
+      "heroDescription": "LLM-generated code often contains hidden security vulnerabilities. Our migration audits and secures your code to protect your application.",
+      "ctaTitle": "Secure your code now",
+      "ctaDescription": "Protect your application from vulnerabilities",
+      "metaTitle": "Security vulnerabilities in LLM code? Migration to secure code - A2H",
+      "metaDescription": "Your LLM code contains security vulnerabilities? Migrate to secure code with A2H. Security audit and code protected by experts."
+    },
+    "mauvaise-qualite-code-genere-par-ia": {
+      "heroTitle": "Poor&nbsp;quality&nbsp;AI&nbsp;code&nbsp;?<br />Migrate to quality code",
+      "heroSubtitle": "Improve your code quality",
+      "heroDescription": "AI-generated code is often poor quality: unreadable, redundant and fragile. Our migration transforms this code into professional quality code.",
+      "ctaTitle": "Get quality code",
+      "ctaDescription": "Professional, readable and robust code",
+      "metaTitle": "Poor quality AI code? Migration to quality code - A2H",
+      "metaDescription": "Your AI code is poor quality? Migrate to quality code with A2H. Professional, readable and maintainable code by experts."
+    },
+    "refactoring-code-ia": {
+      "heroTitle": "Refactoring&nbsp;AI&nbsp;code&nbsp;?<br />Migrate to maintainable code",
+      "heroSubtitle": "Intelligently refactor your AI code",
+      "heroDescription": "Refactoring AI code is complex and risky. Our migration performs a complete and secure refactoring to maintainable and scalable code.",
+      "ctaTitle": "Refactor safely",
+      "ctaDescription": "Restructured and optimized code",
+      "metaTitle": "Refactoring AI code? Migration to maintainable code - A2H",
+      "metaDescription": "Need to refactor your AI code? Migrate to maintainable code with A2H. Secure refactoring and optimized code by experts."
+    },
+    "hallucination-code-ia": {
+      "heroTitle": "AI&nbsp;hallucinations&nbsp;in&nbsp;code&nbsp;?<br />Migrate to reliable code",
+      "heroSubtitle": "Eliminate AI hallucinations",
+      "heroDescription": "AI hallucinations generate incorrect or dangerous code. Our migration eliminates these errors and guarantees reliable and verified code.",
+      "ctaTitle": "Eliminate hallucinations",
+      "ctaDescription": "Verified, tested and reliable code",
+      "metaTitle": "AI hallucinations in code? Migration to reliable code - A2H",
+      "metaDescription": "Your AI code contains hallucinations? Migrate to reliable code with A2H. Error elimination and verified code by experts."
+    },
+    "probleme-integration-code-ia": {
+      "heroTitle": "Integration&nbsp;problems&nbsp;with&nbsp;AI&nbsp;code&nbsp;?<br />Migrate to integrated code",
+      "heroSubtitle": "Solve your integration problems",
+      "heroDescription": "AI-generated code integrates poorly with your existing architecture. Our migration ensures perfect and harmonious integration with your system.",
+      "ctaTitle": "Solve your integration problems",
+      "ctaDescription": "Perfect and harmonious integration",
+      "metaTitle": "Integration problems with AI code? Migration to integrated code - A2H",
+      "metaDescription": "Integration problems with your AI code? Migrate to integrated code with A2H. Perfect integration with your existing architecture."
+    },
+    "reassurance-production-vibe-code": {
+      "heroTitle": "Uncertain&nbsp;before<br />production&nbsp;deployment&nbsp;?<br />CTO&nbsp;on&nbsp;demand<br />for&nbsp;robust&nbsp;code",
+      "heroSubtitle": "Expert software engineer and cybersecurity",
+      "heroDescription": "Hesitating to push your project to production? Our CTO on demand service guarantees robust, stable and secure code before deployment. Expert software engineering and cybersecurity at your service.",
+      "ctaTitle": "Secure your production deployment",
+      "ctaDescription": "Get the expertise you need to deploy with confidence",
+      "metaTitle": "Production reassurance vibe code - CTO on demand - A2H",
+      "metaDescription": "Uncertain before production deployment? A2H CTO on demand: expert software engineer and cybersecurity to guarantee robust and secure code before deployment."
+    }
   }
 }
 
