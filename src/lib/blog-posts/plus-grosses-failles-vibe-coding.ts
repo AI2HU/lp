@@ -97,7 +97,7 @@ Les trois failles majeures du vibe coding – sécurité, scalabilité et qualit
 
 Le vibe coding peut être un outil puissant lorsqu'il est utilisé par des développeurs expérimentés qui comprennent ces risques et qui refactorisent, sécurisent et optimisent le code généré. Mais utilisé "à l'aveugle", il produit des applications qui semblent fonctionner mais qui sont en réalité des bombes à retardement techniques, financières et sécuritaires.
 
-<strong>La solution n'est pas d'abandonner ces outils, mais de migrer le code généré vers du code humain, maintenable, sécurisé et scalable.</strong> C'est précisément la mission d'A2H : transformer votre code IA en code de qualité professionnelle que vous maîtrisez entièrement.
+<strong>La solution n'est pas d'abandonner ces outils, mais de migrer le code généré vers du code humain, maintenable, sécurisé et scalable.</strong> C'est précisément la mission d'AI2H : transformer votre code IA en code de qualité professionnelle que vous maîtrisez entièrement.
   `,
   author: "Jonathan Serra",
   publishedAt: "2025-11-18",

@@ -15,7 +15,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
-            A2H
+            AI2H
           </h3>
           <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
             {t("footer.tagline")}

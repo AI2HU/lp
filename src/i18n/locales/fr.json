@@ -13,7 +13,7 @@
     "title": "Code IA bloqué ?<br />Reprenez le contrôle<br />avec du code maintenable",
     "subtitle": "Sortez de l'impasse du code IA bloqué grâce à notre migration unique vers un code <span class=\"text-accent font-semibold\">plus robuste</span>, <span class=\"text-accent font-semibold\">facile à maintenir</span> et <span class=\"text-accent font-semibold\">que vous maîtrisez</span>",
     "highlight": "Maximisez votre ROI et prenez le contrôle total de votre technologie",
-    "ctaDiscover": "Découvrir A2H",
+    "ctaDiscover": "Découvrir AI2H",
     "ctaDebug": "Debug Express"
   },
   "benefits": {
@@ -37,10 +37,10 @@
     }
   },
   "aiServices": {
-    "title": "A2H vous aide à migrer de ces services",
+    "title": "AI2H vous aide à migrer de ces services",
     "subtitle": "Les agents IA créent du code, mais vous restez dépendant de leurs plateformes. Nous vous libérons de cette dépendance en convertissant votre code IA en code humain robuste.",
     "highlight": "Ces plateformes génèrent du code avec l'IA",
-    "highlight2": "A2H vous libère",
+    "highlight2": "AI2H vous libère",
     "description": "mais vous restez prisonnier de leurs écosystèmes. en transformant ce code IA en code humain que vous possédez entièrement et pouvez déployer partout."
   },
   "comparison": {
@@ -54,7 +54,7 @@
     },
     "a2h": {
       "badge": "VOUS GAGNEZ",
-      "title": "Migration unique A2H",
+      "title": "Migration unique AI2H",
       "oneTime": "Paiement unique, propriété à vie",
       "control": "Propriété et contrôle total du code",
       "customization": "Potentiel de personnalisation illimité",
@@ -62,22 +62,22 @@
     }
   },
   "cloudProviders": {
-    "title": "Les fournisseurs suggérés par A2H",
+    "title": "Les fournisseurs suggérés par AI2H",
     "subtitle": "Nous nous adaptons à vos besoins pour choisir votre hébergeur le plus rentable et performant"
   },
   "calculator": {
-    "title": "Calculez vos économies avec A2H",
+    "title": "Calculez vos économies avec AI2H",
     "subtitle": "Découvrez combien vous pourriez économiser en migrant vers un code optimisé",
     "currentCost": "Coût mensuel actuel de votre service IA",
     "perMonth": "par mois",
     "currentCost12Months": "Coût actuel (12 mois)",
     "continuousPayments": "Paiements continus",
     "vs": "vs",
-    "a2hMigration": "Migration A2H",
+    "a2hMigration": "Migration AI2H",
     "oneTimePayment": "Paiement unique",
     "breakEven": "Rentabilisation en",
     "months": "mois",
-    "savings": "Vos économies avec A2H",
+    "savings": "Vos économies avec AI2H",
     "firstYear": "Première année",
     "firstYearDescription": "Économies immédiates après migration",
     "eachYear": "Chaque année suivante",
@@ -107,10 +107,10 @@
   "faq": {
     "title": "Questions fréquentes",
     "subtitle": "Trouvez les réponses aux questions les plus courantes sur nos services de migration de code IA",
-    "q1": "Est-ce que je dois transmettre mon code source pour bénéficier du service A2H ?",
-    "a1": "Non, pas lors du premier contact. Échangeons d'abord, selon vos besoins vous nous partagerez l'accès à votre code ou non. Pour un besoin de migration, A2H devra accéder à votre code.",
+    "q1": "Est-ce que je dois transmettre mon code source pour bénéficier du service AI2H ?",
+    "a1": "Non, pas lors du premier contact. Échangeons d'abord, selon vos besoins vous nous partagerez l'accès à votre code ou non. Pour un besoin de migration, AI2H devra accéder à votre code.",
     "q2": "Est-ce que je peux choisir vers quel service migrer ?",
-    "a2": "Oui ! Cependant, A2H propose d'étudier avec vous quels services privilégier. Nous choisissons les meilleurs services qualifiés selon les besoins de votre produit.",
+    "a2": "Oui ! Cependant, AI2H propose d'étudier avec vous quels services privilégier. Nous choisissons les meilleurs services qualifiés selon les besoins de votre produit.",
     "q3": "Est-ce que je pourrai toujours bénéficier des IAs pour le code de mon produit ?",
     "a3": "Oui, toujours avec vos services IA favoris.",
     "q4": "Mon code est bloqué, vous pouvez m'aider ?",
@@ -174,7 +174,7 @@
     "startMigration": "Commencer la migration",
     "debugExpress": "Debug Express",
     "blogButton": "Consulter notre blog",
-    "blogText": "Vous voulez voir un cas d'utilisation réel d'A2H en action ?",
+    "blogText": "Vous voulez voir un cas d'utilisation réel d'AI2H en action ?",
     "blogLink": "Consultez notre article de blog",
     "blogRest": "pour un exemple détaillé."
   },
@@ -193,14 +193,14 @@
     "vibeMigration": "Migration Vibe",
     "codeTooExpensive": "Code IA trop cher ?",
     "codeBlocked": "Code IA bloqué ?",
-    "copyright": "© 2025 A2H. Tous droits réservés."
+    "copyright": "© 2025 AI2H. Tous droits réservés."
   },
   "manifesto": {
-    "title": "Manifeste A2H",
+    "title": "Manifeste AI2H",
     "subtitle": "Notre vision pour libérer le développement logiciel de la dépendance à l'IA",
     "whyTitle": "Pourquoi ce manifeste ?",
     "whyP1": "L'intelligence artificielle a révolutionné le développement logiciel, mais elle a aussi créé une nouvelle forme de dépendance. Les développeurs et les entreprises se retrouvent prisonniers d'abonnements coûteux, de code généré qu'ils ne comprennent pas, et de solutions qui les éloignent de leur autonomie technique.",
-    "whyP2": "Chez A2H, nous croyons qu'il est temps de reprendre le contrôle. Ce manifeste expose notre vision d'un développement logiciel libéré, autonome et durable.",
+    "whyP2": "Chez AI2H, nous croyons qu'il est temps de reprendre le contrôle. Ce manifeste expose notre vision d'un développement logiciel libéré, autonome et durable.",
     "principlesTitle": "Nos principes fondamentaux",
     "principle1Title": "1. L'autonomie technique avant tout",
     "principle1Text": "Un développeur doit comprendre et maîtriser son code. L'IA doit être un outil, pas un maître. Nous migrons votre code généré vers du code humain que vous pouvez lire, modifier et maintenir.",
@@ -231,7 +231,7 @@
     "solutionStep3Title": "Formation",
     "solutionStep3Text": "Transfert de compétences pour une autonomie complète",
     "ctaTitle": "Rejoignez le mouvement",
-    "ctaText": "Si vous partagez notre vision d'un développement logiciel libre et autonome, si vous en avez assez des abonnements qui s'accumulent et du code que vous ne maîtrisez pas, alors vous êtes prêt pour la migration A2H.",
+    "ctaText": "Si vous partagez notre vision d'un développement logiciel libre et autonome, si vous en avez assez des abonnements qui s'accumulent et du code que vous ne maîtrisez pas, alors vous êtes prêt pour la migration AI2H.",
     "ctaButton": "Commencer votre migration",
     "quote": "Code is Law."
   },
@@ -241,7 +241,7 @@
     "appointmentDetails": "Détails du rendez-vous",
     "duration": "Durée: 15 minutes",
     "with": "Avec {{name}}",
-    "expert": "Jonathan - Expert A2H",
+    "expert": "Jonathan - Expert AI2H",
     "emailSent": "Email de confirmation envoyé",
     "nextSteps": "Prochaines étapes",
     "step1": "Vous recevrez un email de confirmation avec le lien de la réunion",
@@ -293,7 +293,7 @@
     "whyAnswer": "Des failles critiques sur le site peuvent être découvertes. Par principe de divulgation responsable, un rapport complet est uniquement envoyé à une adresse email enregistrée sous le domaine de votre site."
   },
   "meta": {
-    "title": "Code IA bloqué ? Migrez vers du code maintenable - A2H",
+    "title": "Code IA bloqué ? Migrez vers du code maintenable - AI2H",
     "description": "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts."
   },
   "targetPages": {
@@ -303,7 +303,7 @@
       "heroDescription": "Éliminez définitivement les coûteux abonnements IA grâce à notre migration unique vers un code plus robuste, facile à maintenir et à mettre à jour",
       "ctaTitle": "Gagnez du temps et de l'argent",
       "ctaDescription": "Faites le premier pas vers une véritable propriété du code",
-      "metaTitle": "Migration code IA vers code humain - A2H",
+      "metaTitle": "Migration code IA vers code humain - AI2H",
       "metaDescription": "Migrez votre code IA vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code robuste et maintenable."
     },
     "code-ia-trop-cher": {
@@ -312,8 +312,8 @@
       "heroDescription": "Les abonnements IA deviennent un gouffre financier. Notre migration unique vous libère définitivement de ces coûts récurrents en transformant votre code IA en code humain que vous possédez entièrement.",
       "ctaTitle": "Économisez des milliers d'euros",
       "ctaDescription": "Récupérez votre indépendance financière et technique",
-      "metaTitle": "L'IA coûte trop cher ? Migration vers code humain - A2H",
-      "metaDescription": "Les abonnements IA sont trop chers ? Migrez vers un code humain que vous possédez. Économisez des milliers d'euros par an avec A2H."
+      "metaTitle": "L'IA coûte trop cher ? Migration vers code humain - AI2H",
+      "metaDescription": "Les abonnements IA sont trop chers ? Migrez vers un code humain que vous possédez. Économisez des milliers d'euros par an avec AI2H."
     },
     "code-ia-bloque": {
       "heroTitle": "Votre&nbsp;code&nbsp;IA&nbsp;vous&nbsp;bloque&nbsp;?<br />Migrez vers du code maintenable",
@@ -321,8 +321,8 @@
       "heroDescription": "Reprenez le contrôle total avec notre migration qui transforme votre code IA en code humain que vous maîtrisez et pouvez modifier librement.",
       "ctaTitle": "Reprenez le contrôle maintenant",
       "ctaDescription": "Libérez-vous des contraintes du code IA",
-      "metaTitle": "Code IA bloqué ? Reprenez le contrôle - A2H",
-      "metaDescription": "Votre code IA vous bloque ? Reprenez le contrôle avec A2H. Migration vers un code humain que vous maîtrisez entièrement."
+      "metaTitle": "Code IA bloqué ? Reprenez le contrôle - AI2H",
+      "metaDescription": "Votre code IA vous bloque ? Reprenez le contrôle avec AI2H. Migration vers un code humain que vous maîtrisez entièrement."
     },
     "debugger-code-genere-par-ia": {
       "heroTitle": "Déboguer&nbsp;du&nbsp;code&nbsp;généré&nbsp;par&nbsp;IA&nbsp;?<br />Migrez vers du code maintenable",
@@ -330,8 +330,8 @@
       "heroDescription": "Le code généré par IA est difficile à déboguer et à maintenir. Notre migration transforme ce code opaque en code clair et maintenable par des experts.",
       "ctaTitle": "Arrêtez de perdre du temps",
       "ctaDescription": "Transformez votre code IA en code débogable",
-      "metaTitle": "Déboguer code généré par IA ? Migration vers code maintenable - A2H",
-      "metaDescription": "Le code généré par IA est difficile à déboguer ? Migrez vers un code maintenable avec A2H. Arrêtez de perdre du temps sur du code opaque."
+      "metaTitle": "Déboguer code généré par IA ? Migration vers code maintenable - AI2H",
+      "metaDescription": "Le code généré par IA est difficile à déboguer ? Migrez vers un code maintenable avec AI2H. Arrêtez de perdre du temps sur du code opaque."
     },
     "code-ia-fonctionne-pas": {
       "heroTitle": "Votre&nbsp;code&nbsp;IA&nbsp;ne&nbsp;fonctionne&nbsp;pas&nbsp;?<br />Migrez vers du code fiable",
@@ -339,8 +339,8 @@
       "heroDescription": "Le code généré par IA peut être imprévisible et défaillant. Notre migration garantit un code fiable, testé et maintenu par des experts humains.",
       "ctaTitle": "Obtenez un code qui fonctionne",
       "ctaDescription": "Fini les bugs et les dysfonctionnements",
-      "metaTitle": "Code IA ne fonctionne pas ? Migration vers code fiable - A2H",
-      "metaDescription": "Votre code IA ne fonctionne pas correctement ? Migrez vers un code fiable avec A2H. Garantie de fonctionnement et maintenance par des experts."
+      "metaTitle": "Code IA ne fonctionne pas ? Migration vers code fiable - AI2H",
+      "metaDescription": "Votre code IA ne fonctionne pas correctement ? Migrez vers un code fiable avec AI2H. Garantie de fonctionnement et maintenance par des experts."
     },
     "code-ia-dette-technique": {
       "heroTitle": "Dette&nbsp;technique&nbsp;du&nbsp;code&nbsp;IA&nbsp;?<br />Migrez vers du code propre",
@@ -348,8 +348,8 @@
       "heroDescription": "Le code généré par IA accumule rapidement de la dette technique. Notre migration nettoie et restructure votre code pour éliminer cette dette invisible.",
       "ctaTitle": "Nettoyez votre dette technique",
       "ctaDescription": "Code propre, maintenable et évolutif",
-      "metaTitle": "Dette technique code IA ? Migration vers code propre - A2H",
-      "metaDescription": "Votre code IA accumule de la dette technique ? Migrez vers un code propre avec A2H. Élimination de la dette technique et code maintenable."
+      "metaTitle": "Dette technique code IA ? Migration vers code propre - AI2H",
+      "metaDescription": "Votre code IA accumule de la dette technique ? Migrez vers un code propre avec AI2H. Élimination de la dette technique et code maintenable."
     },
     "failles-securite-code-genere-par-llm": {
       "heroTitle": "Failles&nbsp;sécurité&nbsp;code&nbsp;LLM&nbsp;?<br />Migrez vers du code sécurisé",
@@ -357,8 +357,8 @@
       "heroDescription": "Le code généré par LLM contient souvent des failles de sécurité cachées. Notre migration audite et sécurise votre code pour protéger votre application.",
       "ctaTitle": "Sécurisez votre code maintenant",
       "ctaDescription": "Protégez votre application des vulnérabilités",
-      "metaTitle": "Failles sécurité code LLM ? Migration vers code sécurisé - A2H",
-      "metaDescription": "Votre code LLM contient des failles de sécurité ? Migrez vers un code sécurisé avec A2H. Audit sécurité et code protégé par des experts."
+      "metaTitle": "Failles sécurité code LLM ? Migration vers code sécurisé - AI2H",
+      "metaDescription": "Votre code LLM contient des failles de sécurité ? Migrez vers un code sécurisé avec AI2H. Audit sécurité et code protégé par des experts."
     },
     "mauvaise-qualite-code-genere-par-ia": {
       "heroTitle": "Mauvaise&nbsp;qualité&nbsp;code&nbsp;IA&nbsp;?<br />Migrez vers du code de qualité",
@@ -366,8 +366,8 @@
       "heroDescription": "Le code généré par IA est souvent de mauvaise qualité : illisible, redondant et fragile. Notre migration transforme ce code en code de qualité professionnelle.",
       "ctaTitle": "Obtenez un code de qualité",
       "ctaDescription": "Code professionnel, lisible et robuste",
-      "metaTitle": "Mauvaise qualité code IA ? Migration vers code de qualité - A2H",
-      "metaDescription": "Votre code IA est de mauvaise qualité ? Migrez vers un code de qualité avec A2H. Code professionnel, lisible et maintenable par des experts."
+      "metaTitle": "Mauvaise qualité code IA ? Migration vers code de qualité - AI2H",
+      "metaDescription": "Votre code IA est de mauvaise qualité ? Migrez vers un code de qualité avec AI2H. Code professionnel, lisible et maintenable par des experts."
     },
     "refactoring-code-ia": {
       "heroTitle": "Refactoring&nbsp;code&nbsp;IA&nbsp;?<br />Migrez vers du code maintenable",
@@ -375,8 +375,8 @@
       "heroDescription": "Le refactoring du code IA est complexe et risqué. Notre migration effectue un refactoring complet et sécurisé vers un code maintenable et évolutif.",
       "ctaTitle": "Refactorisez en toute sécurité",
       "ctaDescription": "Code restructuré et optimisé",
-      "metaTitle": "Refactoring code IA ? Migration vers code maintenable - A2H",
-      "metaDescription": "Besoin de refactoriser votre code IA ? Migrez vers un code maintenable avec A2H. Refactoring sécurisé et code optimisé par des experts."
+      "metaTitle": "Refactoring code IA ? Migration vers code maintenable - AI2H",
+      "metaDescription": "Besoin de refactoriser votre code IA ? Migrez vers un code maintenable avec AI2H. Refactoring sécurisé et code optimisé par des experts."
     },
     "hallucination-code-ia": {
       "heroTitle": "Hallucinations&nbsp;code&nbsp;IA&nbsp;?<br />Migrez vers du code fiable",
@@ -384,8 +384,8 @@
       "heroDescription": "Les hallucinations de l'IA génèrent du code incorrect ou dangereux. Notre migration élimine ces erreurs et garantit un code fiable et vérifié.",
       "ctaTitle": "Éliminez les hallucinations",
       "ctaDescription": "Code vérifié, testé et fiable",
-      "metaTitle": "Hallucinations code IA ? Migration vers code fiable - A2H",
-      "metaDescription": "Votre code IA contient des hallucinations ? Migrez vers un code fiable avec A2H. Élimination des erreurs et code vérifié par des experts."
+      "metaTitle": "Hallucinations code IA ? Migration vers code fiable - AI2H",
+      "metaDescription": "Votre code IA contient des hallucinations ? Migrez vers un code fiable avec AI2H. Élimination des erreurs et code vérifié par des experts."
     },
     "probleme-integration-code-ia": {
       "heroTitle": "Problèmes&nbsp;d'intégration&nbsp;code&nbsp;IA&nbsp;?<br />Migrez vers du code intégré",
@@ -393,8 +393,8 @@
       "heroDescription": "Le code généré par IA s'intègre mal avec votre architecture existante. Notre migration assure une intégration parfaite et harmonieuse avec votre système.",
       "ctaTitle": "Résolvez vos problèmes d'intégration",
       "ctaDescription": "Intégration parfaite et harmonieuse",
-      "metaTitle": "Problèmes intégration code IA ? Migration vers code intégré - A2H",
-      "metaDescription": "Problèmes d'intégration avec votre code IA ? Migrez vers un code intégré avec A2H. Intégration parfaite avec votre architecture existante."
+      "metaTitle": "Problèmes intégration code IA ? Migration vers code intégré - AI2H",
+      "metaDescription": "Problèmes d'intégration avec votre code IA ? Migrez vers un code intégré avec AI2H. Intégration parfaite avec votre architecture existante."
     },
     "reassurance-production-vibe-code": {
       "heroTitle": "Incertain&nbsp;avant&nbsp;la&nbsp;mise&nbsp;en&nbsp;prod&nbsp;?<br />CTO&nbsp;à&nbsp;la&nbsp;demande<br />pour&nbsp;code&nbsp;robuste",
@@ -402,8 +402,8 @@
       "heroDescription": "Vous hésitez à mettre votre projet en production ? Notre service CTO à la demande vous garantit un code robuste, stable et sécurisé avant le déploiement. Experts en ingénierie logicielle et cybersécurité à votre service.",
       "ctaTitle": "Sécurisez votre mise en production",
       "ctaDescription": "Obtenez l'expertise nécessaire pour déployer en toute confiance",
-      "metaTitle": "Reassurance production vibe code - CTO à la demande - A2H",
-      "metaDescription": "Incertain avant la mise en prod ? CTO à la demande A2H : expert ingénieur logiciel et cybersécurité pour garantir un code robuste et sécurisé avant déploiement."
+      "metaTitle": "Reassurance production vibe code - CTO à la demande - AI2H",
+      "metaDescription": "Incertain avant la mise en prod ? CTO à la demande AI2H : expert ingénieur logiciel et cybersécurité pour garantir un code robuste et sécurisé avant déploiement."
     }
   }
 }

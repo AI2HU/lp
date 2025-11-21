@@ -12,24 +12,24 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://ai2h.tech'),
     title: isFr 
-      ? "Code IA bloqué ? Migrez vers du code maintenable - A2H"
-      : "AI Code stuck? Migrate to maintainable code - A2H",
+      ? "Code IA bloqué ? Migrez vers du code maintenable - AI2H"
+      : "AI Code stuck? Migrate to maintainable code - AI2H",
     description: isFr
       ? "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts."
       : "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts.",
     openGraph: {
       title: isFr
-        ? "Code IA bloqué ? Migrez vers du code maintenable - A2H"
-        : "AI Code stuck? Migrate to maintainable code - A2H",
+        ? "Code IA bloqué ? Migrez vers du code maintenable - AI2H"
+        : "AI Code stuck? Migrate to maintainable code - AI2H",
       description: isFr
         ? "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts"
         : "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts",
       images: [
         {
-          url: "/images/a2h_banner.png",
+          url: "/images/ai2h_banner.png",
           width: 1200,
           height: 630,
-          alt: isFr ? "A2H - Migration code IA vers code humain" : "A2H - AI Code to Human Code Migration",
+          alt: isFr ? "AI2H - Migration code IA vers code humain" : "AI2H - AI Code to Human Code Migration",
         },
       ],
       locale: isFr ? "fr_FR" : "en_US",
@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     twitter: {
       card: "summary_large_image",
       title: isFr
-        ? "Code IA bloqué ? Migrez vers du code maintenable - A2H"
-        : "AI Code stuck? Migrate to maintainable code - A2H",
+        ? "Code IA bloqué ? Migrez vers du code maintenable - AI2H"
+        : "AI Code stuck? Migrate to maintainable code - AI2H",
       description: isFr
         ? "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts"
         : "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts",
-      images: ["/images/a2h_banner.png"],
+      images: ["/images/ai2h_banner.png"],
     },
   };
 }

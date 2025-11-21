@@ -77,7 +77,7 @@ export function CloudPricingCalculator() {
 
         <div className="text-gray-300 text-2xl">{t("calculator.vs")}</div>
 
-        {/* A2H Cost */}
+        {/* AI2H Cost */}
         <div className="flex flex-col items-center">
           <span className="text-sm text-gray-500 mb-1">{t("calculator.a2hMigration")}</span>
           <span className="text-2xl font-bold text-accent">{oneTimePrice}€</span>

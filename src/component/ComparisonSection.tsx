@@ -45,7 +45,7 @@ export function ComparisonSection() {
             </ul>
           </div>
 
-          {/* A2H Migration Column */}
+          {/* AI2H Migration Column */}
           <div className="bg-gradient-to-br from-green-50 to-accent/10 border-2 border-accent  p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-accent text-white px-4 py-2 text-sm font-semibold ">
               {t("comparison.a2h.badge")}

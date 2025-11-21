@@ -3,7 +3,7 @@ import { BlogPost } from '../blog-posts';
 export const sortirBoucleInfernaleIaEgareCodeReprendreControle: BlogPost = {
   slug: "sortir-boucle-infernale-ia-egare-code-reprendre-controle",
   title: "Sortir de la boucle infernale : quand l'IA s'égare dans votre code et comment reprendre le contrôle",
-  excerpt: "L'IA peut se retrouver piégée dans des boucles de codage infructueuses, coûteuses et frustrantes. Découvrez les causes profondes et comment A2H transforme votre code chaotique en atout stratégique.",
+  excerpt: "L'IA peut se retrouver piégée dans des boucles de codage infructueuses, coûteuses et frustrantes. Découvrez les causes profondes et comment AI2H transforme votre code chaotique en atout stratégique.",
   content: `
 L'ère du développement logiciel assisté par l'intelligence artificielle est une <strong>promesse de productivité décuplée</strong>. En quelques secondes, une IA peut générer des centaines de lignes de code, esquisser une nouvelle fonctionnalité ou proposer une correction de bug. Cette nouvelle façon de travailler, que certains nomment le <strong>"vibe coding"</strong>, coder selon l'intuition et des instructions de haut niveau données à une machine, est exaltante. <strong>Jusqu'au moment où tout s'arrête.</strong>
 
@@ -13,7 +13,7 @@ Cette boucle n'est pas qu'une simple anecdote frustrante. <strong>C'est un gouff
 
 <strong>La cause fondamentale de ce phénomène n'est pas une défaillance de l'IA, mais un reflet de la qualité du code sur lequel elle travaille.</strong> Un code avec une forte redondance ou des conventions de nommage ambiguës est un terrain miné pour une intelligence artificielle.
 
-Cet article plonge au cœur de la boucle de codage IA. Nous analyserons ses causes profondes, ses coûts cachés, et nous vous présenterons une <strong>solution durable pour transformer votre code chaotique en un atout stratégique maintenable</strong>, tant pour les humains que pour les IA : <strong>le service A2H</strong>.
+Cet article plonge au cœur de la boucle de codage IA. Nous analyserons ses causes profondes, ses coûts cachés, et nous vous présenterons une <strong>solution durable pour transformer votre code chaotique en un atout stratégique maintenable</strong>, tant pour les humains que pour les IA : <strong>le service AI2H</strong>.
 
 ## Qu'est-ce que la boucle de codage IA ? Anatomie d'un blocage moderne
 
@@ -125,11 +125,11 @@ Au-delà des noms et de la redondance, l'architecture globale du code joue un r�
 
 Elle ne peut pas raisonner sur le flux de données ni isoler l'impact d'une modification. Changer une ligne peut avoir des effets de bord imprévisibles à dix autres endroits. Confrontée à cette complexité cyclomatique élevée, l'IA opte pour la solution la plus sûre et la plus locale possible, ce qui est rarement la bonne, initiant ainsi une boucle de tentatives ratées.
 
-## La solution durable : A2H, transformer le chaos en clarté pour l'humain et l'IA
+## La solution durable : AI2H, transformer le chaos en clarté pour l'humain et l'IA
 
 Tenter de casser la boucle en reformulant sa demande à l'IA est une solution de court terme. C'est comme secouer une machine distributrice bloquée : parfois ça marche, mais ça ne répare pas le mécanisme. <strong>La seule solution pérenne est de s'attaquer à la cause racine : la qualité du code lui-même.</strong>
 
-<strong>C'est précisément la mission d'A2H.</strong> Nous ne sommes pas un simple service de débogage. <strong>Nous sommes des architectes de la maintenabilité à l'ère de l'IA.</strong> Notre service transforme les bases de code confuses, souvent générées ou modifiées à la hâte par des IA, en systèmes robustes, lisibles et optimisés pour une collaboration future efficace entre les développeurs humains et leurs assistants IA.
+<strong>C'est précisément la mission d'AI2H.</strong> Nous ne sommes pas un simple service de débogage. <strong>Nous sommes des architectes de la maintenabilité à l'ère de l'IA.</strong> Notre service transforme les bases de code confuses, souvent générées ou modifiées à la hâte par des IA, en systèmes robustes, lisibles et optimisés pour une collaboration future efficace entre les développeurs humains et leurs assistants IA.
 
 ### Notre approche : de l'humain pour l'IA, et de l'IA pour l'humain
 
@@ -147,9 +147,9 @@ Notre processus est une synergie entre l'expertise humaine et l'outillage intell
 
 - **Documentation et contextualisation** : Nous enrichissons le code avec une documentation pertinente. Pas des commentaires qui paraphrasent le code, mais des explications qui clarifient le "pourquoi", le contexte métier que l'IA ne peut pas deviner. Cela permet aux futurs développeurs (humains ou IA) de comprendre instantanément l'objectif de chaque module.
 
-### Les bénéfices concrets d'un code "A2H-ready"
+### Les bénéfices concrets d'un code "AI2H-ready"
 
-<strong>En investissant dans la remise en état de votre code avec A2H, vous ne résolvez pas seulement le problème de la boucle. Vous débloquez un nouveau niveau de productivité.</strong>
+<strong>En investissant dans la remise en état de votre code avec AI2H, vous ne résolvez pas seulement le problème de la boucle. Vous débloquez un nouveau niveau de productivité.</strong>
 
 **Productivité de l'IA multipliée** : Sur un code propre et bien structuré, les interventions de l'IA deviennent chirurgicales. Les demandes sont comprises du premier coup, les solutions sont pertinentes et les boucles disparaissent. Votre assistant IA passe du statut de stagiaire confus à celui d'expert efficace.
 
@@ -167,10 +167,10 @@ Le "vibe coding" assisté par l'IA a changé la donne, mais il nous a aussi ense
 
 <strong>Ne laissez pas votre projet être la victime d'une boucle infinie. Reprenez le contrôle en vous attaquant à la source du problème.</strong>
 
-<strong>Contactez A2H dès aujourd'hui pour un diagnostic de votre base de code.</strong> Découvrez comment nous pouvons la transformer en un moteur de performance pour vos équipes et vos intelligences artificielles, et faire de la collaboration Homme-Machine la véritable clé de votre succès.
+<strong>Contactez AI2H dès aujourd'hui pour un diagnostic de votre base de code.</strong> Découvrez comment nous pouvons la transformer en un moteur de performance pour vos équipes et vos intelligences artificielles, et faire de la collaboration Homme-Machine la véritable clé de votre succès.
   `,
   author: "Jonathan Serra",
   publishedAt: "2025-09-30",
   readTime: "12 min",
-  tags: ["IA", "Vibe Coding", "Boucle", "Code", "A2H", "Productivité", "Maintenance"]
+  tags: ["IA", "Vibe Coding", "Boucle", "Code", "AI2H", "Productivité", "Maintenance"]
 };

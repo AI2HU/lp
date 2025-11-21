@@ -1,6 +1,6 @@
-# A2H Landing Page
+# AI2H Landing Page
 
-This is a [Next.js](https://nextjs.org) project for the A2H landing page, featuring a contact form integrated with Brevo (formerly Sendinblue).
+This is a [Next.js](https://nextjs.org) project for the AI2H landing page, featuring a contact form integrated with Brevo (formerly Sendinblue).
 
 ## Environment Setup
 

@@ -75,7 +75,7 @@ export function Nav() {
             <Link href={i18n.language === 'en' ? '/en' : '/'} className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="A2H Logo"
+                alt="AI2H Logo"
                 width={60}
                 height={60}
                 className="transition-all duration-300 hover:scale-105"

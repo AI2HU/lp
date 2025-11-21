@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
     const emailPayload: EmailPayload = {
       sender: {
         email: 'jonathan@ai2h.tech',
-        name: 'A2H - Goditor'
+        name: 'AI2H - Goditor'
       },
       to: [
         {
@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
             <p><strong>Moyen : ${result.summary.medium ?? 0}</strong></p>
             <p><strong>Faible : ${result.summary.low ?? 0}</strong></p>
             <p><strong>Info : ${result.summary.info ?? 0}</strong></p>
-            <p>Cordialement,<br>L'équipe A2H</p>
+            <p>Cordialement,<br>L'équipe AI2H</p>
             <p>Goditor @ https://ai2h.tech - jonathan@ai2h.tech</p>
           </body>
         </html>

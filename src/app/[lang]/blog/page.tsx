@@ -19,7 +19,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
       <div className="bg-gradient-to-br from-gray-50 via-white to-accent/5 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent leading-tight">
-            Blog A2H
+            Blog AI2H
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
             Découvrez nos cas d&apos;usage, conseils et retours d&apos;expérience sur la migration IA vers code humain
