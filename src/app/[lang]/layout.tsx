@@ -12,24 +12,24 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://ai2h.tech'),
     title: isFr 
-      ? "Code IA bloqué ? Migrez vers du code maintenable - AI2H"
-      : "AI Code stuck? Migrate to maintainable code - AI2H",
+      ? "Assurer la mise en Production : Stabilisez votre logiciel pour l'évolutivité et la sécurité - AI2H"
+      : "Production-Ready Certainty: Stabilize Your Software for Scale and Security - AI2H",
     description: isFr
-      ? "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts."
-      : "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts.",
+      ? "Votre partenaire CTO à la demande pour la dernière ligne droite. Nous durcissons votre base de code, garantissant des mises à jour plus rapides, une sécurité supérieure, et une stabilité opérationnelle à long terme."
+      : "Your CTO-on-Demand partner for the last mile. We harden your code base, guaranteeing faster updates, superior security, and long-term operational stability.",
     openGraph: {
       title: isFr
-        ? "Code IA bloqué ? Migrez vers du code maintenable - AI2H"
-        : "AI Code stuck? Migrate to maintainable code - AI2H",
+        ? "Assurer la mise en Production : Stabilisez votre logiciel pour l'évolutivité et la sécurité - AI2H"
+        : "Production-Ready Certainty: Stabilize Your Software for Scale and Security - AI2H",
       description: isFr
-        ? "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts"
-        : "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts",
+        ? "Votre partenaire CTO à la demande pour la dernière ligne droite. Nous durcissons votre base de code, garantissant des mises à jour plus rapides, une sécurité supérieure, et une stabilité opérationnelle à long terme"
+        : "Your CTO-on-Demand partner for the last mile. We harden your code base, guaranteeing faster updates, superior security, and long-term operational stability",
       images: [
         {
           url: "/images/ai2h_banner.png",
           width: 1200,
           height: 630,
-          alt: isFr ? "AI2H - Migration code IA vers code humain" : "AI2H - AI Code to Human Code Migration",
+          alt: isFr ? "AI2H - Du prototype IA au système de production puissant" : "AI2H - From AI Prototype to Production Powerhouse",
         },
       ],
       locale: isFr ? "fr_FR" : "en_US",
@@ -38,11 +38,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     twitter: {
       card: "summary_large_image",
       title: isFr
-        ? "Code IA bloqué ? Migrez vers du code maintenable - AI2H"
-        : "AI Code stuck? Migrate to maintainable code - AI2H",
+        ? "Assurer la mise en Production : Stabilisez votre logiciel pour l'évolutivité et la sécurité - AI2H"
+        : "Production-Ready Certainty: Stabilize Your Software for Scale and Security - AI2H",
       description: isFr
-        ? "Code IA bloqué ? Migrez vers du code maintenable. Éliminez les boucles infinies avec notre migration unique vers un code maintenu par des experts"
-        : "AI Code stuck? Migrate to maintainable code. Eliminate infinite loops with our unique migration to code maintained by experts",
+        ? "Votre partenaire CTO à la demande pour la dernière ligne droite. Nous durcissons votre base de code, garantissant des mises à jour plus rapides, une sécurité supérieure, et une stabilité opérationnelle à long terme"
+        : "Your CTO-on-Demand partner for the last mile. We harden your code base, guaranteeing faster updates, superior security, and long-term operational stability",
       images: ["/images/ai2h_banner.png"],
     },
   };
