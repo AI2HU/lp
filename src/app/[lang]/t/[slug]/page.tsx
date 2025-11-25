@@ -1,6 +1,5 @@
 "use client";
 
-import { CloudPricingCalculator } from "@/component/CloudPricingCalculator";
 import { TokenPricingCalculator } from "@/component/TokenPricingCalculator";
 import { ProcessSteps } from "@/component/ProcessSteps";
 import { BenefitsSection } from "@/component/BenefitsSection";
@@ -249,11 +248,7 @@ export default function TargetPage({ params }: TargetPageProps) {
       {resolvedParams.slug !== "reassurance-production-vibe-code" && (
       <section id="pricing-calculator" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          {resolvedParams.slug === "code-ia-trop-cher" ? (
-            <TokenPricingCalculator />
-          ) : (
-            <CloudPricingCalculator />
-          )}
+          <TokenPricingCalculator />
         </div>
       </section>
       )}

@@ -89,6 +89,11 @@ export function Footer() {
                     {t("footer.codeBlocked")}
                   </Link>
                 </li>
+                <li>
+                  <Link href={getLocalizedPath("/t/reassurance-production-vibe-code")} className="text-gray-300 hover:font-bold transition-all duration-300">
+                    {t("footer.productionReassurance")}
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

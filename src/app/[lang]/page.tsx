@@ -1,7 +1,7 @@
 "use client";
 
 import { Nav } from "@/component/Nav";
-import { CloudPricingCalculator } from "@/component/CloudPricingCalculator";
+import { TokenPricingCalculator } from "@/component/TokenPricingCalculator";
 import { ProcessSteps } from "@/component/ProcessSteps";
 import { Footer } from "@/component/Footer";
 import { HeroSection } from "@/component/HeroSection";
@@ -12,10 +12,9 @@ import { ContactSection } from "@/component/ContactSection";
 import { CTASection } from "@/component/CTASection";
 import { CloudProvidersSection } from "@/component/CloudProvidersSection";
 import { FAQ } from "@/component/FAQ";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 
-export default function Home({ params }: { params: Promise<{ lang: string }> }) {
-  const resolvedParams = use(params);
+export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export default function Home({ params }: { params: Promise<{ lang: string }> }) 
       {/* Pricing Calculator Section */}
       <section id="pricing-calculator" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <CloudPricingCalculator />
+          <TokenPricingCalculator />
         </div>
       </section>
 

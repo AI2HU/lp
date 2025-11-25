@@ -9,9 +9,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Migration code IA vers Code Humain",
-    "title": "Code IA bloqué ?<br />Reprenez le contrôle<br />avec du code maintenable",
-    "subtitle": "Sortez de l'impasse du code IA bloqué grâce à notre migration unique vers un code <span class=\"text-accent font-semibold\">plus robuste</span>, <span class=\"text-accent font-semibold\">facile à maintenir</span> et <span class=\"text-accent font-semibold\">que vous maîtrisez</span>",
+    "badge": "De code IA vers la mise en Production",
+    "title": "Assurer la mise en Production :<br />Stabilisez votre logiciel<br />pour l'évolutivité et la sécurité.",
+    "subtitle": "Votre partenaire CTO à la demande pour la dernière ligne droite. Nous durcissons votre base de code, garantissant des <span class=\"text-accent font-semibold\">mises à jour plus rapides</span>, une <span class=\"text-accent font-semibold\">sécurité supérieure</span>, et une <span class=\"text-accent font-semibold\">stabilité opérationnelle à long terme</span>",
     "highlight": "Maximisez votre ROI et prenez le contrôle total de votre technologie",
     "ctaDiscover": "Découvrir AI2H",
     "ctaDebug": "Debug Express"
@@ -20,45 +20,45 @@
     "title": "Avantages exceptionnels",
     "subtitle": "Votre investissement se transforme en économies substantielles",
     "savings": {
-      "title": "Économies importantes",
-      "description": "Éliminez définitivement les frais d'abonnement IA. Notre migration unique est rentabilisée en seulement 5 mois."
+      "title": "Sécurité et Résilience Renforcées",
+      "description": "Nous mettons en œuvre des protocoles de sécurité de niveau production, effectuons des audits complets et renforçons votre système contre les vulnérabilités, garantissant la continuité des activités et l'intégrité des données."
     },
     "ownership": {
-      "title": "Propriété intellectuelle totale",
-      "description": "Obtenez 100% de contrôle sur votre code sans aucune dépendance continue ni restriction de licence."
+      "title": "Efficacité des Coûts à Long Terme",
+      "description": "En éliminant la dette technique et en stabilisant l'architecture centrale, nous réduisons considérablement les coûts d'indisponibilité imprévus, les charges de maintenance futures et le besoin d'interventions d'urgence."
     },
     "migration": {
-      "title": "Migration transparente",
-      "description": "Notre équipe d'élite gère l'ensemble de la transition sans interruption de service et avec un impact minimal sur vos opérations."
+      "title": "Vélocité Accélérée",
+      "description": "Nous restructurons la base de code pour une maintenabilité supérieure, permettant à vos équipes de déployer des corrections et de nouvelles fonctionnalités avec plus de rapidité, de confiance et un risque minimal de régression."
     },
     "performance": {
-      "title": "Performance améliorée",
-      "description": "Nous ne nous contentons pas de convertir, nous optimisons. Attendez-vous à un code plus propre, des performances accrues et l'élimination des bizarreries générées par l'IA."
+      "title": "Stabilité Opérationnelle Garantie",
+      "description": "Notre processus identifie et résout les problèmes de stabilité cachés, fournissant une base robuste et évolutive prête à gérer une croissance significative des utilisateurs et des pics de charge imprévus."
     }
   },
   "aiServices": {
-    "title": "AI2H vous aide à migrer de ces services",
-    "subtitle": "Les agents IA créent du code, mais vous restez dépendant de leurs plateformes. Nous vous libérons de cette dépendance en convertissant votre code IA en code humain robuste.",
-    "highlight": "Ces plateformes génèrent du code avec l'IA",
-    "highlight2": "AI2H vous libère",
-    "description": "mais vous restez prisonnier de leurs écosystèmes. en transformant ce code IA en code humain que vous possédez entièrement et pouvez déployer partout."
+    "title": "AI2H vous aide à tirer le meilleur parti de ces services",
+    "subtitle": "AI2H fournit une stabilisation de niveau CTO et une optimisation de production pour faire évoluer votre produit généré par IA en toute confiance.",
+    "highlight": "Les agents IA excellent dans le prototypage rapide",
+    "highlight2": "AI2H transforme ce potentiel en fiabilité",
+    "description": "mais le code résultant manque souvent de stabilité et de sécurité en production."
   },
   "comparison": {
-    "title": "Comparer et économiser",
+    "title": "Comparer et évoluer",
     "aiSubscription": {
-      "title": "Abonnement au service IA",
-      "continuousPayments": "Paiements mensuels continus",
-      "locked": "Verrouillé dans des systèmes propriétaires",
-      "limited": "Options de personnalisation limitées",
-      "dependency": "Dépendance à un service tiers"
+      "title": "Sans le service AI2H",
+      "continuousPayments": "Faible vélocité et maintenabilité",
+      "locked": "Risque de failles de sécurité élevé",
+      "limited": "Limitation des options de personnalisation",
+      "dependency": "Peu ou pas de stratégie technique"
     },
     "a2h": {
       "badge": "VOUS GAGNEZ",
-      "title": "Migration unique AI2H",
-      "oneTime": "Paiement unique, propriété à vie",
-      "control": "Propriété et contrôle total du code",
-      "customization": "Potentiel de personnalisation illimité",
-      "deploy": "Déployez n'importe où, sans verrouillage par le fournisseur"
+      "title": "Avec le service AI2H",
+      "oneTime": "Vitesse et maintenabilité accélérées",
+      "control": "Sécurité renforcée et failles de sécurité minimisées",
+      "customization": "Personnalisation sans limites",
+      "deploy": "Vision stratégique et maîtrise technique"
     }
   },
   "cloudProviders": {
@@ -84,24 +84,63 @@
     "eachYearDescription": "Économies annuelles récurrentes",
     "startNow": "Commencer maintenant"
   },
+  "tokenCalculator": {
+    "title": "AI2H optimise votre vélocité",
+    "subtitle": "AI2H réduit la probabilité d'erreurs et réduit la fenêtre de contexte pour la production de code, permettant une production plus rapide",
+    "dailyRequests": "Requêtes quotidiennes",
+    "perDay": "par jour",
+    "tokensPerRequest": "Tokens par requête",
+    "averageTokens": "tokens moyens",
+    "contextReduction": "Réduction de contexte",
+    "optimization": "optimisation",
+    "currentUsage": "Usage actuel (mensuel)",
+    "tokens": "tokens",
+    "nonOptimizedContext": "Contexte non optimisé",
+    "optimizedUsage": "Usage optimisé",
+    "reducedContext": "Contexte réduit",
+    "timeGainedTitle": "Temps gagné grâce à l'optimisation (jour-homme)",
+    "timeGainedDescription": "Évitez les échecs exponentiels : moins d'erreurs = moins de retry et de debug",
+    "timePerDay": "Par jour",
+    "minutes": "min",
+    "dailyTimeSaved": "temps économisé quotidiennement",
+    "timePerMonth": "Par mois",
+    "hours": "h",
+    "monthlyHoursSaved": "heures économisées mensuellement",
+    "timePerYear": "Par an",
+    "days": "jours",
+    "personDaysSaved": "jour-homme économisés",
+    "savingsTitle": "Vos économies de tokens LLM",
+    "tokensSaved": "Tokens économisés",
+    "savingsPerMonth": "par mois",
+    "llmSavings": "Économies LLM",
+    "monthlyTokenCosts": "coûts tokens mensuels",
+    "timeGain": "Gain temps",
+    "monthlyTimeValue": "valeur temps mensuelle",
+    "timeCostNote": "Basé sur un coût journalier de 400€ (8h de travail)",
+    "monthlyTotal": "Total mensuel",
+    "totalSavings": "économies totales",
+    "yearlyTotalSavings": "Économies annuelles totales",
+    "includingTokensAndTime": "incluant tokens LLM + gain de temps",
+    "optimizeContext": "Optimiser ma vélocité"
+  },
   "process": {
     "title": "Quatre étapes simples",
-    "subtitle": "Optez pour l'indépendance complète du code",
+    "subtitle": "Optez pour l'amélioration continue du code",
     "step1": {
       "title": "Évaluation complète",
       "subtext": "Analyse approfondie de votre code existant"
     },
     "step2": {
-      "title": "Migration stratégique",
-      "subtext": "Stratégie personnalisée pour votre migration"
+      "title": "Planification stratégique",
+      "subtext": "Stratégie personnalisée pour optimiser votre code"
     },
     "step3": {
       "title": "Implémentation experte",
-      "subtext": "Exécution par nos experts développeurs"
+      "subtext": "Exécution par nos experts et outils internes"
     },
     "step4": {
-      "title": "Transfert complet",
-      "subtext": "Livraison avec documentation complète"
+      "title": "Amélioration continue",
+      "subtext": "Amélioration continue de votre code avec nos experts et outils internes"
     }
   },
   "faq": {
@@ -170,8 +209,8 @@
   },
   "cta": {
     "title": "Gagnez du temps et de l'argent",
-    "subtitle": "Faites le premier pas vers une véritable propriété du code",
-    "startMigration": "Commencer la migration",
+    "subtitle": "Obtenez la certitude production-ready pour votre logiciel",
+    "startMigration": "Stabiliser mon code",
     "debugExpress": "Debug Express",
     "blogButton": "Consulter notre blog",
     "blogText": "Vous voulez voir un cas d'utilisation réel d'AI2H en action ?",
@@ -179,7 +218,7 @@
     "blogRest": "pour un exemple détaillé."
   },
   "footer": {
-    "tagline": "Migrez votre code IA vers du code humain",
+    "tagline": "Du prototype IA au système de production puissant",
     "services": "Services",
     "resources": "Ressources",
     "advantages": "Avantages",
@@ -193,6 +232,7 @@
     "vibeMigration": "Migration Vibe",
     "codeTooExpensive": "Code IA trop cher ?",
     "codeBlocked": "Code IA bloqué ?",
+    "productionReassurance": "Réassurance production",
     "copyright": "© 2025 AI2H. Tous droits réservés."
   },
   "manifesto": {
@@ -302,7 +342,7 @@
       "heroSubtitle": "Migration code IA vers code humain",
       "heroDescription": "Éliminez définitivement les coûteux abonnements IA grâce à notre migration unique vers un code plus robuste, facile à maintenir et à mettre à jour",
       "ctaTitle": "Gagnez du temps et de l'argent",
-      "ctaDescription": "Faites le premier pas vers une véritable propriété du code",
+      "ctaDescription": "Obtenez la certitude production-ready pour votre logiciel",
       "metaTitle": "Migration code IA vers code humain - AI2H",
       "metaDescription": "Migrez votre code IA vers du code humain. Éliminez les abonnements coûteux avec notre migration unique vers un code robuste et maintenable."
     },
