@@ -5,13 +5,13 @@ export const plusGrossesFaillesVibeCoding: BlogPost = {
   title: "Les plus grosses failles du vibe coding : sécurité, scalabilité et qualité du code",
   excerpt: "Le vibe coding expose les projets à des risques critiques : failles de sécurité béantes, architectures non scalables et code de qualité médiocre. Analyse approfondie des trois faiblesses majeures de cette approche.",
   content: `
-Le <strong>vibe coding</strong>, cette pratique qui consiste à générer du code via l'IA en se fiant à l'intuition plutôt qu'à une analyse rigoureuse, séduit par sa rapidité apparente. Cependant, <strong>derrière cette facilité se cachent trois failles structurelles majeures</strong> qui peuvent compromettre gravement la viabilité d'un projet : les vulnérabilités de sécurité, l'absence de scalabilité et la dégradation de la qualité du code. Ces problèmes ne sont pas des détails marginaux, mais des défauts fondamentaux qui transforment souvent un prototype prometteur en un cauchemar technique.
+Le <strong>vibe coding</strong>, cette pratique qui consiste à générer du code via l'IA en se fiant à l'intuition plutôt qu'à une analyse rigoureuse, séduit par sa rapidité apparente. Cependant, <strong>derrière cette facilité se cachent trois failles structurelles majeures</strong> qui peuvent compromettre gravement la viabilité d'un projet : les vulnérabilités de sécurité, l'absence de scalabilité et la dégradation de la qualité du code. Ces problèmes ne sont pas des détails marginaux, mais des défauts fondamentaux qui transforment souvent un prototype prometteur en un cauchemar technique. Pour une introduction complète au sujet, consultez notre article sur <a href="/blog/vibe-coding-revolution-mirage-ingenieur-logiciel" class="text-accent hover:text-accent/80 underline font-semibold">le vibe coding comme révolution ou mirage</a>.
 
 ## 1. Les failles de sécurité
 
 ### L'IA reproduit les erreurs du passé
 
-Les modèles d'intelligence artificielle utilisés pour le vibe coding sont entraînés sur des millions de lignes de code public, notamment issues de GitHub. <strong>Le problème fondamental est que ce corpus contient une proportion alarmante de code vulnérable, obsolète ou mal sécurisé.</strong> L'IA, n'ayant pas de capacité de jugement qualitatif, apprend et reproduit ces mauvaises pratiques sans distinction.
+Les modèles d'intelligence artificielle utilisés pour le vibe coding sont entraînés sur des millions de lignes de code public, notamment issues de GitHub. <strong>Le problème fondamental est que ce corpus contient une proportion alarmante de code vulnérable, obsolète ou mal sécurisé.</strong> L'IA, n'ayant pas de capacité de jugement qualitatif, apprend et reproduit ces mauvaises pratiques sans distinction. Pour approfondir les risques de sécurité et les coûts cachés, lisez notre article sur <a href="/blog/vibe-coding-cout-securite-risques-caches" class="text-accent hover:text-accent/80 underline font-semibold">les coûts cachés et risques de sécurité du vibe coding</a>.
 
 ### Injections SQL et XSS : des classiques qui reviennent
 
@@ -95,7 +95,7 @@ Cette absence de robustesse rend l'application fragile. Une erreur inattendue pe
 
 Les trois failles majeures du vibe coding – sécurité, scalabilité et qualité – ne sont pas des problèmes mineurs que l'on peut corriger après coup. <strong>Ce sont des défauts structurels qui s'incrustent profondément dans le code</strong> et qui deviennent de plus en plus coûteux à corriger avec le temps.
 
-Le vibe coding peut être un outil puissant lorsqu'il est utilisé par des développeurs expérimentés qui comprennent ces risques et qui refactorisent, sécurisent et optimisent le code généré. Mais utilisé "à l'aveugle", il produit des applications qui semblent fonctionner mais qui sont en réalité des bombes à retardement techniques, financières et sécuritaires.
+Le vibe coding peut être un outil puissant lorsqu'il est utilisé par des développeurs expérimentés qui comprennent ces risques et qui refactorisent, sécurisent et optimisent le code généré. Mais utilisé "à l'aveugle", il produit des applications qui semblent fonctionner mais qui sont en réalité des bombes à retardement techniques, financières et sécuritaires. Si vous êtes confronté à des boucles de codage IA, découvrez <a href="/blog/sortir-boucle-infernale-ia-egare-code-reprendre-controle" class="text-accent hover:text-accent/80 underline font-semibold">comment sortir de la boucle infernale et reprendre le contrôle</a>.
 
 <strong>La solution n'est pas d'abandonner ces outils, mais de migrer le code généré vers du code humain, maintenable, sécurisé et scalable.</strong> C'est précisément la mission d'AI2H : transformer votre code IA en code de qualité professionnelle que vous maîtrisez entièrement.
   `,

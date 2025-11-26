@@ -5,7 +5,7 @@ export const vibeCodingRevolutionMirageIngenieurLogiciel: BlogPost = {
   title: "Le Vibe Coding : Révolution ou mirage pour l'ingénieur logiciel ?",
   excerpt: "Le vibe coding démocratise la création logicielle mais soulève des questions cruciales sur la qualité et la maintenabilité du code. Analyse complète de cette nouvelle approche de développement.",
   content: `
-Le monde du développement logiciel est en perpétuelle ébullition, et un nouveau terme a émergé pour décrire une tendance de fond : <strong>le vibe coding</strong>. Popularisé par l'avènement des assistants IA comme GitHub Copilot et des plateformes Low-Code/No-Code, ce concept décrit une approche où le développeur se concentre sur l'intention ("le vibe") et laisse l'outil générer le code fonctionnel. <strong>C'est une méthode qui privilégie le résultat immédiat plutôt que la maîtrise du processus.</strong> Mais est-ce une véritable avancée ou une bombe à retardement technique ?
+Le monde du développement logiciel est en perpétuelle ébullition, et un nouveau terme a émergé pour décrire une tendance de fond : <strong>le vibe coding</strong>. Popularisé par l'avènement des assistants IA comme GitHub Copilot et des plateformes Low-Code/No-Code, ce concept décrit une approche où le développeur se concentre sur l'intention ("le vibe") et laisse l'outil générer le code fonctionnel. <strong>C'est une méthode qui privilégie le résultat immédiat plutôt que la maîtrise du processus.</strong> Mais est-ce une véritable avancée ou une bombe à retardement technique ? Pour approfondir les risques spécifiques, consultez notre article sur <a href="/blog/vibe-coding-cout-securite-risques-caches" class="text-accent hover:text-accent/80 underline font-semibold">les coûts cachés et les risques de sécurité</a> ou celui sur <a href="/blog/plus-grosses-failles-vibe-coding" class="text-accent hover:text-accent/80 underline font-semibold">les plus grosses failles du vibe coding</a>.
 
 ## La démocratisation de la création logicielle
 
@@ -33,7 +33,7 @@ Le code généré par "vibe" est souvent une boîte noire. Il fonctionne, mais p
 
 **Le syndrome du "code magique"** : Le développeur perd en compétence. Au lieu de comprendre les principes fondamentaux de l'algorithmique, de l'architecture ou de la sécurité, il apprend à "parler" à une machine. Le jour où l'outil ne suffit plus, il se retrouve démuni.
 
-En voulant aller trop vite, on construit des solutions jetables qui ne sont pas viables sur le long terme. C'est l'antithèse même des principes de robustesse, de scalabilité et de maintenabilité qui définissent l'ingénierie logicielle.
+En voulant aller trop vite, on construit des solutions jetables qui ne sont pas viables sur le long terme. C'est l'antithèse même des principes de robustesse, de scalabilité et de maintenabilité qui définissent l'ingénierie logicielle. Pour comprendre comment sortir de ces situations problématiques, lisez notre guide sur <a href="/blog/sortir-boucle-infernale-ia-egare-code-reprendre-controle" class="text-accent hover:text-accent/80 underline font-semibold">comment reprendre le contrôle quand l'IA s'égare dans votre code</a>.
 
 ## Un outil puissant qui exige un savoir-faire expert
 

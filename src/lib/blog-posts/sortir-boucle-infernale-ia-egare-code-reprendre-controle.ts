@@ -5,7 +5,7 @@ export const sortirBoucleInfernaleIaEgareCodeReprendreControle: BlogPost = {
   title: "Sortir de la boucle infernale : quand l'IA s'égare dans votre code et comment reprendre le contrôle",
   excerpt: "L'IA peut se retrouver piégée dans des boucles de codage infructueuses, coûteuses et frustrantes. Découvrez les causes profondes et comment AI2H transforme votre code chaotique en atout stratégique.",
   content: `
-L'ère du développement logiciel assisté par l'intelligence artificielle est une <strong>promesse de productivité décuplée</strong>. En quelques secondes, une IA peut générer des centaines de lignes de code, esquisser une nouvelle fonctionnalité ou proposer une correction de bug. Cette nouvelle façon de travailler, que certains nomment le <strong>"vibe coding"</strong>, coder selon l'intuition et des instructions de haut niveau données à une machine, est exaltante. <strong>Jusqu'au moment où tout s'arrête.</strong>
+L'ère du développement logiciel assisté par l'intelligence artificielle est une <strong>promesse de productivité décuplée</strong>. En quelques secondes, une IA peut générer des centaines de lignes de code, esquisser une nouvelle fonctionnalité ou proposer une correction de bug. Cette nouvelle façon de travailler, que certains nomment le <strong>"vibe coding"</strong>, coder selon l'intuition et des instructions de haut niveau données à une machine, est exaltante. <strong>Jusqu'au moment où tout s'arrête.</strong> Pour mieux comprendre cette approche, consultez notre analyse sur <a href="/blog/vibe-coding-revolution-mirage-ingenieur-logiciel" class="text-accent hover:text-accent/80 underline font-semibold">le vibe coding comme révolution ou mirage</a>.
 
 Vous avez demandé une modification, en apparence simple. Mais l'IA semble patiner. Elle vous propose une solution, vous la testez, elle ne fonctionne pas. Vous lui signalez l'erreur, elle s'excuse et vous propose une variation quasi identique de la même solution défaillante. <strong>Vous êtes entré, sans le savoir, dans une boucle de codage IA.</strong> Le curseur clignote, les minutes se transforment en heures, et votre assistant IA, autrefois si brillant, est désormais prisonnier d'un cycle de tentatives infructueuses.
 
@@ -35,7 +35,7 @@ Le cycle infernal se déroule souvent comme suit :
 
 **Répétition** : Le cycle se répète. Chaque "échec" renforce la conviction de l'IA que le problème réside dans sa propre logique de validation, et non dans l'endroit où elle l'applique. Elle est piégée.
 
-<strong>Ce phénomène est l'expression directe des limites du "vibe coding" : la rapidité initiale se paie par une perte de contrôle et une accumulation de dette technique lorsque les fondations du code sont instables.</strong>
+<strong>Ce phénomène est l'expression directe des limites du "vibe coding" : la rapidité initiale se paie par une perte de contrôle et une accumulation de dette technique lorsque les fondations du code sont instables.</strong> Pour approfondir les risques liés au vibe coding, lisez nos articles sur <a href="/blog/vibe-coding-cout-securite-risques-caches" class="text-accent hover:text-accent/80 underline font-semibold">les coûts cachés et risques de sécurité</a> et sur <a href="/blog/plus-grosses-failles-vibe-coding" class="text-accent hover:text-accent/80 underline font-semibold">les plus grosses failles du vibe coding</a>.
 
 ## Les coûts cachés de la boucle : plus qu'une simple perte de temps
 
@@ -161,7 +161,7 @@ Notre processus est une synergie entre l'expertise humaine et l'outillage intell
 
 ## Conclusion
 
-Le "vibe coding" assisté par l'IA a changé la donne, mais il nous a aussi enseigné une leçon cruciale : <strong>l'intelligence artificielle est un amplificateur.</strong> Appliquée à un code propre et bien structuré, elle amplifie la productivité et l'innovation. Appliquée à un code chaotique, redondant et mal nommé, elle amplifie la confusion, la frustration et les coûts.
+Le "vibe coding" assisté par l'IA a changé la donne, mais il nous a aussi enseigné une leçon cruciale : <strong>l'intelligence artificielle est un amplificateur.</strong> Appliquée à un code propre et bien structuré, elle amplifie la productivité et l'innovation. Appliquée à un code chaotique, redondant et mal nommé, elle amplifie la confusion, la frustration et les coûts. Pour une vision complète des enjeux, découvrez notre analyse sur <a href="/blog/vibe-coding-revolution-mirage-ingenieur-logiciel" class="text-accent hover:text-accent/80 underline font-semibold">le vibe coding comme révolution ou mirage</a>.
 
 <strong>La boucle de l'IA n'est pas une fatalité. C'est un signal d'alarme qui vous indique que les fondations de votre projet sont fragiles.</strong> Ignorer ce signal, c'est s'exposer à des coûts croissants et à une paralysie technique.
 

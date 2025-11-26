@@ -13,7 +13,7 @@ Au lancement d'un projet, <strong>Lovable peut s'avérer être un allié précie
 
 <strong>Chaque mise à jour, chaque nouvelle fonctionnalité, nécessite de repasser par Lovable.</strong> Si les premières évolutions sont fluides, rapidement le nombre d'itérations augmente, et chaque ajout de fonctionnalité se traduit par une facture en tokens de plus en plus élevée.
 
-En parallèle, <strong>l'infrastructure par défaut basée sur Supabase commence à montrer ses limites.</strong> Lorsque le trafic croît, les coûts grimpent en flèche. Là où une simple instance sur un VPS ou une configuration cloud optimisée auraient permis plus de contrôle, de performance et d'économies, l'abonnement Supabase devient une contrainte.
+En parallèle, <strong>l'infrastructure par défaut basée sur Supabase commence à montrer ses limites.</strong> Lorsque le trafic croît, les coûts grimpent en flèche. Là où une simple instance sur un VPS ou une configuration cloud optimisée auraient permis plus de contrôle, de performance et d'économies, l'abonnement Supabase devient une contrainte. Pour comprendre en détail <a href="/blog/supabase-cout-reel-technique-pricing" class="text-accent hover:text-accent/80 underline font-semibold">le coût réel de Supabase en production</a>, consultez notre analyse technique approfondie.
 
 ## La migration : auditer, refactorer, documenter
 
