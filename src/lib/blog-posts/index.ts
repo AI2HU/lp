@@ -5,8 +5,10 @@ import { vibeCodingCoutSecuriteRisquesCaches } from './vibe-coding-cout-securite
 import { sortirBoucleInfernaleIaEgareCodeReprendreControle } from './sortir-boucle-infernale-ia-egare-code-reprendre-controle';
 import { supabaseCoutReelTechniquePricing } from './supabase-cout-reel-technique-pricing';
 import { plusGrossesFaillesVibeCoding } from './plus-grosses-failles-vibe-coding';
+import { vibeCodingKitSurvieLivrerProd } from './vibe-coding-kit-survie-livrer-prod';
 
 export const blogPosts: BlogPost[] = [
+  vibeCodingKitSurvieLivrerProd,
   plusGrossesFaillesVibeCoding,
   vibeCodingRevolutionMirageIngenieurLogiciel,
   reprendreMainCodeLovablePrototypeControleTotal,
