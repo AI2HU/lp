@@ -332,6 +332,163 @@
     "whyQuestion": "Pourquoi je n'ai pas accès à tout l'audit ?",
     "whyAnswer": "Des failles critiques sur le site peuvent être découvertes. Par principe de divulgation responsable, un rapport complet est uniquement envoyé à une adresse email enregistrée sous le domaine de votre site."
   },
+  "pdf": {
+    "title": "Rapport d'Audit de Sécurité",
+    "auditedSite": "Site audité:",
+    "summary": "Résumé",
+    "totalFindings": "Total des découvertes:",
+    "critical": "Critique:",
+    "high": "Élevé:",
+    "medium": "Moyen:",
+    "low": "Faible:",
+    "info": "Info:",
+    "findings": "Découvertes",
+    "evidence": "Preuve:",
+    "footer": "Goditor @ https://ai2h.tech - jonathan@ai2h.tech",
+    "findingsByType": {
+      "missing_hsts": {
+        "title": "En-tête Strict-Transport-Security manquant",
+        "description": "Le site n'applique pas HTTPS via HSTS, ce qui pourrait permettre des attaques de dégradation."
+      },
+      "insecure_hsts": {
+        "title": "Configuration HSTS non sécurisée",
+        "description": "L'en-tête HSTS est présent mais manque la directive max-age."
+      },
+      "missing_csp": {
+        "title": "En-tête Content-Security-Policy manquant",
+        "description": "Le site n'a pas d'en-tête CSP, qui aide à prévenir les attaques XSS."
+      },
+      "missing_content_type_options": {
+        "title": "En-tête X-Content-Type-Options: nosniff manquant",
+        "description": "Le site ne prévient pas le reniflage de type MIME, ce qui pourrait conduire à des problèmes de sécurité."
+      },
+      "missing_frame_protection": {
+        "title": "Protection contre le clickjacking manquante",
+        "description": "Le site n'a pas X-Frame-Options ou frame-ancestors dans CSP, ce qui pourrait permettre des attaques de clickjacking."
+      },
+      "version_leak_server": {
+        "title": "Fuite de version du serveur",
+        "description": "L'en-tête Server expose des informations de version de logiciel qui pourraient aider les attaquants à trouver des exploits connus."
+      },
+      "version_leak_powered_by": {
+        "title": "Fuite de version X-Powered-By",
+        "description": "L'en-tête X-Powered-By expose des informations de version de logiciel qui pourraient aider les attaquants à trouver des exploits connus."
+      },
+      "insecure_cookie_secure": {
+        "title": "Cookie sans drapeau Secure",
+        "description": "Le cookie est défini sur HTTPS mais manque le drapeau Secure, ce qui pourrait permettre son envoi sur HTTP."
+      },
+      "insecure_cookie_httponly": {
+        "title": "Cookie sans drapeau HttpOnly",
+        "description": "Le cookie est accessible via JavaScript, ce qui pourrait permettre aux attaques XSS de le voler."
+      },
+      "insecure_cookie_samesite": {
+        "title": "Cookie SameSite=None sans Secure",
+        "description": "Le cookie a SameSite=None mais manque le drapeau Secure, qui est requis pour les cookies cross-site."
+      },
+      "missing_cookie_samesite": {
+        "title": "Cookie sans attribut SameSite",
+        "description": "Le cookie n'a pas d'attribut SameSite défini, ce qui pourrait permettre des attaques CSRF."
+      },
+      "cors_wildcard": {
+        "title": "CORS autorise toutes les origines",
+        "description": "Le site autorise les requêtes de n'importe quelle origine via le caractère générique CORS, ce qui pourrait permettre à des sites malveillants de faire des requêtes au nom des utilisateurs."
+      },
+      "cors_credentials_with_wildcard": {
+        "title": "CORS autorise les identifiants avec origine générique/réfléchie",
+        "description": "Le site autorise l'envoi d'identifiants avec CORS tout en autorisant toutes les origines ou des origines réfléchies, ce qui est une faille de sécurité critique."
+      },
+      "cors_reflects_origin": {
+        "title": "CORS reflète l'en-tête Origin",
+        "description": "Le site reflète l'en-tête Origin dans Access-Control-Allow-Origin, ce qui pourrait permettre à n'importe quel site de faire des requêtes."
+      },
+      "sensitive_file_exposed": {
+        "title": "Fichier sensible exposé",
+        "description": "Un fichier sensible est publiquement accessible, ce qui pourrait exposer des secrets, la configuration ou le code source."
+      },
+      "directory_listing_enabled": {
+        "title": "Listage de répertoire activé",
+        "description": "Le listage de répertoire est activé, ce qui pourrait exposer la structure de fichiers et des fichiers sensibles."
+      },
+      "leaked_secret_stripe_key": {
+        "title": "Fuite potentielle de clé secrète Stripe Live",
+        "description": "Une fuite potentielle de clé secrète Stripe Live a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_stripe_test": {
+        "title": "Fuite potentielle de clé secrète Stripe Test",
+        "description": "Une fuite potentielle de clé secrète Stripe Test a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_google_api": {
+        "title": "Fuite potentielle de clé API Google",
+        "description": "Une fuite potentielle de clé API Google a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_aws_access": {
+        "title": "Fuite potentielle d'ID de clé d'accès AWS",
+        "description": "Une fuite potentielle d'ID de clé d'accès AWS a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_aws_secret": {
+        "title": "Fuite potentielle de clé secrète d'accès AWS",
+        "description": "Une fuite potentielle de clé secrète d'accès AWS a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_client_secret": {
+        "title": "Fuite potentielle de secret client OAuth",
+        "description": "Une fuite potentielle de secret client OAuth a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_private_key": {
+        "title": "Fuite potentielle de clé privée",
+        "description": "Une fuite potentielle de clé privée a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_api_key": {
+        "title": "Fuite potentielle de clé API",
+        "description": "Une fuite potentielle de clé API a été trouvée dans le code source de la page ou les fichiers JavaScript."
+      },
+      "leaked_secret_password": {
+        "title": "Mot de passe potentiel dans le code",
+        "description": "Un mot de passe potentiel dans le code a été trouvé dans le code source de la page ou les fichiers JavaScript."
+      },
+      "robots_txt_sensitive_paths": {
+        "title": "robots.txt révèle des chemins sensibles",
+        "description": "Le fichier robots.txt contient des chemins qui sont interdits, ce qui pourrait révéler des panneaux d'administration cachés, des points de terminaison API ou des répertoires sensibles."
+      },
+      "verbose_error_500": {
+        "title": "Messages d'erreur verbeux sur erreur 500",
+        "description": "Le serveur renvoie des informations d'erreur détaillées dans les réponses 500, ce qui pourrait fuiter des informations sensibles sur les chemins de code, la structure de la base de données ou les technologies serveur."
+      },
+      "sql_injection_anomaly": {
+        "title": "Vulnérabilité d'injection SQL potentielle",
+        "description": "L'envoi d'une simple quote (') a causé une erreur 500 avec des messages d'erreur spécifiques à la base de données, indiquant une vulnérabilité potentielle d'injection SQL."
+      },
+      "reflected_xss": {
+        "title": "Vulnérabilité XSS réfléchie potentielle",
+        "description": "L'entrée utilisateur est réfléchie dans la réponse HTML sans assainissement approprié, ce qui pourrait permettre des attaques XSS."
+      },
+      "open_api_endpoint": {
+        "title": "Point de terminaison API potentiellement ouvert",
+        "description": "Un point de terminaison API a été trouvé qui renvoie des données JSON sans authentification. Cela peut exposer des données sensibles et nécessite une revue manuelle."
+      },
+      "insecure_form_action": {
+        "title": "Action de formulaire utilise HTTP",
+        "description": "Une action de formulaire pointe vers une URL HTTP au lieu de HTTPS, ce qui enverrait les identifiants ou données utilisateur en texte clair."
+      },
+      "missing_csrf_token": {
+        "title": "Jeton CSRF manquant",
+        "description": "Un formulaire qui effectue des actions modifiant l'état (POST/PUT/DELETE/PATCH) ne semble pas avoir de jeton CSRF, ce qui pourrait permettre des attaques CSRF."
+      }
+    }
+  },
+  "email": {
+    "subject": "Rapport d'audit de sécurité - {{url}}",
+    "greeting": "Bonjour,",
+    "body": "Veuillez trouver ci-joint le rapport d'audit de sécurité pour le site : <strong>{{url}}</strong>",
+    "findingsSummary": "L'audit a relevé {{total}} découvertes :",
+    "critical": "Critique : {{count}}",
+    "high": "Élevé : {{count}}",
+    "medium": "Moyen : {{count}}",
+    "low": "Faible : {{count}}",
+    "info": "Info : {{count}}",
+    "signature": "Cordialement,<br>L'équipe AI2H",
+    "footer": "Goditor @ https://ai2h.tech - jonathan@ai2h.tech"
+  },
   "meta": {
     "title": "Assurer la mise en Production : Stabilisez votre logiciel pour l'évolutivité et la sécurité - AI2H",
     "description": "Votre partenaire CTO à la demande pour la dernière ligne droite. Nous durcissons votre base de code, garantissant des mises à jour plus rapides, une sécurité supérieure, et une stabilité opérationnelle à long terme."

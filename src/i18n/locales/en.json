@@ -332,6 +332,163 @@
     "whyQuestion": "Why don't I have access to the full audit?",
     "whyAnswer": "Critical vulnerabilities on the site may be discovered. Following responsible disclosure principles, a full report is only sent to an email address registered under your site's domain."
   },
+  "pdf": {
+    "title": "Security Audit Report",
+    "auditedSite": "Audited site:",
+    "summary": "Summary",
+    "totalFindings": "Total findings:",
+    "critical": "Critical:",
+    "high": "High:",
+    "medium": "Medium:",
+    "low": "Low:",
+    "info": "Info:",
+    "findings": "Findings",
+    "evidence": "Evidence:",
+    "footer": "Goditor @ https://ai2h.tech - jonathan@ai2h.tech",
+    "findingsByType": {
+      "missing_hsts": {
+        "title": "Missing Strict-Transport-Security header",
+        "description": "The site does not enforce HTTPS via HSTS, which could allow downgrade attacks."
+      },
+      "insecure_hsts": {
+        "title": "Insecure HSTS configuration",
+        "description": "The HSTS header is present but missing the max-age directive."
+      },
+      "missing_csp": {
+        "title": "Missing Content-Security-Policy header",
+        "description": "The site has no CSP header, which helps prevent XSS attacks."
+      },
+      "missing_content_type_options": {
+        "title": "Missing X-Content-Type-Options: nosniff header",
+        "description": "The site does not prevent MIME type sniffing, which could lead to security issues."
+      },
+      "missing_frame_protection": {
+        "title": "Missing clickjacking protection",
+        "description": "The site has no X-Frame-Options or frame-ancestors in CSP, which could allow clickjacking attacks."
+      },
+      "version_leak_server": {
+        "title": "Server version leak",
+        "description": "The Server header exposes software version information that could help attackers find known exploits."
+      },
+      "version_leak_powered_by": {
+        "title": "X-Powered-By version leak",
+        "description": "The X-Powered-By header exposes software version information that could help attackers find known exploits."
+      },
+      "insecure_cookie_secure": {
+        "title": "Cookie without Secure flag",
+        "description": "The cookie is set on HTTPS but missing the Secure flag, which could allow it to be sent over HTTP."
+      },
+      "insecure_cookie_httponly": {
+        "title": "Cookie without HttpOnly flag",
+        "description": "The cookie is accessible via JavaScript, which could allow XSS attacks to steal it."
+      },
+      "insecure_cookie_samesite": {
+        "title": "Cookie SameSite=None without Secure",
+        "description": "The cookie has SameSite=None but is missing the Secure flag, which is required for cross-site cookies."
+      },
+      "missing_cookie_samesite": {
+        "title": "Cookie without SameSite attribute",
+        "description": "The cookie has no SameSite attribute defined, which could allow CSRF attacks."
+      },
+      "cors_wildcard": {
+        "title": "CORS allows all origins",
+        "description": "The site allows requests from any origin via CORS wildcard, which could allow malicious sites to make requests on behalf of users."
+      },
+      "cors_credentials_with_wildcard": {
+        "title": "CORS allows credentials with wildcard/reflected origin",
+        "description": "The site allows sending credentials with CORS while allowing all origins or reflected origins, which is a critical security flaw."
+      },
+      "cors_reflects_origin": {
+        "title": "CORS reflects Origin header",
+        "description": "The site reflects the Origin header in Access-Control-Allow-Origin, which could allow any site to make requests."
+      },
+      "sensitive_file_exposed": {
+        "title": "Sensitive file exposed",
+        "description": "A sensitive file is publicly accessible, which could expose secrets, configuration, or source code."
+      },
+      "directory_listing_enabled": {
+        "title": "Directory listing enabled",
+        "description": "Directory listing is enabled, which could expose file structure and sensitive files."
+      },
+      "leaked_secret_stripe_key": {
+        "title": "Potential Stripe Live secret key leak",
+        "description": "A potential Stripe Live secret key leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_stripe_test": {
+        "title": "Potential Stripe Test secret key leak",
+        "description": "A potential Stripe Test secret key leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_google_api": {
+        "title": "Potential Google API key leak",
+        "description": "A potential Google API key leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_aws_access": {
+        "title": "Potential AWS access key ID leak",
+        "description": "A potential AWS access key ID leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_aws_secret": {
+        "title": "Potential AWS secret access key leak",
+        "description": "A potential AWS secret access key leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_client_secret": {
+        "title": "Potential OAuth client secret leak",
+        "description": "A potential OAuth client secret leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_private_key": {
+        "title": "Potential private key leak",
+        "description": "A potential private key leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_api_key": {
+        "title": "Potential API key leak",
+        "description": "A potential API key leak was found in the page source code or JavaScript files."
+      },
+      "leaked_secret_password": {
+        "title": "Potential password in code",
+        "description": "A potential password in code was found in the page source code or JavaScript files."
+      },
+      "robots_txt_sensitive_paths": {
+        "title": "robots.txt reveals sensitive paths",
+        "description": "The robots.txt file contains disallowed paths, which could reveal hidden admin panels, API endpoints, or sensitive directories."
+      },
+      "verbose_error_500": {
+        "title": "Verbose error messages on 500 error",
+        "description": "The server returns detailed error information in 500 responses, which could leak sensitive information about code paths, database structure, or server technologies."
+      },
+      "sql_injection_anomaly": {
+        "title": "Potential SQL injection vulnerability",
+        "description": "Sending a simple quote (') caused a 500 error with database-specific error messages, indicating a potential SQL injection vulnerability."
+      },
+      "reflected_xss": {
+        "title": "Potential reflected XSS vulnerability",
+        "description": "User input is reflected in the HTML response without proper sanitization, which could allow XSS attacks."
+      },
+      "open_api_endpoint": {
+        "title": "Potentially open API endpoint",
+        "description": "An API endpoint was found that returns JSON data without authentication. This may expose sensitive data and requires manual review."
+      },
+      "insecure_form_action": {
+        "title": "Form action uses HTTP",
+        "description": "A form action points to an HTTP URL instead of HTTPS, which would send credentials or user data in plain text."
+      },
+      "missing_csrf_token": {
+        "title": "Missing CSRF token",
+        "description": "A form that performs state-changing actions (POST/PUT/DELETE/PATCH) does not appear to have a CSRF token, which could allow CSRF attacks."
+      }
+    }
+  },
+  "email": {
+    "subject": "Security audit report - {{url}}",
+    "greeting": "Hello,",
+    "body": "Please find attached the security audit report for the site: <strong>{{url}}</strong>",
+    "findingsSummary": "The audit found {{total}} findings:",
+    "critical": "Critical: {{count}}",
+    "high": "High: {{count}}",
+    "medium": "Medium: {{count}}",
+    "low": "Low: {{count}}",
+    "info": "Info: {{count}}",
+    "signature": "Best regards,<br>The AI2H team",
+    "footer": "Goditor @ https://ai2h.tech - jonathan@ai2h.tech"
+  },
   "meta": {
     "title": "Production-Ready Certainty: Stabilize Your Software for Scale and Security - AI2H",
     "description": "Your CTO-on-Demand partner for the last mile. We harden your code base, guaranteeing faster updates, superior security, and long-term operational stability."

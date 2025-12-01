@@ -2,6 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import { generatePDF } from '@/lib/pdf';
 import { GoditorClient } from '@/lib/goditor-client';
 import { CreateContact, ContactsApi } from '@getbrevo/brevo';
+import frTranslations from '@/i18n/locales/fr.json';
+import enTranslations from '@/i18n/locales/en.json';
+
+type Translations = typeof frTranslations;
+
+function getTranslations(lang: string): Translations {
+  return lang === 'en' ? enTranslations : frTranslations;
+}
 
 function extractDomain(urlString: string): string {
   try {
@@ -29,7 +37,7 @@ function validateEmailDomain(email: string, url: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { url, email } = body;
+    const { url, email, lang = 'fr' } = body;
 
     if (!url || typeof url !== 'string') {
       return NextResponse.json(
@@ -70,7 +78,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const pdfBuffer = await generatePDF(result);
+    const translations = getTranslations(lang);
+    const emailT = translations.email;
+    
+    const pdfBuffer = await generatePDF(result, lang);
     const pdfBase64 = pdfBuffer.toString('base64');
 
     const attachmentName = `audit_securite_${result.url.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`;
@@ -105,20 +116,20 @@ export async function POST(request: NextRequest) {
           name: email.split('@')[0]
         }
       ],
-      subject: `Rapport d'audit de sécurité - ${result.url}`,
+      subject: emailT.subject.replace('{{url}}', result.url),
       htmlContent: `
         <html>
           <body>
-            <p>Bonjour,</p>
-            <p>Veuillez trouver ci-joint le rapport d'audit de sécurité pour le site : <strong>${result.url}</strong></p>
-            <p><strong>L'audit a relevé ${totalFindings} découvertes :</strong></p>
-            <p><strong>Critique : ${result.summary.critical ?? 0}</strong></p>
-            <p><strong>Élevé : ${result.summary.high ?? 0}</strong></p>
-            <p><strong>Moyen : ${result.summary.medium ?? 0}</strong></p>
-            <p><strong>Faible : ${result.summary.low ?? 0}</strong></p>
-            <p><strong>Info : ${result.summary.info ?? 0}</strong></p>
-            <p>Cordialement,<br>L'équipe AI2H</p>
-            <p>Goditor @ https://ai2h.tech - jonathan@ai2h.tech</p>
+            <p>${emailT.greeting}</p>
+            <p>${emailT.body.replace('{{url}}', result.url)}</p>
+            <p><strong>${emailT.findingsSummary.replace('{{total}}', totalFindings.toString())}</strong></p>
+            <p><strong>${emailT.critical.replace('{{count}}', (result.summary.critical ?? 0).toString())}</strong></p>
+            <p><strong>${emailT.high.replace('{{count}}', (result.summary.high ?? 0).toString())}</strong></p>
+            <p><strong>${emailT.medium.replace('{{count}}', (result.summary.medium ?? 0).toString())}</strong></p>
+            <p><strong>${emailT.low.replace('{{count}}', (result.summary.low ?? 0).toString())}</strong></p>
+            <p><strong>${emailT.info.replace('{{count}}', (result.summary.info ?? 0).toString())}</strong></p>
+            <p>${emailT.signature}</p>
+            <p>${emailT.footer}</p>
           </body>
         </html>
       `,

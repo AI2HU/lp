@@ -1,9 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, use } from "react";
 import { Nav } from "@/component/Nav";
 import { Footer } from "@/component/Footer";
 import { useTranslation } from "react-i18next";
+import frTranslations from '@/i18n/locales/fr.json';
+import enTranslations from '@/i18n/locales/en.json';
+
+type Translations = typeof frTranslations;
+
+function getTranslations(lang: string): Translations {
+  return lang === 'en' ? enTranslations : frTranslations;
+}
+
+function getFindingTranslation(type: string, lang: string): { title: string; description: string } {
+  const translations = getTranslations(lang);
+  const findingsByType = translations.pdf?.findingsByType;
+  if (!findingsByType) {
+    return { title: "", description: "" };
+  }
+  const finding = findingsByType[type as keyof typeof findingsByType];
+  return finding || { title: "", description: "" };
+}
 
 interface Finding {
   type: string;
@@ -28,6 +46,7 @@ interface AuditResult {
 }
 
 export default function AuditPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = use(params);
   const { t } = useTranslation();
   const [url, setUrl] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -156,6 +175,7 @@ export default function AuditPage({ params }: { params: Promise<{ lang: string }
         body: JSON.stringify({
           url: result.url,
           email: fullEmail,
+          lang: lang,
         }),
       });
 
@@ -326,29 +346,35 @@ export default function AuditPage({ params }: { params: Promise<{ lang: string }
                   {result.findings.length > 0 ? (
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-gray-900">{t("audit.results")}</h3>
-                      {result.findings.map((finding, index) => (
-                        <div
-                          key={index}
-                          className={`border-2 p-6 ${getSeverityColor(finding.severity)}`}
-                        >
-                          <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-lg font-semibold">{finding.title}</h4>
-                            <span className="px-3 py-1 bg-white/50 text-sm font-semibold">
-                              {translateSeverity(finding.severity)}
-                            </span>
-                          </div>
-                          <p className="text-sm mb-2">
-                            <span className="font-semibold">{t("audit.type")}</span> {finding.type}
-                          </p>
-                          <p className="mb-2">{finding.description}</p>
-                          {finding.evidence && (
-                            <div className="mt-3 p-3 bg-white/50">
-                              <p className="text-sm font-semibold mb-1">{t("audit.evidence")}</p>
-                              <p className="text-sm font-mono break-all">{finding.evidence}</p>
+                      {result.findings.map((finding, index) => {
+                        const translatedFinding = getFindingTranslation(finding.type, lang);
+                        const displayTitle = translatedFinding.title || finding.title;
+                        const displayDescription = translatedFinding.description || finding.description;
+                        
+                        return (
+                          <div
+                            key={index}
+                            className={`border-2 p-6 ${getSeverityColor(finding.severity)}`}
+                          >
+                            <div className="flex items-start justify-between mb-2">
+                              <h4 className="text-lg font-semibold">{displayTitle}</h4>
+                              <span className="px-3 py-1 bg-white/50 text-sm font-semibold">
+                                {translateSeverity(finding.severity)}
+                              </span>
                             </div>
-                          )}
-                        </div>
-                      ))}
+                            <p className="text-sm mb-2">
+                              <span className="font-semibold">{t("audit.type")}</span> {finding.type}
+                            </p>
+                            <p className="mb-2">{displayDescription}</p>
+                            {finding.evidence && (
+                              <div className="mt-3 p-3 bg-white/50">
+                                <p className="text-sm font-semibold mb-1">{t("audit.evidence")}</p>
+                                <p className="text-sm font-mono break-all">{finding.evidence}</p>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   ) : (
                     <div className="bg-green-50 border-2 border-green-200 p-6 text-center">
