@@ -17,7 +17,6 @@ export function TokenPricingCalculator() {
   const dailyCost = 400; // EUR per day
   const workHoursPerDay = 8;
   const workMinutesPerDay = workHoursPerDay * 60; // 480 minutes
-  const costPerMinute = dailyCost / workMinutesPerDay; // ~0.833 EUR per minute
   const costPerHour = dailyCost / workHoursPerDay; // 50 EUR per hour
   
   // Calculate costs
@@ -34,13 +33,10 @@ export function TokenPricingCalculator() {
   const monthlyCostCurrent = (monthlyTokensUsed / 1000000) * inputTokenPrice;
   const monthlyCostOptimized = ((monthlyTokensUsed - monthlyTokensSaved) / 1000000) * inputTokenPrice;
   const monthlySavings = monthlyCostCurrent - monthlyCostOptimized;
-  
-  const yearlySavings = monthlySavings * 12;
 
   // Time estimation calculations including failure exponential growth
   const avgResponseTimePerRequest = 3; // seconds per successful request
   const baseFailureRate = Math.min(0.6, Math.max(0.1, (avgTokensPerRequest / 10000) * 0.4)); // Base failure rate based on context size
-  const retryMultiplier = 2.5; // Average retries per failed request
   const debuggingTimePerFailure = 15; // minutes spent debugging per failure
   
   // Calculate current failure impact (with large context)

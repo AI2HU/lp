@@ -214,7 +214,7 @@ function LoadingFallback() {
   );
 }
 
-export default function DebugExpressInvitationPage({ params }: { params: Promise<{ lang: string }> }) {
+export default function DebugExpressInvitationPage() {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <DebugExpressContent />

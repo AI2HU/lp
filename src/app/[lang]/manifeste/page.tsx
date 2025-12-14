@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Footer } from '@/component/Footer'
 import { useTranslation } from 'react-i18next'
 
-export default function ManifestePage({ params }: { params: Promise<{ lang: string }> }) {
+export default function ManifestePage() {
   const { t, i18n } = useTranslation();
   
   const getLocalizedPath = (path: string) => {
