@@ -6,8 +6,10 @@ import { sortirBoucleInfernaleIaEgareCodeReprendreControle } from './sortir-bouc
 import { supabaseCoutReelTechniquePricing } from './supabase-cout-reel-technique-pricing';
 import { plusGrossesFaillesVibeCoding } from './plus-grosses-failles-vibe-coding';
 import { vibeCodingKitSurvieLivrerProd } from './vibe-coding-kit-survie-livrer-prod';
+import { supabaseFaillesSecuriteSqlClientSideRls } from './supabase-failles-securite-sql-client-side-rls';
 
 export const blogPosts: BlogPost[] = [
+  supabaseFaillesSecuriteSqlClientSideRls,
   vibeCodingKitSurvieLivrerProd,
   plusGrossesFaillesVibeCoding,
   vibeCodingRevolutionMirageIngenieurLogiciel,

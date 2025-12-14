@@ -493,6 +493,14 @@
     "title": "Production-Ready Certainty: Stabilize Your Software for Scale and Security - AI2H",
     "description": "Your CTO-on-Demand partner for the last mile. We harden your code base, guaranteeing faster updates, superior security, and long-term operational stability."
   },
+  "blog": {
+    "cta": {
+      "title": "Ready to take your vibe code project to production?",
+      "description": "Discover how we can help you reduce costs and improve performance",
+      "requestQuote": "Request a free quote",
+      "viewAllArticles": "View all articles"
+    }
+  },
   "targetPages": {
     "vibe-code": {
       "heroTitle": "Vibe&nbsp;code&nbsp;too&nbsp;expensive&nbsp;?<br />Migrate&nbsp;to&nbsp;maintainable code",

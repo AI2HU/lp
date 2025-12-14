@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { getBlogPost, getAllBlogPosts } from '@/lib/blog-posts'
 import { FaCalendarAlt, FaClock, FaUser, FaTag, FaArrowLeft } from 'react-icons/fa'
 import { Footer } from '@/component/Footer'
+import frTranslations from '@/i18n/locales/fr.json'
+import enTranslations from '@/i18n/locales/en.json'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -25,6 +27,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   if (!post) {
     notFound()
+  }
+
+  const translations = lang === 'en' ? enTranslations : frTranslations
+  const t = (key: string) => {
+    const keys = key.split('.')
+    let value: any = translations
+    for (const k of keys) {
+      value = value?.[k]
+    }
+    return value || key
   }
 
   return (
@@ -132,23 +144,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/80 backdrop-blur-sm border border-accent/20 p-8 shadow-xl">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-accent bg-clip-text text-transparent">
-              Prêt à migrer votre application ?
+              {t('blog.cta.title')}
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Découvrez comment nous pouvons vous aider à réduire vos coûts et améliorer vos performances
+              {t('blog.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={lang === 'en' ? '/en/#contact' : '/#contact'}
                 className="inline-flex items-center justify-center px-8 py-4 bg-accent text-white font-semibold hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                Demander un devis gratuit
+                {t('blog.cta.requestQuote')}
               </Link>
               <Link
                 href={lang === 'en' ? '/en/blog' : '/blog'}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-accent text-accent font-semibold hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                Voir tous les articles
+                {t('blog.cta.viewAllArticles')}
               </Link>
             </div>
           </div>

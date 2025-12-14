@@ -493,6 +493,14 @@
     "title": "Assurer la mise en Production : Stabilisez votre logiciel pour l'évolutivité et la sécurité - AI2H",
     "description": "Votre partenaire CTO à la demande pour la dernière ligne droite. Nous durcissons votre base de code, garantissant des mises à jour plus rapides, une sécurité supérieure, et une stabilité opérationnelle à long terme."
   },
+  "blog": {
+    "cta": {
+      "title": "Prêt à passer votre projet vibe code en production ?",
+      "description": "Découvrez comment nous pouvons vous aider à réduire vos coûts et améliorer vos performances",
+      "requestQuote": "Demander un devis gratuit",
+      "viewAllArticles": "Voir tous les articles"
+    }
+  },
   "targetPages": {
     "vibe-code": {
       "heroTitle": "Vibe&nbsp;code&nbsp;trop&nbsp;cher&nbsp;?<br />Migrez&nbsp;vers&nbsp;du code maintenable",
