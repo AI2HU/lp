@@ -694,3 +694,4 @@ La règle d'or : <strong>si une opération implique de la logique métier comple
   readTime: "15 min",
   tags: ["Supabase", "Sécurité", "RLS", "PostgreSQL", "Edge Functions", "SQL Injection", "Client-Side", "PostgREST"]
 };
+
