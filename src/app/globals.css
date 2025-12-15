@@ -60,10 +60,6 @@ html {
   line-height: 1.7;
 }
 
-.blog-content p:first-of-type {
-  @apply text-xl text-gray-600 font-medium;
-}
-
 /* Better spacing for sections */
 .blog-content h1 + p,
 .blog-content h2 + p,
