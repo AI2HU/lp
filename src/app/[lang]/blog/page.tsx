@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getAllBlogPosts } from '@/lib/blog-posts'
 import { FaCalendarAlt, FaClock, FaUser, FaTag } from 'react-icons/fa'
 import { Footer } from '@/component/Footer'
+import { Nav } from '@/component/Nav'
 
 export default async function BlogPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -15,6 +16,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
 
   return (
     <div className="min-h-screen bg-white">
+      <Nav />
       {/* Header */}
       <div className="bg-gradient-to-br from-gray-50 via-white to-accent/5 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

@@ -4,9 +4,12 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { usePathname, useRouter } from "next/navigation";
 
 export function Nav() {
   const { t, i18n } = useTranslation();
+  const pathname = usePathname();
+  const router = useRouter();
   
   const getLocalizedPath = (path: string) => {
     const currentLang = i18n.language;
@@ -15,6 +18,9 @@ export function Nav() {
     }
     return path;
   };
+  
+  const isHomePage = pathname === '/' || pathname === '/en' || pathname === '/fr';
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -54,10 +60,27 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [menuItems]);
 
+  useEffect(() => {
+    if (isHomePage && typeof globalThis !== 'undefined' && globalThis.location?.hash) {
+      const hash = globalThis.location.hash.substring(1);
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [isHomePage, pathname]);
+
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      const homePath = i18n.language === 'en' ? '/en' : '/';
+      router.push(`${homePath}#${sectionId}`);
     }
     setIsMenuOpen(false);
   };
@@ -76,8 +99,8 @@ export function Nav() {
               <Image
                 src="/logo.png"
                 alt="AI2H Logo"
-                width={60}
-                height={60}
+                width={50}
+                height={50}
                 className="transition-all duration-300 hover:scale-105"
               />
             </Link>
