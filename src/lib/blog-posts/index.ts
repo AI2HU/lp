@@ -7,8 +7,10 @@ import { supabaseCoutReelTechniquePricing } from './supabase-cout-reel-technique
 import { plusGrossesFaillesVibeCoding } from './plus-grosses-failles-vibe-coding';
 import { vibeCodingKitSurvieLivrerProd } from './vibe-coding-kit-survie-livrer-prod';
 import { supabaseFaillesSecuriteSqlClientSideRls } from './supabase-failles-securite-sql-client-side-rls';
+import { vibeWallPourquoiPrototypeExplose1000Utilisateurs } from './vibe-wall-pourquoi-prototype-explose-1000-utilisateurs';
 
 export const blogPosts: BlogPost[] = [
+  vibeWallPourquoiPrototypeExplose1000Utilisateurs,
   supabaseFaillesSecuriteSqlClientSideRls,
   vibeCodingKitSurvieLivrerProd,
   plusGrossesFaillesVibeCoding,

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { getBlogPost, getAllBlogPosts } from '@/lib/blog-posts'
 import { FaCalendarAlt, FaClock, FaUser, FaTag, FaArrowLeft } from 'react-icons/fa'
 import { Footer } from '@/component/Footer'
@@ -19,6 +20,58 @@ export async function generateStaticParams() {
     ...posts.map((post) => ({ lang: 'fr', slug: post.slug })),
     ...posts.map((post) => ({ lang: 'en', slug: post.slug })),
   ]
+}
+
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { lang, slug } = await params
+  const post = getBlogPost(slug)
+
+  if (!post) {
+    return {
+      title: 'Article non trouvé',
+    }
+  }
+
+  const baseUrl = 'https://ai2h.tech'
+  const url = `${baseUrl}/${lang === 'en' ? 'en' : ''}/blog/${slug}`
+  const imageUrl = `${baseUrl}/images/ai2h_banner.png`
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    keywords: post.tags.join(', '),
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      siteName: 'AI2H',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      locale: lang === 'en' ? 'en_US' : 'fr_FR',
+      type: 'article',
+      publishedTime: post.publishedAt,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [imageUrl],
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        'fr': `${baseUrl}/blog/${slug}`,
+        'en': `${baseUrl}/en/blog/${slug}`,
+      },
+    },
+  }
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -43,8 +96,43 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     return typeof value === 'string' ? value : key
   }
 
+  const baseUrl = 'https://ai2h.tech'
+  const url = `${baseUrl}/${lang === 'en' ? 'en' : ''}/blog/${slug}`
+  const imageUrl = `${baseUrl}/images/ai2h_banner.png`
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: imageUrl,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'AI2H',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
+    },
+    keywords: post.tags.join(', '),
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header */}
       <div className="bg-gradient-to-br from-gray-50 via-white to-accent/5 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -105,38 +193,74 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div
               className="blog-content text-gray-800 leading-relaxed"
               dangerouslySetInnerHTML={{
-                __html: post.content
+                __html: (() => {
+                  let content = post.content;
+                  
+                  // Tables - process before paragraphs to avoid wrapping
+                  content = content.replace(/^\|(.+)\|\s*\n\|[-\s|:]+\|\s*\n((?:\|.+\|\s*\n?)+)/gm, (match, headerRow, bodyRows) => {
+                    // Parse headers
+                    const headerCells = headerRow.split('|').map((h: string) => h.trim()).filter((h: string) => h.length > 0);
+                    
+                    // Parse body rows
+                    const bodyLines = bodyRows.trim().split('\n').filter((line: string) => line.trim().length > 0);
+                    const dataRows = bodyLines.map((row: string) => {
+                      const cells = row.split('|').map((cell: string) => cell.trim()).filter((cell: string) => cell.length > 0);
+                      return cells;
+                    });
+                    
+                    // Build HTML
+                    const headerHtml = `<thead><tr>${headerCells.map((h: string) => `<th class="px-4 py-3 text-left text-sm font-semibold text-gray-900 bg-gray-50 border-b border-gray-200">${h}</th>`).join('')}</tr></thead>`;
+                    const bodyHtml = `<tbody>${dataRows.map((row: string[]) => 
+                      `<tr class="border-b border-gray-200 hover:bg-gray-50">${row.map((cell: string) => 
+                        `<td class="px-4 py-3 text-sm text-gray-700">${cell}</td>`
+                      ).join('')}</tr>`
+                    ).join('')}</tbody>`;
+                    
+                    return `<div class="overflow-x-auto my-8"><table class="min-w-full border-collapse border border-gray-300 rounded-lg shadow-sm">${headerHtml}${bodyHtml}</table></div>`;
+                  });
+                  
                   // Headers
-                  .replace(/^# (.*$)/gm, '<h1 class="text-4xl font-bold text-gray-900 mt-12 mb-6 leading-tight">$1</h1>')
-                  .replace(/^## (.*$)/gm, '<h2 class="text-3xl font-bold text-gray-900 mt-10 mb-5 leading-tight">$1</h2>')
-                  .replace(/^### (.*$)/gm, '<h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4 leading-tight">$1</h3>')
-                  .replace(/^#### (.*$)/gm, '<h4 class="text-xl font-bold text-gray-900 mt-6 mb-3 leading-tight">$1</h4>')
+                  content = content
+                    .replace(/^# (.*$)/gm, '<h1 class="text-4xl font-bold text-gray-900 mt-12 mb-6 leading-tight">$1</h1>')
+                    .replace(/^## (.*$)/gm, '<h2 class="text-3xl font-bold text-gray-900 mt-10 mb-5 leading-tight">$1</h2>')
+                    .replace(/^### (.*$)/gm, '<h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4 leading-tight">$1</h3>')
+                    .replace(/^#### (.*$)/gm, '<h4 class="text-xl font-bold text-gray-900 mt-6 mb-3 leading-tight">$1</h4>');
                   
                   // Bold and italic text
-                  .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
-                  .replace(/\*(.*?)\*/g, '<em class="italic text-gray-700">$1</em>')
+                  content = content
+                    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em class="italic text-gray-700">$1</em>');
                   
                   // Lists
-                  .replace(/^- (.*$)/gm, '<li class="mb-2 text-gray-700 leading-relaxed text-lg">$1</li>')
-                  .replace(/^\d+\. (.*$)/gm, '<li class="mb-2 text-gray-700 leading-relaxed text-lg">$1</li>')
-                  .replace(/(<li.*<\/li>)/g, '<ul class="list-disc list-inside mb-6 space-y-1 ml-4">$1</ul>')
+                  content = content
+                    .replace(/^- (.*$)/gm, '<li class="mb-2 text-gray-700 leading-relaxed text-lg">$1</li>')
+                    .replace(/^\d+\. (.*$)/gm, '<li class="mb-2 text-gray-700 leading-relaxed text-lg">$1</li>')
+                    .replace(/(<li.*<\/li>)/g, '<ul class="list-disc list-inside mb-6 space-y-1 ml-4">$1</ul>');
                   
                   // Paragraphs
-                  .replace(/\n\n/g, '</p><p class="mb-6 text-gray-700 leading-relaxed text-lg">')
-                  .replace(/^(?!<[h|u|l|s|e|p|c])/gm, '<p class="mb-6 text-gray-700 leading-relaxed text-lg">')
-                  .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><\/p>/g, '')
-                  .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<h[1-6].*?)<\/p>/g, '$1')
-                  .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<ul.*?)<\/p>/g, '$1')
-                  .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<li.*?)<\/p>/g, '$1')
+                  content = content
+                    .replace(/\n\n/g, '</p><p class="mb-6 text-gray-700 leading-relaxed text-lg">')
+                    .replace(/^(?!<[h|u|l|s|e|p|c|t|d])/gm, '<p class="mb-6 text-gray-700 leading-relaxed text-lg">')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><\/p>/g, '')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<h[1-6].*?)<\/p>/g, '$1')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<ul.*?)<\/p>/g, '$1')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<li.*?)<\/p>/g, '$1')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<div.*?)<\/p>/g, '$1')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg">(<table.*?)<\/p>/g, '$1');
 
                   // Code blocks
-                  .replace(/<code(?:\s+class="[^"]*")?>\s*([\s\S]*?)\s*<\/code>/g, '<pre class="bg-gray-100 border-1 border-gray-400 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm font-mono code-block">$1</code></pre>')
-                  // Inline code (single backticks)
-                  .replace(/`(.*?)`/g, '<code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono border">$1</code>')
+                  content = content
+                    .replace(/<code(?:\s+class="[^"]*")?>\s*([\s\S]*?)\s*<\/code>/g, '<pre class="bg-gray-100 border-1 border-gray-400 p-4 rounded-lg overflow-x-auto mb-6"><code class="text-sm font-mono code-block">$1</code></pre>')
+                    // Inline code (single backticks)
+                    .replace(/`(.*?)`/g, '<code class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono border">$1</code>');
                   
                   // Clean up empty paragraphs
-                  .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><br><\/p>/g, '')
-                  .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><\/p>/g, '')
+                  content = content
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><br><\/p>/g, '')
+                    .replace(/<p class="mb-6 text-gray-700 leading-relaxed text-lg"><\/p>/g, '');
+                  
+                  return content;
+                })()
               }}
             />
           </article>
