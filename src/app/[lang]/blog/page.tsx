@@ -11,7 +11,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
   )
   
   const getLocalizedPath = (path: string) => {
-    return lang === 'en' ? `/en${path}` : path;
+    return `/${lang}${path}`;
   };
 
   return (

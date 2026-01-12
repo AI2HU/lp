@@ -494,6 +494,7 @@
     "description": "Your CTO-on-Demand partner for the last mile. We harden your code base, guaranteeing faster updates, superior security, and long-term operational stability."
   },
   "blog": {
+    "backToBlog": "Back to blog",
     "cta": {
       "title": "Ready to take your vibe code project to production?",
       "description": "Discover how we can help you reduce costs and improve performance",
