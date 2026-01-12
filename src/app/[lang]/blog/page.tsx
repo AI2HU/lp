@@ -6,7 +6,7 @@ import { Nav } from '@/component/Nav'
 
 export default async function BlogPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const posts = getAllBlogPosts().sort((a, b) => 
+  const posts = getAllBlogPosts(lang).sort((a, b) => 
     new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   )
   
@@ -58,7 +58,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
                       </div>
                       <div className="flex items-center gap-2">
                         <FaCalendarAlt className="text-accent" />
-                        <span>{new Date(post.publishedAt).toLocaleDateString('fr-FR')}</span>
+                        <span>{new Date(post.publishedAt).toLocaleDateString(lang === 'en' ? 'en-US' : 'fr-FR')}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <FaClock className="text-accent" />

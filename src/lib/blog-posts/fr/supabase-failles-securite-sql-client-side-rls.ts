@@ -1,7 +1,8 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const supabaseFaillesSecuriteSqlClientSideRls: BlogPost = {
   slug: "supabase-failles-securite-sql-client-side-rls",
+  lang: "fr",
   title: "Supabase : les failles de sécurité critiques des requêtes SQL côté client",
   excerpt: "Exposer des requêtes SQL directement depuis le client JavaScript est une faille de sécurité majeure. Analyse technique des risques, de l'importance cruciale du RLS et des Edge Functions comme solution sécurisée.",
   content: `

@@ -1,8 +1,9 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const vibeCodingKitSurvieLivrerProd: BlogPost = {
   slug: "vibe-coding-kit-survie-livrer-prod",
-  title: "Du \"Vibe Coding\" à l'Engineering : le kit de survie pour livrer en prod (sans perdre son flow)",
+  lang: "fr",
+  title: "Du \"Vibe Coding\" à l'engineering : le kit de survie pour livrer en prod (sans perdre son flow)",
   excerpt: "Transformez votre prototype fragile en produit robuste. Un guide pratique pour passer du code généré par IA à une application prête pour 10 000 utilisateurs, sans sacrifier votre créativité.",
   content: `
 ## Introduction

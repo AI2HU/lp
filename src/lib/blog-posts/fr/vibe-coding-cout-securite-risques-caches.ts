@@ -1,7 +1,8 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const vibeCodingCoutSecuriteRisquesCaches: BlogPost = {
   slug: "vibe-coding-cout-securite-risques-caches",
+  lang: "fr",
   title: "Vibe Coding : les coûts cachés et les risques de sécurité de la programmation assistée par IA",
   excerpt: "Le vibe coding promet une productivité décuplée, mais cache des coûts explosifs liés aux tokens et des failles de sécurité critiques. Analyse des risques réels de la programmation assistée par IA.",
   content: `

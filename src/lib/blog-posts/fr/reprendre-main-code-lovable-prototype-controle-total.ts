@@ -1,7 +1,8 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const reprendreMainCodeLovablePrototypeControleTotal: BlogPost = {
   slug: "reprendre-main-code-lovable-prototype-controle-total",
+  lang: "fr",
   title: "Reprendre la main sur un code généré par Lovable : du prototype au contrôle total",
   excerpt: "Découvrez comment migrer efficacement un projet Lovable vers une base de code autonome, réduisant les coûts récurrents et reprenant le contrôle total de votre infrastructure.",
   content: `

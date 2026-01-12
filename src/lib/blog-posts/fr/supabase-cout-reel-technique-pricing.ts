@@ -1,7 +1,8 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const supabaseCoutReelTechniquePricing: BlogPost = {
   slug: "supabase-cout-reel-technique-pricing",
+  lang: "fr",
   title: "Supabase : le coût réel derrière la simplicité apparente",
   excerpt: "Supabase promet une base de données PostgreSQL hébergée avec une API REST automatique. Mais que se cache-t-il vraiment sous le capot ? Analyse technique approfondie et estimation réaliste des coûts pour une application en production.",
   content: `

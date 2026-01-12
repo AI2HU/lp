@@ -3,7 +3,6 @@ import { getAllBlogPosts } from '@/lib/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ai2h.tech'
-  const blogPosts = getAllBlogPosts()
   const locales = ['', '/en'] // '' for French (base path), '/en' for English
   
   // Target page slugs
@@ -25,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Generate pages for both locales
   const generatePages = (locale: string) => {
     const prefix = locale
+    const lang = locale === '/en' ? 'en' : 'fr'
+    const langBlogPosts = getAllBlogPosts(lang)
     const pages: MetadataRoute.Sitemap = [
       {
         url: `${baseUrl}${prefix}`,
@@ -60,8 +61,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     }))
 
-    // Add blog posts
-    const blogPostPages = blogPosts.map(post => ({
+    // Add blog posts for this language
+    const blogPostPages = langBlogPosts.map(post => ({
       url: `${baseUrl}${prefix}/blog/${post.slug}`,
       lastModified: new Date(post.publishedAt),
       changeFrequency: 'monthly' as const,

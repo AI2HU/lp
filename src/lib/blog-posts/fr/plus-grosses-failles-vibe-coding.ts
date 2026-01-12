@@ -1,7 +1,8 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const plusGrossesFaillesVibeCoding: BlogPost = {
   slug: "plus-grosses-failles-vibe-coding",
+  lang: "fr",
   title: "Les plus grosses failles du vibe coding : sécurité, scalabilité et qualité du code",
   excerpt: "Le vibe coding expose les projets à des risques critiques : failles de sécurité béantes, architectures non scalables et code de qualité médiocre. Analyse approfondie des trois faiblesses majeures de cette approche.",
   content: `

@@ -1,12 +1,11 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const vibeWallPourquoiPrototypeExplose1000Utilisateurs: BlogPost = {
   slug: "vibe-wall-pourquoi-prototype-explose-1000-utilisateurs",
-  title: "Le \"Vibe Wall\" : Pourquoi votre prototype explose à 1 000 utilisateurs (et comment le sauver)",
+  lang: "fr",
+  title: "Le \"Vibe Wall\" : pourquoi votre prototype explose à 1 000 utilisateurs (et comment le sauver)",
   excerpt: "Guide complet pour passer un projet Lovable en production : éviter le Vibe Wall à 1000 utilisateurs, optimiser Supabase, sécuriser votre code généré par IA, et transformer votre prototype en application scalable. Solutions pratiques pour migrer du Vibe Coding vers la production.",
   content: `
-## Introduction
-
 Le phénomène du <strong>Vibe Coding</strong> (ou développement assisté par IA) a bouleversé la Silicon Valley et le monde de la tech en 2024 et 2025. Avec des outils comme Lovable, GPT Engineer, ou Cursor, construire une application web est devenu une conversation. On "vibe", on discute avec l'IA, et le code s'écrit tout seul. C'est magique, c'est grisant, et ça permet de lancer un MVP (Produit Minimum Viable) en quelques heures. Pour comprendre les enjeux de cette approche, consultez notre analyse sur <a href="/blog/vibe-coding-revolution-mirage-ingenieur-logiciel" class="text-accent hover:text-accent/80 underline font-semibold">le Vibe Coding comme révolution ou mirage</a>.
 
 Mais un mur invisible attend tous les créateurs : <strong>le Vibe Wall</strong>. C'est ce moment brutal où, après avoir atteint vos 1 000 premiers utilisateurs, l'application commence à ralentir, les bugs se multiplient, et vous réalisez qu'il est devenu impossible de mettre à jour votre projet Lovable sans tout casser.

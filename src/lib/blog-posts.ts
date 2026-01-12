@@ -1,5 +1,6 @@
 export interface BlogPost {
   slug: string;
+  lang: string;
   title: string;
   excerpt: string;
   content: string;

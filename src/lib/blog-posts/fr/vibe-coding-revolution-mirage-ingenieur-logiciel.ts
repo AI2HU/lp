@@ -1,8 +1,9 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const vibeCodingRevolutionMirageIngenieurLogiciel: BlogPost = {
   slug: "vibe-coding-revolution-mirage-ingenieur-logiciel",
-  title: "Le Vibe Coding : Révolution ou mirage pour l'ingénieur logiciel ?",
+  lang: "fr",
+  title: "Le Vibe Coding : révolution ou mirage pour l'ingénieur logiciel ?",
   excerpt: "Le vibe coding démocratise la création logicielle mais soulève des questions cruciales sur la qualité et la maintenabilité du code. Analyse complète de cette nouvelle approche de développement.",
   content: `
 Le monde du développement logiciel est en perpétuelle ébullition, et un nouveau terme a émergé pour décrire une tendance de fond : <strong>le vibe coding</strong>. Popularisé par l'avènement des assistants IA comme GitHub Copilot et des plateformes Low-Code/No-Code, ce concept décrit une approche où le développeur se concentre sur l'intention ("le vibe") et laisse l'outil générer le code fonctionnel. <strong>C'est une méthode qui privilégie le résultat immédiat plutôt que la maîtrise du processus.</strong> Mais est-ce une véritable avancée ou une bombe à retardement technique ? Pour approfondir les risques spécifiques, consultez notre article sur <a href="/blog/vibe-coding-cout-securite-risques-caches" class="text-accent hover:text-accent/80 underline font-semibold">les coûts cachés et les risques de sécurité</a> ou celui sur <a href="/blog/plus-grosses-failles-vibe-coding" class="text-accent hover:text-accent/80 underline font-semibold">les plus grosses failles du vibe coding</a>.

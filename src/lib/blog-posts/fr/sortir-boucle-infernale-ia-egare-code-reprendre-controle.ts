@@ -1,7 +1,8 @@
-import { BlogPost } from '../blog-posts';
+import { BlogPost } from '../../blog-posts';
 
 export const sortirBoucleInfernaleIaEgareCodeReprendreControle: BlogPost = {
   slug: "sortir-boucle-infernale-ia-egare-code-reprendre-controle",
+  lang: "fr",
   title: "Sortir de la boucle infernale : quand l'IA s'égare dans votre code et comment reprendre le contrôle",
   excerpt: "L'IA peut se retrouver piégée dans des boucles de codage infructueuses, coûteuses et frustrantes. Découvrez les causes profondes et comment AI2H transforme votre code chaotique en atout stratégique.",
   content: `

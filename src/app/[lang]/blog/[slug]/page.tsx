@@ -15,20 +15,21 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllBlogPosts()
+  const frPosts = getAllBlogPosts('fr')
+  const enPosts = getAllBlogPosts('en')
   return [
-    ...posts.map((post) => ({ lang: 'fr', slug: post.slug })),
-    ...posts.map((post) => ({ lang: 'en', slug: post.slug })),
+    ...frPosts.map((post) => ({ lang: 'fr', slug: post.slug })),
+    ...enPosts.map((post) => ({ lang: 'en', slug: post.slug })),
   ]
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { lang, slug } = await params
-  const post = getBlogPost(slug)
+  const post = getBlogPost(slug, lang)
 
   if (!post) {
     return {
-      title: 'Article non trouvé',
+      title: lang === 'en' ? 'Article not found' : 'Article non trouvé',
     }
   }
 
@@ -76,7 +77,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { lang, slug } = await params
-  const post = getBlogPost(slug)
+  const post = getBlogPost(slug, lang)
 
   if (!post) {
     notFound()
@@ -142,7 +143,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             className="inline-flex items-center text-accent hover:text-accent/80 transition-colors duration-300 mb-4 text-sm"
           >
             <FaArrowLeft className="mr-2" />
-            Retour au blog
+            {t('blog.backToBlog') || (lang === 'en' ? 'Back to blog' : 'Retour au blog')}
           </Link>
 
           {/* Meta Information */}
@@ -153,7 +154,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
             <div className="flex items-center gap-1">
               <FaCalendarAlt className="text-accent" />
-              <span>{new Date(post.publishedAt).toLocaleDateString('fr-FR')}</span>
+              <span>{new Date(post.publishedAt).toLocaleDateString(lang === 'en' ? 'en-US' : 'fr-FR')}</span>
             </div>
             <div className="flex items-center gap-1">
               <FaClock className="text-accent" />
