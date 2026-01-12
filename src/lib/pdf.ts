@@ -23,7 +23,7 @@ interface AuditResult {
   };
 }
 
-type Translations = typeof frTranslations;
+type Translations = typeof frTranslations | typeof enTranslations;
 
 function getTranslations(lang: string): Translations {
   return lang === 'en' ? enTranslations : frTranslations;

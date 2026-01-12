@@ -233,6 +233,11 @@
     "codeTooExpensive": "Code IA trop cher ?",
     "codeBlocked": "Code IA bloqué ?",
     "productionReassurance": "Réassurance production",
+    "lovableMigration": "Migration Lovable",
+    "vibeWall": "Vibe Wall",
+    "aiLoop": "Boucle IA",
+    "spaghettiCode": "Code Spaghetti",
+    "productionDeployment": "Mise en Production",
     "copyright": "© 2025 AI2H. Tous droits réservés."
   },
   "manifesto": {
@@ -610,6 +615,51 @@
       "ctaDescription": "Obtenez l'expertise nécessaire pour déployer en toute confiance",
       "metaTitle": "Reassurance production vibe code - CTO à la demande - AI2H",
       "metaDescription": "Incertain avant la mise en prod ? CTO à la demande AI2H : expert ingénieur logiciel et cybersécurité pour garantir un code robuste et sécurisé avant déploiement."
+    },
+    "lovable-migration-controle": {
+      "heroTitle": "Projet&nbsp;Lovable&nbsp;bloqué&nbsp;?<br />Reprenez&nbsp;le&nbsp;contrôle",
+      "heroSubtitle": "Du prototype Lovable au code autonome",
+      "heroDescription": "Chaque mise à jour nécessite de repasser par Lovable, et les coûts explosent. Notre migration transforme votre projet Lovable en code propre et maintenable que vous maîtrisez entièrement, éliminant les coûts récurrents.",
+      "ctaTitle": "Reprenez le contrôle de votre code",
+      "ctaDescription": "Transformez votre prototype Lovable en produit industriel",
+      "metaTitle": "Projet Lovable bloqué ? Reprenez le contrôle - AI2H",
+      "metaDescription": "Projet Lovable bloqué ? Reprenez le contrôle avec AI2H. Transformez votre prototype en code autonome et maintenable, éliminez les coûts récurrents."
+    },
+    "prototype-explose-1000-utilisateurs": {
+      "heroTitle": "Prototype&nbsp;explose&nbsp;à<br />1&nbsp;000&nbsp;utilisateurs&nbsp;?<br />Passez&nbsp;à&nbsp;l'échelle&nbsp;production",
+      "heroSubtitle": "Évitez le Vibe Wall",
+      "heroDescription": "Votre prototype fonctionnait parfaitement jusqu'à 1 000 utilisateurs. Maintenant il est lent, bugué et impossible à mettre à jour. Notre migration transforme votre prototype fragile en application évolutive et prête pour la production.",
+      "ctaTitle": "Passez votre application à l'échelle",
+      "ctaDescription": "Transformez votre prototype en produit robuste",
+      "metaTitle": "Prototype explose à 1000 utilisateurs ? Passez à l'échelle production - AI2H",
+      "metaDescription": "Prototype explose à 1000 utilisateurs ? Évitez le Vibe Wall avec AI2H. Migrez vers un code évolutif et prêt pour la production qui gère la croissance."
+    },
+    "boucle-ia-code-bloque": {
+      "heroTitle": "IA&nbsp;bloquée&nbsp;dans&nbsp;une&nbsp;boucle&nbsp;?<br />Sortez-en&nbsp;avec&nbsp;du&nbsp;code&nbsp;propre",
+      "heroSubtitle": "Échappez à la boucle infernale",
+      "heroDescription": "L'IA continue de proposer la même solution défaillante, consommant des tokens coûteux et gaspillant des heures. Notre migration transforme votre code chaotique en code propre et structuré avec lequel l'IA peut travailler efficacement.",
+      "ctaTitle": "Sortez de la boucle",
+      "ctaDescription": "Transformez le chaos en clarté pour humains et IA",
+      "metaTitle": "IA bloquée dans une boucle ? Sortez-en avec du code propre - AI2H",
+      "metaDescription": "IA bloquée dans une boucle ? Sortez-en avec AI2H. Transformez votre code chaotique en architecture propre et maintenable qui élimine les boucles et réduit les coûts."
+    },
+    "code-spaghetti-ia": {
+      "heroTitle": "Code&nbsp;spaghetti&nbsp;IA&nbsp;?<br />Transformez&nbsp;en&nbsp;architecture&nbsp;maintenable",
+      "heroSubtitle": "Du chaos à la clarté",
+      "heroDescription": "Le code généré par IA est souvent illisible, redondant et fragile. Notre migration restructure votre base de code en une architecture propre et modulaire facile à maintenir et à étendre.",
+      "ctaTitle": "Transformez votre architecture de code",
+      "ctaDescription": "Code propre, maintenable et évolutif",
+      "metaTitle": "Code spaghetti IA ? Transformez en architecture maintenable - AI2H",
+      "metaDescription": "Code spaghetti IA ? Transformez en architecture maintenable avec AI2H. Restructurez votre base de code en code propre et modulaire facile à maintenir."
+    },
+    "mise-production-prototype": {
+      "heroTitle": "Incertain&nbsp;avant<br />la&nbsp;mise&nbsp;en&nbsp;production&nbsp;?<br />Obtenez&nbsp;l'expertise&nbsp;CTO",
+      "heroSubtitle": "Conseil expert pour la production",
+      "heroDescription": "Votre prototype fonctionne, mais est-il prêt pour la production ? Notre service CTO à la demande audite votre code, identifie les risques et garantit que votre application est robuste, sécurisée et évolutive avant le déploiement.",
+      "ctaTitle": "Préparez-vous pour la production",
+      "ctaDescription": "Déployez avec confiance et expertise",
+      "metaTitle": "Incertain avant la mise en production ? Obtenez l'expertise CTO - AI2H",
+      "metaDescription": "Incertain avant la mise en production ? Obtenez l'expertise CTO avec AI2H. Audit expert et durcissement pour garantir que votre application est prête pour la production."
     }
   }
 }

@@ -233,6 +233,11 @@
     "codeTooExpensive": "AI Code too expensive?",
     "codeBlocked": "AI Code stuck?",
     "productionReassurance": "Production reassurance",
+    "lovableMigration": "Lovable Migration",
+    "vibeWall": "Vibe Wall",
+    "aiLoop": "AI Loop",
+    "spaghettiCode": "Spaghetti Code",
+    "productionDeployment": "Production Deployment",
     "copyright": "© 2025 AI2H. All rights reserved."
   },
   "manifesto": {
@@ -610,6 +615,51 @@
       "ctaDescription": "Get the expertise you need to deploy with confidence",
       "metaTitle": "Production reassurance vibe code - CTO on demand - AI2H",
       "metaDescription": "Uncertain before production deployment? AI2H CTO on demand: expert software engineer and cybersecurity to guarantee robust and secure code before deployment."
+    },
+    "lovable-migration-control": {
+      "heroTitle": "Lovable&nbsp;project&nbsp;stuck&nbsp;?<br />Regain&nbsp;control",
+      "heroSubtitle": "From Lovable prototype to autonomous codebase",
+      "heroDescription": "Every update requires going back through Lovable, and costs explode. Our migration transforms your Lovable project into clean, maintainable code you fully control, eliminating recurring costs.",
+      "ctaTitle": "Regain control of your code",
+      "ctaDescription": "Transform your Lovable prototype into an industrial product",
+      "metaTitle": "Lovable project stuck? Regain control - AI2H",
+      "metaDescription": "Lovable project stuck? Regain control with AI2H. Transform your prototype into autonomous, maintainable code and eliminate recurring costs."
+    },
+    "prototype-explodes-1000-users": {
+      "heroTitle": "Prototype&nbsp;breaks&nbsp;at<br />1,000&nbsp;users&nbsp;?<br />Scale&nbsp;to&nbsp;production",
+      "heroSubtitle": "Avoid the Vibe Wall",
+      "heroDescription": "Your prototype worked perfectly until 1,000 users. Now it's slow, buggy, and impossible to update. Our migration transforms your fragile prototype into a scalable, production-ready application.",
+      "ctaTitle": "Scale your application",
+      "ctaDescription": "Transform your prototype into a robust product",
+      "metaTitle": "Prototype breaks at 1000 users? Scale to production - AI2H",
+      "metaDescription": "Prototype breaks at 1000 users? Avoid the Vibe Wall with AI2H. Migrate to scalable, production-ready code that handles growth."
+    },
+    "ai-loop-code-stuck": {
+      "heroTitle": "AI&nbsp;stuck&nbsp;in&nbsp;coding&nbsp;loop&nbsp;?<br />Break&nbsp;free&nbsp;with&nbsp;clean&nbsp;code",
+      "heroSubtitle": "Escape the infernal loop",
+      "heroDescription": "AI keeps proposing the same flawed solution, consuming expensive tokens and wasting hours. Our migration transforms your chaotic code into clean, structured code that AI can work with effectively.",
+      "ctaTitle": "Break free from the loop",
+      "ctaDescription": "Transform chaos into clarity for humans and AI",
+      "metaTitle": "AI stuck in coding loop? Break free with clean code - AI2H",
+      "metaDescription": "AI stuck in coding loop? Break free with AI2H. Transform chaotic code into clean, maintainable architecture that eliminates loops and reduces costs."
+    },
+    "ai-spaghetti-code": {
+      "heroTitle": "AI&nbsp;spaghetti&nbsp;code&nbsp;?<br />Transform&nbsp;to&nbsp;maintainable&nbsp;architecture",
+      "heroSubtitle": "From chaos to clarity",
+      "heroDescription": "AI-generated code is often unreadable, redundant, and fragile. Our migration restructures your codebase into a clean, modular architecture that's easy to maintain and extend.",
+      "ctaTitle": "Transform your code architecture",
+      "ctaDescription": "Clean, maintainable and scalable code",
+      "metaTitle": "AI spaghetti code? Transform to maintainable architecture - AI2H",
+      "metaDescription": "AI spaghetti code? Transform to maintainable architecture with AI2H. Restructure your codebase into clean, modular code that's easy to maintain."
+    },
+    "production-deployment-prototype": {
+      "heroTitle": "Uncertain&nbsp;about<br />production&nbsp;deployment&nbsp;?<br />Get&nbsp;CTO&nbsp;expertise",
+      "heroSubtitle": "Expert guidance for production readiness",
+      "heroDescription": "Your prototype works, but is it production-ready? Our CTO on demand service audits your code, identifies risks, and ensures your application is robust, secure, and scalable before deployment.",
+      "ctaTitle": "Get production-ready",
+      "ctaDescription": "Deploy with confidence and expertise",
+      "metaTitle": "Uncertain about production deployment? Get CTO expertise - AI2H",
+      "metaDescription": "Uncertain about production deployment? Get CTO expertise with AI2H. Expert audit and hardening to ensure your application is production-ready."
     }
   }
 }

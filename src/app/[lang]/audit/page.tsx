@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import frTranslations from '@/i18n/locales/fr.json';
 import enTranslations from '@/i18n/locales/en.json';
 
-type Translations = typeof frTranslations;
+type Translations = typeof frTranslations | typeof enTranslations;
 
 function getTranslations(lang: string): Translations {
   return lang === 'en' ? enTranslations : frTranslations;

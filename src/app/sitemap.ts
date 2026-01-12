@@ -5,21 +5,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ai2h.tech'
   const locales = ['', '/en'] // '' for French (base path), '/en' for English
   
-  // Target page slugs
-  const targetSlugs = [
-    'vibe-code',
-    'code-ia-trop-cher',
-    'code-ia-bloque',
-    'debugger-code-genere-par-ia',
-    'code-ia-fonctionne-pas',
-    'code-ia-dette-technique',
-    'failles-securite-code-genere-par-llm',
-    'mauvaise-qualite-code-genere-par-ia',
-    'refactoring-code-ia',
-    'hallucination-code-ia',
-    'probleme-integration-code-ia',
-    'reassurance-production-vibe-code',
-  ]
+  // Target page slugs by language
+  const targetSlugsByLang: Record<string, string[]> = {
+    fr: [
+      'vibe-code',
+      'code-ia-trop-cher',
+      'code-ia-bloque',
+      'debugger-code-genere-par-ia',
+      'code-ia-fonctionne-pas',
+      'code-ia-dette-technique',
+      'failles-securite-code-genere-par-llm',
+      'mauvaise-qualite-code-genere-par-ia',
+      'refactoring-code-ia',
+      'hallucination-code-ia',
+      'probleme-integration-code-ia',
+      'reassurance-production-vibe-code',
+      'lovable-migration-controle',
+      'prototype-explose-1000-utilisateurs',
+      'boucle-ia-code-bloque',
+      'code-spaghetti-ia',
+      'mise-production-prototype',
+    ],
+    en: [
+      'vibe-code',
+      'code-ia-trop-cher',
+      'code-ia-bloque',
+      'debugger-code-genere-par-ia',
+      'code-ia-fonctionne-pas',
+      'code-ia-dette-technique',
+      'failles-securite-code-genere-par-llm',
+      'mauvaise-qualite-code-genere-par-ia',
+      'refactoring-code-ia',
+      'hallucination-code-ia',
+      'probleme-integration-code-ia',
+      'reassurance-production-vibe-code',
+      'lovable-migration-control',
+      'prototype-explodes-1000-users',
+      'ai-loop-code-stuck',
+      'ai-spaghetti-code',
+      'production-deployment-prototype',
+    ],
+  }
 
   // Generate pages for both locales
   const generatePages = (locale: string) => {
@@ -54,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ]
 
     // Add target pages
+    const targetSlugs = targetSlugsByLang[lang] || []
     const targetPages = targetSlugs.map(slug => ({
       url: `${baseUrl}${prefix}/t/${slug}`,
       lastModified: new Date(),

@@ -94,6 +94,31 @@ export function Footer() {
                     {t("footer.productionReassurance")}
                   </Link>
                 </li>
+                <li>
+                  <Link href={getLocalizedPath(i18n.language === 'en' ? "/t/lovable-migration-control" : "/t/lovable-migration-controle")} className="text-gray-300 hover:font-bold transition-all duration-300">
+                    {t("footer.lovableMigration")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={getLocalizedPath(i18n.language === 'en' ? "/t/prototype-explodes-1000-users" : "/t/prototype-explose-1000-utilisateurs")} className="text-gray-300 hover:font-bold transition-all duration-300">
+                    {t("footer.vibeWall")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={getLocalizedPath(i18n.language === 'en' ? "/t/ai-loop-code-stuck" : "/t/boucle-ia-code-bloque")} className="text-gray-300 hover:font-bold transition-all duration-300">
+                    {t("footer.aiLoop")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={getLocalizedPath(i18n.language === 'en' ? "/t/ai-spaghetti-code" : "/t/code-spaghetti-ia")} className="text-gray-300 hover:font-bold transition-all duration-300">
+                    {t("footer.spaghettiCode")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={getLocalizedPath(i18n.language === 'en' ? "/t/production-deployment-prototype" : "/t/mise-production-prototype")} className="text-gray-300 hover:font-bold transition-all duration-300">
+                    {t("footer.productionDeployment")}
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

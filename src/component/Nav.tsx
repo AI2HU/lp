@@ -131,8 +131,14 @@ export function Nav() {
             </div>
           </div>
 
-          {/* Contact Button - Right */}
-          <div className="hidden md:block">
+          {/* Blog and Contact Buttons - Right */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href={blogItem.href}
+              className="px-4 py-2 text-sm font-medium transition-all duration-300 text-accent hover:bg-accent/5"
+            >
+              {blogItem.label}
+            </Link>
             <button
               onClick={() => scrollToSection("contact")}
               className="px-6 py-2 text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 bg-accent text-white hover:bg-accent/90"
