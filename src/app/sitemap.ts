@@ -3,7 +3,7 @@ import { getAllBlogPosts } from '@/lib/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ai2h.tech'
-  const locales = ['', '/en'] // '' for French (base path), '/en' for English
+  const locales = ['/fr', '/en']
   
   // Target page slugs by language
   const targetSlugsByLang: Record<string, string[]> = {
